@@ -18,7 +18,8 @@
         </span>
       </a>
       <nav class="primary-nav" aria-label="主导航">
-        <a class="active" href="./">最新一期</a>
+        <a class="active" href="./">监控首页</a>
+        <a href="#signals">竞品动态</a>
         <a href="#archive">往期内容</a>
         <a href="admin/更新说明.md">更新说明</a>
       </nav>
@@ -38,6 +39,7 @@
           <span><i class="status-dot"></i>持续更新</span>
           <span>当前共 <b id="issue-count">1</b> 期</span>
           <span>最近更新：<b id="latest-date">2026-08-12</b></span>
+          <span>覆盖竞品：<b id="competitor-count">0</b></span>
         </div>
       </div>
     </section>
@@ -48,7 +50,7 @@
           <div class="eyebrow">LATEST ISSUE</div>
           <h2>最新一期</h2>
         </div>
-        <a class="text-link" id="latest-open-link" href="issues/2026-08-12.html">打开完整周报 <span aria-hidden="true">↗</span></a>
+        <a class="text-link" id="latest-open-link" href="view.html?issue=issues%2F2026-08-12.html">打开完整周报 <span aria-hidden="true">↗</span></a>
       </div>
 
       <article class="latest-panel" id="latest-panel">
@@ -58,7 +60,7 @@
           <p id="latest-summary">
             本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。
           </p>
-          <a class="primary-action" id="latest-action" href="issues/2026-08-12.html">阅读本期周报 <span aria-hidden="true">→</span></a>
+          <a class="primary-action" id="latest-action" href="view.html?issue=issues%2F2026-08-12.html">阅读本期周报 <span aria-hidden="true">→</span></a>
         </div>
         <div class="latest-side">
           <div class="stat">
@@ -76,17 +78,61 @@
         </div>
       </article>
 
+      <section class="monitor-console" id="monitor-console">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">MONITOR CONSOLE</div>
+            <h2>按条件检索</h2>
+          </div>
+          <button class="ghost-button" id="clear-filters" type="button">清除筛选</button>
+        </div>
+        <div class="filter-grid">
+          <label class="filter-field">
+            <span>关键词</span>
+            <input id="archive-search" type="search" placeholder="搜索竞品、动作、主题或摘要" autocomplete="off">
+          </label>
+          <label class="filter-field">
+            <span>开始日期</span>
+            <input id="date-from" type="date">
+          </label>
+          <label class="filter-field">
+            <span>结束日期</span>
+            <input id="date-to" type="date">
+          </label>
+        </div>
+        <div class="filter-row">
+          <span class="filter-caption">竞品</span>
+          <div class="chip-list" id="competitor-filters" role="group" aria-label="按竞品筛选"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-caption">主题</span>
+          <div class="chip-list" id="topic-filters" role="group" aria-label="按主题筛选"></div>
+        </div>
+        <div class="filter-result-bar">
+          <span id="filter-summary">正在加载周报目录…</span>
+          <span class="filter-tip">筛选条件会同步到网址，可直接分享给同事</span>
+        </div>
+      </section>
+
+      <section class="signal-section" id="signals">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">COMPETITOR SIGNALS</div>
+            <h2>竞品动态索引</h2>
+          </div>
+          <span class="section-note">跨期查看同一竞品的变化</span>
+        </div>
+        <div class="signal-list" id="signal-list" aria-live="polite"></div>
+        <div class="empty-state" id="signal-empty" hidden>当前条件下没有可展示的竞品动态。</div>
+      </section>
+
       <section class="archive-section" id="archive">
         <div class="section-heading archive-heading">
           <div>
             <div class="eyebrow">ARCHIVE</div>
             <h2>往期内容</h2>
           </div>
-          <label class="search-box">
-            <span aria-hidden="true">⌕</span>
-            <span class="sr-only">搜索往期周报</span>
-            <input id="archive-search" type="search" placeholder="按标题或日期搜索" autocomplete="off">
-          </label>
+          <span class="section-note">每期保留原始证据、截图和跳转来源</span>
         </div>
         <div class="archive-list" id="archive-list" aria-live="polite"></div>
         <div class="empty-state" id="empty-state" hidden>没有匹配的周报。</div>
@@ -98,8 +144,8 @@
           <h2>每周更新方式</h2>
         </div>
         <p>
-          将新一期 HTML 放入 <code>issues/</code>，然后在 <code>data/issues.json</code> 顶部增加一条记录。
-          网站首页会自动把最新记录显示为“最新一期”，历史记录会保留在“往期内容”。
+          将新一期 HTML 放入 <code>issues/</code>，在 <code>data/issues.json</code> 增加日期、竞品和动态摘要。
+          首页会自动更新最新一期、动态索引和往期筛选。
         </p>
         <a class="secondary-action" href="admin/更新说明.md">查看维护说明 <span aria-hidden="true">↗</span></a>
       </section>

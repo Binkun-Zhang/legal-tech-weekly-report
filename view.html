@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="法律科技竞品监控周报单期阅读页">
+  <title>周报阅读｜法律科技竞品监控周报</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/viewer.css">
+</head>
+<body class="viewer-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">律</span>
+        <span>
+          <strong>法律科技竞品监控周报</strong>
+          <small>Legal Tech Intelligence</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="阅读导航">
+        <a href="./">监控首页</a>
+        <a href="./#signals">竞品动态</a>
+        <a href="./#archive">往期内容</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="viewer-header">
+      <div class="viewer-header-inner">
+        <div class="viewer-actions">
+          <a class="back-button" id="back-home" href="./" aria-label="返回周报首页">← 返回首页</a>
+          <span class="viewer-label">ISSUE READER</span>
+        </div>
+        <div class="viewer-title-row">
+          <div>
+            <div class="eyebrow">WEEKLY INTELLIGENCE</div>
+            <h1 id="issue-title">正在加载周报…</h1>
+            <p class="viewer-period" id="issue-period"></p>
+          </div>
+          <div class="viewer-tools">
+            <button class="tool-button" id="share-button" type="button">分享本期</button>
+            <a class="tool-button secondary" id="report-button" href="#" target="_blank" rel="noopener">报告错误</a>
+          </div>
+        </div>
+        <div class="viewer-stats">
+          <div class="viewer-stat">
+            <span>阅读次数</span>
+            <strong id="view-count">本机统计</strong>
+          </div>
+          <div class="viewer-stat">
+            <span>证据与日期</span>
+            <strong>报告内可直接跳转</strong>
+          </div>
+          <div class="viewer-stat">
+            <span>更新日期</span>
+            <strong id="published-date">—</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="viewer-content">
+      <div class="issue-frame-wrap">
+        <iframe id="issue-frame" title="周报正文" loading="eager"></iframe>
+      </div>
+
+      <div class="reader-footer-grid">
+        <section class="reader-panel">
+          <div class="panel-heading">
+            <div>
+              <div class="eyebrow">DISCUSSION</div>
+              <h2>讨论与补充</h2>
+            </div>
+            <a class="text-link" id="discussion-link" href="#" target="_blank" rel="noopener">打开讨论区 ↗</a>
+          </div>
+          <p class="panel-copy" id="discussion-copy">
+            评论区使用 GitHub Discussions，适合补充竞品线索、提出观点和讨论产品影响。
+          </p>
+          <div id="giscus-container" class="giscus-container"></div>
+        </section>
+
+        <aside class="reader-panel related-panel">
+          <div class="eyebrow">RELATED ISSUES</div>
+          <h2>相关周报</h2>
+          <div id="related-issues" class="related-list"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>法律科技产品情报系统</span>
+      <span id="analytics-note">阅读统计：等待配置</span>
+    </div>
+  </footer>
+
+  <script src="assets/viewer.js"></script>
+</body>
+</html>

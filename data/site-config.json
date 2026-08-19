@@ -1,0 +1,25 @@
+{
+  "siteName": "法律科技竞品监控周报",
+  "repository": "https://github.com/Binkun-Zhang/legal-tech-weekly-report",
+  "discussionUrl": "https://github.com/Binkun-Zhang/legal-tech-weekly-report/discussions",
+  "reportUrl": "https://github.com/Binkun-Zhang/legal-tech-weekly-report/issues/new?template=bug_report.yml",
+  "views": {
+    "apiUrl": "",
+    "provider": "local-fallback"
+  },
+  "giscus": {
+    "enabled": false,
+    "src": "https://giscus.app/client.js",
+    "repo": "Binkun-Zhang/legal-tech-weekly-report",
+    "repoId": "",
+    "category": "Announcements",
+    "categoryId": "",
+    "mapping": "specific",
+    "strict": "0",
+    "reactionsEnabled": "1",
+    "emitMetadata": "0",
+    "inputPosition": "top",
+    "theme": "light",
+    "lang": "zh-CN"
+  }
+}

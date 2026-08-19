@@ -1,0 +1,41 @@
+name: 周报错误反馈
+description: 反馈链接失效、日期错误、内容错漏或页面显示问题
+title: "[错误反馈] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请尽量填写具体期次、栏目和可复现步骤。
+  - type: input
+    id: issue-period
+    attributes:
+      label: 涉及期次
+      placeholder: "例如：2026/08/05—2026/08/12"
+    validations:
+      required: true
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: 问题类型
+      options:
+        - 内容或日期错误
+        - 证据链接失效
+        - 页面显示问题
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 问题描述
+      description: 请说明具体位置、当前表现和期望表现。
+      placeholder: "例如：第三部分 B 板块中，某条来源链接无法打开。"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图或补充材料
+      description: 可拖入截图，也可以粘贴相关链接。

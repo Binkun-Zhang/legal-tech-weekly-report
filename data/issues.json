@@ -1,10 +1,59 @@
 [
   {
+    "id": "2026-08-12",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/08/05—2026/08/12",
+    "periodStart": "2026-08-05",
+    "periodEnd": "2026-08-12",
     "publishedAt": "2026-08-12",
     "file": "issues/2026-08-12.html",
     "tags": ["竞品", "行业政策", "法律科技论文", "测评与技术文章"],
-    "summary": "本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。"
+    "summary": "本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。",
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "北大法宝",
+      "威科先行",
+      "BigHand / Ayora",
+      "DeepSeek"
+    ],
+    "highlights": [
+      {
+        "competitor": "Alpha AI",
+        "action": "功能迭代与律所部署",
+        "impact": "从合同审查能力上限、产品迭代和律所部署信号观察法律 AI 的规模化落地。",
+        "evidence": "S19 / S30"
+      },
+      {
+        "competitor": "幂律智能",
+        "action": "吾律 AI 引入人工智能服务责任险",
+        "impact": "把责任保障作为产品信任和商业化卖点，值得关注保障型产品设计。",
+        "evidence": "S11 / S32"
+      },
+      {
+        "competitor": "北大法宝",
+        "action": "MCP 进入知识库与插件市场，计费方式调整",
+        "impact": "法律数据能力开始通过 MCP 进入通用知识库和开发者生态，商业模式也在试探。",
+        "evidence": "S27 / S28 / S29"
+      },
+      {
+        "competitor": "威科先行",
+        "action": "订阅服务叠加法律 AI 增值能力",
+        "impact": "传统法律信息服务商以数据库、专业内容和 AI 增值形成复合订阅价值。",
+        "evidence": "S11"
+      },
+      {
+        "competitor": "BigHand / Ayora",
+        "action": "收购法律定价 AI 公司",
+        "impact": "法律科技竞争从生成式问答扩展到律所财务经营和定价等垂直工作流。",
+        "evidence": "S01"
+      },
+      {
+        "competitor": "DeepSeek",
+        "action": "Agent 与编码场景测评",
+        "impact": "评测关注上下文污染、跨会话复用、过程可追踪性、并发失败率和成本。",
+        "evidence": "S36"
+      }
+    ]
   }
 ]
