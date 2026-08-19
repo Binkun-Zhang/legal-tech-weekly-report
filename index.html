@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="法律科技产品竞品监控周报，持续追踪法律 AI 产品、行业政策、论文与技术测评。">
+  <title>法律科技竞品监控周报</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">律</span>
+        <span>
+          <strong>法律科技竞品监控周报</strong>
+          <small>Legal Tech Intelligence</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="主导航">
+        <a class="active" href="./">最新一期</a>
+        <a href="#archive">往期内容</a>
+        <a href="admin/更新说明.md">更新说明</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">WEEKLY INTELLIGENCE</div>
+        <h1>把每周竞品变化，沉淀成可复用的产品判断。</h1>
+        <p class="hero-copy">
+          聚焦法律文书起草、合同审核、法律检索、Agent 与法律工作流，
+          汇总竞品动作、行业政策、论文、开源项目和技术测评。
+        </p>
+        <div class="hero-meta">
+          <span><i class="status-dot"></i>持续更新</span>
+          <span>当前共 <b id="issue-count">1</b> 期</span>
+          <span>最近更新：<b id="latest-date">2026-08-12</b></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-shell">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">LATEST ISSUE</div>
+          <h2>最新一期</h2>
+        </div>
+        <a class="text-link" id="latest-open-link" href="issues/2026-08-12.html">打开完整周报 <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <article class="latest-panel" id="latest-panel">
+        <div class="latest-main">
+          <div class="issue-kicker">本期监测 · <span id="latest-period">2026/08/05—2026/08/12</span></div>
+          <h3 id="latest-title">法律科技产品竞品监控周报</h3>
+          <p id="latest-summary">
+            本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。
+          </p>
+          <a class="primary-action" id="latest-action" href="issues/2026-08-12.html">阅读本期周报 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="latest-side">
+          <div class="stat">
+            <span class="stat-label">覆盖主题</span>
+            <strong>竞品 / 政策 / 论文 / 测评</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">证据形式</span>
+            <strong>页面截图 + 可跳转来源</strong>
+          </div>
+          <div class="stat">
+            <span class="stat-label">更新节奏</span>
+            <strong>每周一版</strong>
+          </div>
+        </div>
+      </article>
+
+      <section class="archive-section" id="archive">
+        <div class="section-heading archive-heading">
+          <div>
+            <div class="eyebrow">ARCHIVE</div>
+            <h2>往期内容</h2>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">搜索往期周报</span>
+            <input id="archive-search" type="search" placeholder="按标题或日期搜索" autocomplete="off">
+          </label>
+        </div>
+        <div class="archive-list" id="archive-list" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>没有匹配的周报。</div>
+      </section>
+
+      <section class="update-note">
+        <div>
+          <div class="eyebrow">MAINTENANCE</div>
+          <h2>每周更新方式</h2>
+        </div>
+        <p>
+          将新一期 HTML 放入 <code>issues/</code>，然后在 <code>data/issues.json</code> 顶部增加一条记录。
+          网站首页会自动把最新记录显示为“最新一期”，历史记录会保留在“往期内容”。
+        </p>
+        <a class="secondary-action" href="admin/更新说明.md">查看维护说明 <span aria-hidden="true">↗</span></a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>法律科技产品情报系统</span>
+      <span>内部研究与产品决策支持</span>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
