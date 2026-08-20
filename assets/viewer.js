@@ -31,6 +31,10 @@
   }
 
   function updateLocalViewCount(issue) {
+    if (config && config.views && config.views.provider === "vercount") {
+      document.getElementById("analytics-note").textContent = "阅读统计：共享统计加载中";
+      return 0;
+    }
     var count = Number(localStorage.getItem(localViewKey(issue)) || "0") + 1;
     localStorage.setItem(localViewKey(issue), String(count));
     viewCount.textContent = count + " 次（本机）";
@@ -38,6 +42,15 @@
   }
 
   function sendViewEvent(issue) {
+    if (config && config.views && config.views.provider === "vercount") {
+      window.setTimeout(function () {
+        var pageCount = document.getElementById("vercount_value_page_pv");
+        if (pageCount && pageCount.textContent && pageCount.textContent.indexOf("加载") === -1) {
+          document.getElementById("analytics-note").textContent = "阅读统计：共享统计已接入";
+        }
+      }, 2200);
+      return;
+    }
     var apiUrl = config && config.views && config.views.apiUrl;
     if (!apiUrl) {
       document.getElementById("analytics-note").textContent = "阅读统计：当前显示本机次数";

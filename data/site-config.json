@@ -5,15 +5,16 @@
   "reportUrl": "https://github.com/Binkun-Zhang/legal-tech-weekly-report/issues/new?template=bug_report.yml",
   "views": {
     "apiUrl": "",
-    "provider": "local-fallback"
+    "provider": "vercount",
+    "scriptUrl": "https://events.vercount.one/js"
   },
   "giscus": {
-    "enabled": false,
+    "enabled": true,
     "src": "https://giscus.app/client.js",
     "repo": "Binkun-Zhang/legal-tech-weekly-report",
-    "repoId": "",
+    "repoId": "R_kgDOT8_drA",
     "category": "Announcements",
-    "categoryId": "",
+    "categoryId": "DIC_kwDOT8_drM4DDyHP",
     "mapping": "specific",
     "strict": "0",
     "reactionsEnabled": "1",

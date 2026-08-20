@@ -47,7 +47,11 @@
         <div class="viewer-stats">
           <div class="viewer-stat">
             <span>阅读次数</span>
-            <strong id="view-count">本机统计</strong>
+            <strong id="view-count"><span id="vercount_value_page_pv">加载中…</span> 次</strong>
+          </div>
+          <div class="viewer-stat">
+            <span>全站访问量</span>
+            <strong><span id="vercount_value_site_pv">加载中…</span> 次</strong>
           </div>
           <div class="viewer-stat">
             <span>证据与日期</span>
@@ -97,6 +101,7 @@
     </div>
   </footer>
 
+  <script defer src="https://events.vercount.one/js"></script>
   <script src="assets/viewer.js"></script>
 </body>
 </html>

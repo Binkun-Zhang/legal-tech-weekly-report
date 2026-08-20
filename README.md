@@ -20,7 +20,7 @@ python3 -m http.server 8001 --bind 127.0.0.1
 - 单期阅读页提供返回首页、分享、相关周报和错误反馈。
 - 错误反馈通过 GitHub Issues 提交，便于团队集中处理。
 - 评论区支持 GitHub Discussions；需要进一步配置 Giscus 才能嵌入页面。
-- 阅读次数默认显示“本机统计”。GitHub Pages 本身是静态托管，无法直接提供全站共享浏览量；如需真实总浏览量，需要配置一个带 CORS 的统计 API。
+- 单期阅读页已接入 Vercount，显示本页阅读量和全站访问量；它适合 GitHub Pages 这类静态站点。
 
 ## 每周更新
 
@@ -45,13 +45,18 @@ GitHub Actions 会自动发布新版本。
 
 ## 浏览量配置
 
-`data/site-config.json` 中的 `views.apiUrl` 是可选项。它需要提供一个允许跨域访问的 GET 接口，接收 `issue` 参数并返回：
+当前使用 Vercount：
 
 ```json
-{ "views": 123 }
+{
+  "provider": "vercount",
+  "scriptUrl": "https://events.vercount.one/js"
+}
 ```
 
-配置后，单期页面会优先显示共享浏览量；接口不可用时自动回退到本机次数，不影响阅读。
+单期页面显示本页 PV 和全站 PV。Vercount 官方提供的 HTML 用法是引入统计脚本，并在页面中放置 `vercount_value_page_pv`、`vercount_value_site_pv` 等元素。citeturn0search3
+
+如果统计服务暂时不可用，页面不会影响周报阅读。
 
 ## 回退到升级前版本
 
