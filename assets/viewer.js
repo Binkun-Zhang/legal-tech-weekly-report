@@ -4,6 +4,8 @@
   var fromPage = params.get("from") || "";
   var fromCompetitor = params.get("name") || "";
   var frame = document.getElementById("issue-frame");
+  var frameWrap = document.getElementById("issue-frame-wrap");
+  var loadingState = document.getElementById("issue-loading-state");
   var issueTitle = document.getElementById("issue-title");
   var issuePeriod = document.getElementById("issue-period");
   var publishedDate = document.getElementById("published-date");
@@ -132,6 +134,10 @@
     publishedDate.textContent = currentIssue.publishedAt;
     document.title = currentIssue.title + "｜法律科技竞品监控周报";
     frame.src = currentIssue.file;
+    frame.addEventListener("load", function () {
+      frameWrap.classList.remove("issue-frame-loading");
+      loadingState.hidden = true;
+    }, { once: true });
     if (fromPage === "competitor" && fromCompetitor) {
       var backButton = document.getElementById("back-home");
       backButton.href = "competitor.html?name=" + encodeURIComponent(fromCompetitor);

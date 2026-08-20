@@ -95,10 +95,39 @@
   padding: 28px 0 56px;
 }
 .issue-frame-wrap {
+  position: relative;
   overflow: hidden;
   border: 1px solid #d7e1e9;
   background: #fff;
   box-shadow: 0 15px 36px rgba(20,42,67,.08);
+}
+.issue-frame-loading {
+  min-height: 180px;
+}
+.issue-loading-state {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.issue-loading-state strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #dce9ef;
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 #issue-frame {
   width: 100%;
