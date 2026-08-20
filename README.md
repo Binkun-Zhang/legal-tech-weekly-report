@@ -14,6 +14,9 @@ python3 -m http.server 8001 --bind 127.0.0.1
 
 - 首页按关键词、日期、竞品和主题筛选周报。
 - “竞品动态索引”跨期聚合同一竞品的重点变化。
+- 竞品档案页：能力、历史时间线、产品判断、关注事项和个人备注。
+- 法律 AI 术语解释：在竞品档案页点击术语即可查看简释。
+- 我的工作台：收藏动态、跨期建立专题、为收藏添加备注并导出 Markdown/HTML。
 - 单期阅读页提供返回首页、分享、相关周报和错误反馈。
 - 错误反馈通过 GitHub Issues 提交，便于团队集中处理。
 - 评论区支持 GitHub Discussions；需要进一步配置 Giscus 才能嵌入页面。
@@ -23,7 +26,9 @@ python3 -m http.server 8001 --bind 127.0.0.1
 
 1. 将新一期 HTML 放入 `issues/`。
 2. 在 `data/issues.json` 顶部增加一条记录，并填写 `competitors` 与 `highlights`。
-3. 提交并推送到 `main` 分支。
+3. 如果出现新的竞品，在 `data/competitors.json` 增加竞品档案。
+4. 如果出现新的专业术语，在 `data/glossary.json` 增加解释。
+5. 提交并推送到 `main` 分支。
 
 GitHub Actions 会自动发布新版本。
 
@@ -47,6 +52,27 @@ GitHub Actions 会自动发布新版本。
 ```
 
 配置后，单期页面会优先显示共享浏览量；接口不可用时自动回退到本机次数，不影响阅读。
+
+## 回退到升级前版本
+
+升级前稳定版本已保留为：
+
+- Git tag：`before-personal-workspace-2026-08-20`
+- Git branch：`stable-before-personal-workspace`
+
+如需在本地查看旧版本：
+
+```bash
+git switch stable-before-personal-workspace
+```
+
+恢复完成后切回新版：
+
+```bash
+git switch main
+```
+
+不要删除上述 tag 或 branch，除非确认不再需要回退。
 
 ## GitHub Pages
 

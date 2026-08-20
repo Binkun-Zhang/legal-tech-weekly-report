@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="法律科技竞品监控周报个人工作台">
+  <title>我的工作台｜法律科技竞品监控周报</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/workspace.css">
+</head>
+<body class="workspace-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">律</span>
+        <span>
+          <strong>法律科技竞品监控周报</strong>
+          <small>Legal Tech Intelligence</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="个人工作台导航">
+        <a href="./">监控首页</a>
+        <a href="./#signals">竞品动态</a>
+        <a class="active" href="workspace.html">我的工作台</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="workspace-hero">
+      <div class="workspace-hero-inner">
+        <a class="back-button-light" href="./">← 返回监控首页</a>
+        <div class="eyebrow">PERSONAL WORKSPACE</div>
+        <h1>把看过的情报，变成自己的研究资产。</h1>
+        <p>收藏、归类、备注和导出都保存在当前浏览器。不同同学使用自己的电脑时，工作台互不影响。</p>
+      </div>
+    </section>
+
+    <section class="workspace-shell">
+      <div class="workspace-stats">
+        <div class="workspace-stat"><span>我的收藏</span><strong id="favorite-count">0</strong></div>
+        <div class="workspace-stat"><span>我的专题</span><strong id="topic-count">0</strong></div>
+        <div class="workspace-stat"><span>已写备注</span><strong id="note-count">0</strong></div>
+      </div>
+
+      <div class="workspace-layout">
+        <aside class="workspace-sidebar">
+          <button class="workspace-tab is-active" type="button" data-tab="favorites">我的收藏</button>
+          <button class="workspace-tab" type="button" data-tab="weekly">本周重点</button>
+          <button class="workspace-tab" type="button" data-tab="topics">我的专题</button>
+          <div class="sidebar-divider"></div>
+          <div class="sidebar-tip">
+            <strong>本机保存</strong>
+            <p>清理浏览器网站数据后，收藏和备注可能会被删除。公共周报不会被修改。</p>
+          </div>
+        </aside>
+
+        <div class="workspace-main">
+          <section class="workspace-panel workspace-tab-panel is-active" data-panel="favorites">
+            <div class="panel-heading workspace-heading">
+              <div>
+                <div class="eyebrow">SAVED SIGNALS</div>
+                <h2>我的收藏</h2>
+              </div>
+              <div class="export-actions">
+                <button class="outline-button" id="export-all" type="button">导出 Markdown</button>
+                <button class="outline-button" id="export-all-html" type="button">导出 HTML</button>
+              </div>
+            </div>
+            <p class="panel-copy">把不同期次的动态放进同一个专题，形成连续的竞品观察记录。</p>
+            <div id="favorites-list" class="workspace-list"></div>
+            <div id="favorites-empty" class="workspace-empty" hidden>
+              <strong>还没有收藏动态</strong>
+              <p>在首页的“竞品动态索引”或竞品档案页点击“收藏动态”。</p>
+              <a class="text-link" href="./#signals">去浏览竞品动态 ↗</a>
+            </div>
+          </section>
+
+          <section class="workspace-panel workspace-tab-panel" data-panel="weekly">
+            <div class="panel-heading workspace-heading">
+              <div>
+                <div class="eyebrow">WEEKLY FOCUS</div>
+                <h2>本周重点</h2>
+              </div>
+              <span class="section-note" id="weekly-period">—</span>
+            </div>
+            <p class="panel-copy">快速查看最新一期的重点动作，也可以直接加入我的收藏。</p>
+            <div id="weekly-list" class="workspace-list"></div>
+          </section>
+
+          <section class="workspace-panel workspace-tab-panel" data-panel="topics">
+            <div class="panel-heading workspace-heading">
+              <div>
+                <div class="eyebrow">RESEARCH TOPICS</div>
+                <h2>我的专题</h2>
+              </div>
+              <div class="export-actions">
+                <button class="outline-button" id="export-topic" type="button">导出 Markdown</button>
+                <button class="outline-button" id="export-topic-html" type="button">导出 HTML</button>
+              </div>
+            </div>
+            <div class="topic-create">
+              <input id="new-topic" type="text" maxlength="40" placeholder="新建专题，例如：合同审核竞品">
+              <button class="primary-action compact-action" id="create-topic" type="button">新建专题</button>
+            </div>
+            <div class="topic-switcher" id="topic-switcher"></div>
+            <div class="topic-summary" id="topic-summary"></div>
+            <div id="topic-list" class="workspace-list"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>法律科技产品情报系统</span>
+      <span>个人工作台数据仅保存在本机</span>
+    </div>
+  </footer>
+  <script src="assets/workspace.js"></script>
+</body>
+</html>

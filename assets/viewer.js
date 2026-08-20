@@ -1,6 +1,8 @@
 (function () {
   var params = new URLSearchParams(window.location.search);
   var issueFile = params.get("issue") || "";
+  var fromPage = params.get("from") || "";
+  var fromCompetitor = params.get("name") || "";
   var frame = document.getElementById("issue-frame");
   var issueTitle = document.getElementById("issue-title");
   var issuePeriod = document.getElementById("issue-period");
@@ -117,6 +119,12 @@
     publishedDate.textContent = currentIssue.publishedAt;
     document.title = currentIssue.title + "｜法律科技竞品监控周报";
     frame.src = currentIssue.file;
+    if (fromPage === "competitor" && fromCompetitor) {
+      var backButton = document.getElementById("back-home");
+      backButton.href = "competitor.html?name=" + encodeURIComponent(fromCompetitor);
+      backButton.textContent = "← 返回竞品档案";
+      backButton.setAttribute("aria-label", "返回竞品档案");
+    }
     document.getElementById("discussion-link").href = config.discussionUrl || "#";
     document.getElementById("report-button").href = config.reportUrl || "#";
     updateLocalViewCount(currentIssue);

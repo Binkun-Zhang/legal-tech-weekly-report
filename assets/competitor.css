@@ -1,0 +1,68 @@
+.competitor-page { background: #f4f7fb; }
+.profile-hero { color: #fff; background: var(--navy); }
+.profile-hero-inner,
+.profile-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.profile-hero-inner { padding: 28px 0 42px; }
+.back-button-light {
+  display: inline-block;
+  margin-bottom: 38px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 5px;
+  color: #eaf3fb;
+  font-size: 13px;
+}
+.profile-kicker { color: #7bd7c7; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.profile-hero h1 { margin: 8px 0 8px; font-size: clamp(34px, 5vw, 58px); line-height: 1.15; }
+.profile-hero p { margin: 0; color: #c7d5e1; font-size: 16px; }
+.profile-meta { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 22px; color: #aabecf; font-size: 13px; }
+.profile-meta b { color: #fff; }
+.profile-shell { padding: 38px 0 72px; }
+.profile-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .75fr); gap: 20px; }
+.profile-main,
+.profile-side { min-width: 0; }
+.profile-section,
+.side-panel { padding: 26px 28px; border: 1px solid var(--line); background: #fff; }
+.profile-section + .profile-section { margin-top: 16px; }
+.profile-section h2,
+.side-panel h2 { margin: 5px 0 18px; font-size: 23px; }
+.capability-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.capability-chip { padding: 6px 11px; border: 1px solid #b9ddd8; border-radius: 999px; color: #126d65; background: #effaf8; font-size: 12px; font-weight: 700; }
+.timeline { position: relative; display: grid; gap: 0; }
+.timeline:before { position: absolute; top: 8px; bottom: 15px; left: 137px; width: 1px; content: ""; background: #d4e1ea; }
+.timeline-item { position: relative; display: grid; grid-template-columns: 115px 45px minmax(0, 1fr); gap: 0; padding-bottom: 24px; }
+.timeline-date { padding-top: 3px; color: var(--teal); font-size: 12px; font-weight: 800; text-align: right; }
+.timeline-marker { position: relative; z-index: 1; width: 10px; height: 10px; margin: 6px auto 0; border: 3px solid #fff; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
+.timeline-content { padding: 0 0 0 9px; }
+.timeline-label { color: var(--blue); font-size: 11px; font-weight: 800; }
+.timeline-content h3 { margin: 2px 0 4px; font-size: 16px; }
+.timeline-content p { margin: 0; color: var(--muted); font-size: 13px; }
+.timeline-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 10px; }
+.small-favorite { padding: 3px 8px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); background: #fff; cursor: pointer; font-size: 11px; }
+.small-favorite:hover, .small-favorite.is-saved { border-color: #75b9b0; color: #126d65; background: #effaf8; }
+.judgment-grid { display: grid; gap: 9px; }
+.judgment-item { padding: 14px 16px; border-left: 3px solid; background: #f8fafc; }
+.judgment-item span { font-size: 12px; font-weight: 800; }
+.judgment-item p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+.judgment-item.advantage { border-color: var(--teal); }
+.judgment-item.weakness { border-color: #c78a27; }
+.judgment-item.threat { border-color: #c5525d; }
+.profile-side { display: grid; align-content: start; gap: 16px; }
+.side-panel p { margin: 0 0 18px; color: var(--muted); font-size: 13px; }
+.profile-favorite { border: 0; cursor: pointer; }
+.term-list { display: flex; flex-wrap: wrap; gap: 7px; }
+.term-button { padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--blue); background: #fff; cursor: pointer; font-size: 12px; }
+.term-button:hover, .term-button:focus { border-color: #8ab3dc; background: #f2f7fd; }
+.glossary-box { min-height: 64px; margin-top: 12px; padding: 11px 12px; border-left: 3px solid var(--teal); color: var(--muted); background: #eef8f6; font-size: 12px; }
+#competitor-note { width: 100%; resize: vertical; padding: 10px; border: 1px solid var(--line); outline: 0; color: var(--ink); background: #fbfdff; font: inherit; font-size: 13px; }
+#competitor-note:focus { border-color: #7ca8d7; }
+.full-button { width: 100%; margin-top: 9px; }
+.save-status { display: block; min-height: 18px; margin-top: 5px; color: var(--teal); font-size: 11px; }
+@media (max-width: 760px) {
+  .profile-hero-inner, .profile-shell { width: min(100% - 30px, 1180px); }
+  .profile-grid { grid-template-columns: 1fr; }
+  .profile-section, .side-panel { padding: 21px; }
+  .timeline:before { left: 80px; }
+  .timeline-item { grid-template-columns: 62px 37px minmax(0, 1fr); }
+  .timeline-date { font-size: 11px; }
+}

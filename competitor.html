@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="法律科技竞品档案">
+  <title>竞品档案｜法律科技竞品监控周报</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/competitor.css">
+</head>
+<body class="competitor-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true">律</span>
+        <span>
+          <strong>法律科技竞品监控周报</strong>
+          <small>Legal Tech Intelligence</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="竞品档案导航">
+        <a href="./">监控首页</a>
+        <a href="./#signals">竞品动态</a>
+        <a href="workspace.html">我的工作台</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-hero">
+      <div class="profile-hero-inner">
+        <a class="back-button-light" href="./">← 返回监控首页</a>
+        <div class="profile-kicker">COMPETITOR PROFILE</div>
+        <h1 id="competitor-name">正在加载竞品档案…</h1>
+        <p id="competitor-positioning"></p>
+        <div class="profile-meta">
+          <span>主要用户：<b id="competitor-audience">—</b></span>
+          <span>监测动态：<b id="competitor-signal-count">0</b> 条</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-shell">
+      <div class="profile-grid">
+        <section class="profile-main">
+          <div class="profile-section">
+            <div class="eyebrow">CAPABILITIES</div>
+            <h2>产品能力</h2>
+            <div class="capability-list" id="capabilities"></div>
+          </div>
+          <div class="profile-section">
+            <div class="eyebrow">TIMELINE</div>
+            <h2>历史动态</h2>
+            <div class="timeline" id="timeline"></div>
+            <div class="empty-state" id="timeline-empty" hidden>暂无已录入动态。</div>
+          </div>
+          <div class="profile-section">
+            <div class="eyebrow">PRODUCT JUDGMENT</div>
+            <h2>产品判断</h2>
+            <div class="judgment-grid">
+              <article class="judgment-item advantage">
+                <span>优势信号</span>
+                <p id="advantage"></p>
+              </article>
+              <article class="judgment-item weakness">
+                <span>待观察短板</span>
+                <p id="weakness"></p>
+              </article>
+              <article class="judgment-item threat">
+                <span>潜在威胁</span>
+                <p id="threat"></p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <aside class="profile-side">
+          <section class="side-panel">
+            <div class="eyebrow">WATCH LIST</div>
+            <h2>建议关注</h2>
+            <p id="watch"></p>
+            <button class="primary-action profile-favorite" id="favorite-competitor" type="button">关注该竞品</button>
+          </section>
+          <section class="side-panel">
+            <div class="eyebrow">TERMS</div>
+            <h2>相关术语</h2>
+            <div class="term-list" id="glossary-terms"></div>
+            <div class="glossary-box" id="glossary-box">点击术语查看解释</div>
+          </section>
+          <section class="side-panel">
+            <div class="eyebrow">PERSONAL</div>
+            <h2>我的竞品备注</h2>
+            <textarea id="competitor-note" rows="6" placeholder="记录你的观察、实测计划或问题…"></textarea>
+            <button class="ghost-button full-button" id="save-competitor-note" type="button">保存备注</button>
+            <span class="save-status" id="competitor-note-status"></span>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>法律科技产品情报系统</span>
+      <span>竞品档案仅作内部研究参考</span>
+    </div>
+  </footer>
+  <script src="assets/competitor.js"></script>
+</body>
+</html>

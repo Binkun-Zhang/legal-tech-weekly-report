@@ -20,6 +20,7 @@
       <nav class="primary-nav" aria-label="主导航">
         <a class="active" href="./">监控首页</a>
         <a href="#signals">竞品动态</a>
+        <a href="workspace.html">我的工作台</a>
         <a href="#archive">往期内容</a>
         <a href="admin/更新说明.md">更新说明</a>
       </nav>
@@ -124,6 +125,17 @@
         </div>
         <div class="signal-list" id="signal-list" aria-live="polite"></div>
         <div class="empty-state" id="signal-empty" hidden>当前条件下没有可展示的竞品动态。</div>
+      </section>
+
+      <section class="profile-directory" id="competitor-directory">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">COMPETITOR PROFILES</div>
+            <h2>竞品档案</h2>
+          </div>
+          <span class="section-note">从单条动态进入长期跟踪视图</span>
+        </div>
+        <div class="profile-card-grid" id="profile-card-grid"></div>
       </section>
 
       <section class="archive-section" id="archive">

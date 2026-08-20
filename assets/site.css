@@ -332,6 +332,18 @@ button, input { font: inherit; }
   font-weight: 700;
   white-space: nowrap;
 }
+.signal-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: end; gap: 9px; }
+.signal-competitor a:hover { text-decoration: underline; }
+.profile-directory { padding-top: 68px; }
+.profile-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.profile-card { display: block; min-width: 0; padding: 20px; border: 1px solid var(--line); background: var(--paper); }
+.profile-card:hover, .profile-card:focus { border-color: #a9c2de; box-shadow: var(--shadow); }
+.profile-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.profile-card-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 6px; color: #126d65; background: #e5f6f2; font-weight: 800; }
+.profile-card-count { color: var(--teal); font-size: 11px; font-weight: 800; }
+.profile-card h3 { margin: 14px 0 5px; font-size: 17px; }
+.profile-card p { min-height: 42px; margin: 0; color: var(--muted); font-size: 12px; }
+.profile-card-link { display: block; margin-top: 15px; color: var(--blue); font-size: 12px; font-weight: 700; }
 .mini-chip-list { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .mini-chip { min-height: 21px; padding: 2px 7px; background: #f5f8fb; font-size: 10px; }
 .archive-list {
@@ -447,7 +459,8 @@ code {
   .filter-grid { grid-template-columns: 1fr; }
   .filter-result-bar { align-items: start; flex-direction: column; gap: 5px; }
   .signal-item { grid-template-columns: 1fr; gap: 8px; }
-  .signal-link { justify-self: start; }
+  .signal-actions { justify-content: start; }
+  .profile-card-grid { grid-template-columns: 1fr; }
   .archive-item {
     grid-template-columns: 1fr;
     gap: 7px;
