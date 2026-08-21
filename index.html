@@ -19,7 +19,6 @@
       </a>
       <nav class="primary-nav" aria-label="主导航">
         <a class="active" href="./">监控首页</a>
-        <a href="#signals">竞品动态</a>
         <a href="workspace.html">我的工作台</a>
         <a href="#archive">往期内容</a>
         <a href="admin/更新说明.md">更新说明</a>
@@ -38,8 +37,8 @@
         </p>
         <div class="hero-meta">
           <span><i class="status-dot"></i>持续更新</span>
-          <span>当前共 <b id="issue-count">1</b> 期</span>
-          <span>最近更新：<b id="latest-date">2026-08-12</b></span>
+          <span>当前共 <b id="issue-count">2</b> 期</span>
+          <span>最近更新：<b id="latest-date">2026-08-20</b></span>
           <span>覆盖竞品：<b id="competitor-count">0</b></span>
         </div>
       </div>
@@ -51,17 +50,20 @@
           <div class="eyebrow">LATEST ISSUE</div>
           <h2>最新一期</h2>
         </div>
-        <a class="text-link" id="latest-open-link" href="view.html?issue=issues%2F2026-08-12.html">打开完整周报 <span aria-hidden="true">↗</span></a>
+        <a class="text-link" id="latest-open-link" href="view.html?issue=issues%2F2026-08-20.html">打开完整周报 <span aria-hidden="true">↗</span></a>
       </div>
 
       <article class="latest-panel" id="latest-panel">
         <div class="latest-main">
-          <div class="issue-kicker">本期监测 · <span id="latest-period">2026/08/05—2026/08/12</span></div>
+          <div class="issue-kicker">本期监测 · <span id="latest-period">2026/08/14—2026/08/20</span></div>
           <h3 id="latest-title">法律科技产品竞品监控周报</h3>
           <p id="latest-summary">
-            本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。
+            本期重点跟踪 iCourt Alpha 与幂律智能 MeWork 的产品功能突破，并补充法律科技论文、GitHub Skill、行业政策与技术测评。
           </p>
-          <a class="primary-action" id="latest-action" href="view.html?issue=issues%2F2026-08-12.html">阅读本期周报 <span aria-hidden="true">→</span></a>
+          <div class="latest-actions">
+            <a class="primary-action" id="latest-action" href="view.html?issue=issues%2F2026-08-20.html">阅读本期周报 <span aria-hidden="true">→</span></a>
+            <button class="small-action" id="latest-favorite" type="button">收藏本期</button>
+          </div>
         </div>
         <div class="latest-side">
           <div class="stat">
@@ -90,7 +92,7 @@
         <div class="filter-grid">
           <label class="filter-field">
             <span>关键词</span>
-            <input id="archive-search" type="search" placeholder="搜索竞品、动作、主题或摘要" autocomplete="off">
+            <input id="archive-search" type="search" placeholder="搜索周报、竞品、主题或摘要" autocomplete="off">
           </label>
           <label class="filter-field">
             <span>开始日期</span>
@@ -115,25 +117,13 @@
         </div>
       </section>
 
-      <section class="signal-section" id="signals">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">COMPETITOR SIGNALS</div>
-            <h2>竞品动态索引</h2>
-          </div>
-          <span class="section-note">跨期查看同一竞品的变化</span>
-        </div>
-        <div class="signal-list" id="signal-list" aria-live="polite"></div>
-        <div class="empty-state" id="signal-empty" hidden>当前条件下没有可展示的竞品动态。</div>
-      </section>
-
       <section class="profile-directory" id="competitor-directory">
         <div class="section-heading">
           <div>
             <div class="eyebrow">COMPETITOR PROFILES</div>
             <h2>竞品档案</h2>
           </div>
-          <span class="section-note">从单条动态进入长期跟踪视图</span>
+          <span class="section-note">查看定位、能力和历史动态</span>
         </div>
         <div class="profile-card-grid" id="profile-card-grid"></div>
       </section>
@@ -156,8 +146,8 @@
           <h2>每周更新方式</h2>
         </div>
         <p>
-          将新一期 HTML 放入 <code>issues/</code>，在 <code>data/issues.json</code> 增加日期、竞品和动态摘要。
-          首页会自动更新最新一期、动态索引和往期筛选。
+          将新一期 HTML 放入 <code>issues/</code>，在 <code>data/issues.json</code> 增加日期、竞品和摘要。
+          首页会自动更新最新一期和往期内容筛选。
         </p>
         <a class="secondary-action" href="admin/更新说明.md">查看维护说明 <span aria-hidden="true">↗</span></a>
       </section>

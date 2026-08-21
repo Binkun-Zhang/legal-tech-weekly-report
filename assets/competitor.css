@@ -26,6 +26,7 @@
 .profile-section + .profile-section { margin-top: 16px; }
 .profile-section h2,
 .side-panel h2 { margin: 5px 0 18px; font-size: 23px; }
+.profile-intro { margin: 0 0 13px; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .capability-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .capability-chip { padding: 6px 11px; border: 1px solid #b9ddd8; border-radius: 999px; color: #126d65; background: #effaf8; font-size: 12px; font-weight: 700; }
 .timeline { position: relative; display: grid; gap: 0; }
@@ -49,7 +50,6 @@
 .judgment-item.threat { border-color: #c5525d; }
 .profile-side { display: grid; align-content: start; gap: 16px; }
 .side-panel p { margin: 0 0 18px; color: var(--muted); font-size: 13px; }
-.profile-favorite { border: 0; cursor: pointer; }
 .term-list { display: flex; flex-wrap: wrap; gap: 7px; }
 .term-button { padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--blue); background: #fff; cursor: pointer; font-size: 12px; }
 .term-button:hover, .term-button:focus { border-color: #8ab3dc; background: #f2f7fd; }

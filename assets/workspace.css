@@ -23,7 +23,6 @@
 .workspace-tab-panel { display: none; padding: 27px 29px; border: 1px solid var(--line); background: #fff; }
 .workspace-tab-panel.is-active { display: block; }
 .workspace-heading { margin-bottom: 8px; }
-.export-actions { display: flex; flex-wrap: wrap; gap: 7px; }
 .outline-button { padding: 8px 11px; border: 1px solid #aec3d7; border-radius: 5px; color: var(--blue); background: #fff; cursor: pointer; font-size: 12px; font-weight: 700; }
 .outline-button:hover, .outline-button:focus { background: #f1f6fb; }
 .compact-action { border: 0; cursor: pointer; white-space: nowrap; }

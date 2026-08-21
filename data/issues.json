@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-08-20",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/08/14—2026/08/20",
+    "periodStart": "2026-08-14",
+    "periodEnd": "2026-08-20",
+    "publishedAt": "2026-08-20",
+    "file": "issues/2026-08-20.html",
+    "tags": ["竞品", "行业政策", "法律科技论文", "GitHub Skill", "测评与技术文章"],
+    "summary": "本期重点跟踪 iCourt Alpha 与幂律智能 MeWork 的产品功能突破，并补充法律科技论文、GitHub Skill、行业政策与技术测评。",
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "WorkBuddy",
+      "Harvey",
+      "DeepJudge",
+      "Seedless",
+      "Qwen"
+    ],
+    "highlights": [
+      {
+        "competitor": "Alpha AI",
+        "action": "类案检索与法律 Skill 迭代",
+        "impact": "AlphaGPT 类案检索 Pro 与 AlphaClaw 6 个法律 Skill 同步推进，形成从检索、争议焦点识别到诉讼分析的连续工作流。",
+        "evidence": "S03 / S04"
+      },
+      {
+        "competitor": "幂律智能",
+        "action": "MeWork 开启内测",
+        "impact": "以证据回源、可查依据与 AI 分析区分、报告式交付和本地处理强化法律 AI 的可核验性与责任感知。",
+        "evidence": "S07"
+      },
+      {
+        "competitor": "WorkBuddy",
+        "action": "政务智能体发布与试点",
+        "impact": "通用智能体通过省级统一中枢进入政务工作流，为法律与合规产品提供新的集成入口和场景扩展信号。",
+        "evidence": "S06"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "自研模型与记忆能力",
+        "impact": "法律 AI 头部厂商开始控制模型层、长期工作流记忆与任务路由，竞争从应用层向模型栈和组织协作层下沉。",
+        "evidence": "S11 / S34"
+      },
+      {
+        "competitor": "DeepJudge",
+        "action": "开放协议连接法律 AI 产品",
+        "impact": "Agent Handoff Protocol 让用户与任务上下文跨产品传递，可能改变法律 AI 的入口壁垒和数据孤岛。",
+        "evidence": "S12"
+      },
+      {
+        "competitor": "Seedless",
+        "action": "法律 AI 合成数据基础设施",
+        "impact": "法律 AI 竞争要素从模型与知识库扩展至可训练、可测试且不暴露客户隐私的数据资产。",
+        "evidence": "S15"
+      }
+    ]
+  },
+  {
     "id": "2026-08-12",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/08/05—2026/08/12",

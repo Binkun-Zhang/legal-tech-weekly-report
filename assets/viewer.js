@@ -11,6 +11,7 @@
   var publishedDate = document.getElementById("published-date");
   var viewCount = document.getElementById("view-count");
   var related = document.getElementById("related-issues");
+  var favoriteIssueButton = document.getElementById("favorite-issue");
   var config = null;
   var issues = [];
   var currentIssue = null;
@@ -26,6 +27,86 @@
 
   function relativeViewer(file) {
     return "view.html?issue=" + encodeURIComponent(file);
+  }
+
+  function readIssueFavorites() {
+    try {
+      var favorites = JSON.parse(localStorage.getItem("legal-tech-weekly:issue-favorites") || "[]");
+      return Array.isArray(favorites) ? favorites : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function updateFavoriteIssueButton() {
+    if (!currentIssue) return;
+    var key = "issue::" + currentIssue.id;
+    var saved = readIssueFavorites().some(function (item) { return item.key === key; });
+    favoriteIssueButton.textContent = saved ? "已收藏本期" : "收藏本期";
+    favoriteIssueButton.classList.toggle("is-saved", saved);
+    favoriteIssueButton.setAttribute("aria-pressed", String(saved));
+  }
+
+  function toggleFavoriteIssue() {
+    var favorites = readIssueFavorites();
+    var key = "issue::" + currentIssue.id;
+    var index = favorites.findIndex(function (item) { return item.key === key; });
+    if (index === -1) {
+      favorites.push({
+        key: key,
+        issueId: currentIssue.id,
+        issueFile: currentIssue.file,
+        period: currentIssue.period,
+        title: currentIssue.title,
+        summary: currentIssue.summary,
+        topic: "未分类",
+        note: ""
+      });
+    } else {
+      favorites.splice(index, 1);
+    }
+    localStorage.setItem("legal-tech-weekly:issue-favorites", JSON.stringify(favorites));
+    updateFavoriteIssueButton();
+  }
+
+  function focusCompetitorInFrame(name) {
+    if (!name || !frame.contentDocument) return;
+    var doc = frame.contentDocument;
+    var normalizedName = name.replace(/\s+/g, "");
+    var aliases = {
+      "AlphaAI": ["Alpha AI", "iCourt", "AlphaClaw"],
+      "幂律智能": ["幂律智能", "吾律AI", "MeFlow"],
+      "北大法宝": ["北大法宝"],
+      "威科先行": ["威科先行", "小威AI", "Wolters Kluwer"],
+      "BigHand/Ayora": ["BigHand", "Ayora"],
+      "DeepSeek": ["DeepSeek"]
+    };
+    var terms = aliases[normalizedName] || [name];
+    function containsTerm(node) {
+      var text = (node.textContent || "").replace(/\s+/g, "");
+      return terms.some(function (term) {
+        return text.indexOf(term.replace(/\s+/g, "")) !== -1;
+      });
+    }
+    var target = Array.prototype.slice.call(doc.querySelectorAll(".competitor-sheet")).find(containsTerm);
+    if (!target) {
+      target = Array.prototype.slice.call(doc.querySelectorAll(".competitor-name,h2,h3,h4,td")).find(containsTerm);
+    }
+    if (!target) return;
+    if (!doc.getElementById("competitor-focus-style")) {
+      var style = doc.createElement("style");
+      style.id = "competitor-focus-style";
+      style.textContent =
+        ".competitor-focus-target{outline:3px solid #dca64b!important;" +
+        "outline-offset:5px;background:#fff8df!important;" +
+        "transition:background .2s ease,outline-color .2s ease}";
+      doc.head.appendChild(style);
+    }
+    target.scrollIntoView({ block: "center", behavior: "smooth" });
+    target.classList.add("competitor-focus-target");
+    window.setTimeout(function () {
+      target.classList.remove("competitor-focus-target");
+    }, 4200);
   }
 
   function localViewKey(issue) {
@@ -137,6 +218,7 @@
     frame.addEventListener("load", function () {
       frameWrap.classList.remove("issue-frame-loading");
       loadingState.hidden = true;
+      if (fromPage === "competitor") focusCompetitorInFrame(fromCompetitor);
     }, { once: true });
     if (fromPage === "competitor" && fromCompetitor) {
       var backButton = document.getElementById("back-home");
@@ -150,6 +232,7 @@
     sendViewEvent(currentIssue);
     renderRelated();
     loadGiscus();
+    updateFavoriteIssueButton();
   }
 
   document.getElementById("back-home").addEventListener("click", function (event) {
@@ -170,6 +253,10 @@
       var button = this;
       window.setTimeout(function () { button.textContent = "分享本期"; }, 1600);
     }.bind(this)).catch(function () {});
+  });
+
+  favoriteIssueButton.addEventListener("click", function () {
+    if (currentIssue) toggleFavoriteIssue();
   });
 
   Promise.all([

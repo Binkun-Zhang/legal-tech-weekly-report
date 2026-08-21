@@ -1,8 +1,6 @@
 (function () {
   var list = document.getElementById("archive-list");
-  var signalList = document.getElementById("signal-list");
   var empty = document.getElementById("empty-state");
-  var signalEmpty = document.getElementById("signal-empty");
   var search = document.getElementById("archive-search");
   var dateFrom = document.getElementById("date-from");
   var dateTo = document.getElementById("date-to");
@@ -13,6 +11,7 @@
   var selectedCompetitor = "";
   var selectedTopic = "";
   var allIssues = [];
+  var favoriteStorageKey = "legal-tech-weekly:issue-favorites";
 
   function escapeHtml(value) {
     return String(value)
@@ -23,21 +22,63 @@
       .replace(/'/g, "&#039;");
   }
 
+  function readFavorites() {
+    try {
+      var favorites = JSON.parse(localStorage.getItem(favoriteStorageKey) || "[]");
+      return Array.isArray(favorites) ? favorites : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveFavorites(favorites) {
+    localStorage.setItem(favoriteStorageKey, JSON.stringify(favorites));
+  }
+
+  function issueFavoriteKey(issue) {
+    return "issue::" + issue.id;
+  }
+
+  function isFavorite(issue) {
+    var key = issueFavoriteKey(issue);
+    return readFavorites().some(function (item) { return item.key === key; });
+  }
+
+  function toggleIssueFavorite(issue) {
+    var favorites = readFavorites();
+    var key = issueFavoriteKey(issue);
+    var index = favorites.findIndex(function (item) { return item.key === key; });
+    if (index === -1) {
+      favorites.push({
+        key: key,
+        issueId: issue.id,
+        issueFile: issue.file,
+        period: issue.period,
+        title: issue.title,
+        summary: issue.summary,
+        topic: "未分类",
+        note: ""
+      });
+    } else {
+      favorites.splice(index, 1);
+    }
+    saveFavorites(favorites);
+    return index === -1;
+  }
+
+  function updateFavoriteButton(button, issue) {
+    var saved = isFavorite(issue);
+    button.textContent = saved ? "已收藏本期" : "收藏本期";
+    button.classList.toggle("is-saved", saved);
+    button.setAttribute("aria-pressed", String(saved));
+  }
+
   function viewerHref(issue) {
     return "view.html?issue=" + encodeURIComponent(issue.file);
   }
 
   function competitorHref(name) {
     return "competitor.html?name=" + encodeURIComponent(name);
-  }
-
-  function favoriteKey(issue, highlight) {
-    return issue.id + "::" + highlight.competitor + "::" + highlight.action;
-  }
-
-  function isFavorite(key) {
-    var favorites = JSON.parse(localStorage.getItem("legal-tech-weekly:favorites") || "[]");
-    return favorites.some(function (item) { return item.key === key; });
   }
 
   function getQueryState() {
@@ -102,69 +143,26 @@
         return '<span class="mini-chip">' + escapeHtml(tag) + '</span>';
       }).join("");
       return [
-        '<a class="archive-item" href="' + viewerHref(issue) + '">',
+        '<article class="archive-item">',
           '<div class="archive-date">' + escapeHtml(issue.period) + '</div>',
           '<div class="archive-copy">',
-            '<h3>' + escapeHtml(issue.title) + '</h3>',
-            '<p>' + escapeHtml(issue.summary) + '</p>',
-            '<div class="mini-chip-list">' + tags + '</div>',
+            '<a class="archive-main-link" href="' + viewerHref(issue) + '">',
+              '<h3>' + escapeHtml(issue.title) + '</h3>',
+              '<p>' + escapeHtml(issue.summary) + '</p>',
+              '<div class="mini-chip-list">' + tags + '</div>',
+            '</a>',
           '</div>',
-          '<div class="archive-open">查看周报 <span aria-hidden="true">↗</span></div>',
-        '</a>'
-      ].join("");
-    }).join("");
-    empty.hidden = issues.length !== 0;
-  }
-
-  function renderSignals(issues) {
-    var rows = [];
-    issues.forEach(function (issue) {
-      (issue.highlights || []).forEach(function (highlight) {
-        var text = [
-          highlight.competitor,
-          highlight.action,
-          highlight.impact,
-          issue.title,
-          issue.period
-        ].join(" ").toLowerCase();
-        var keyword = search.value.trim().toLowerCase();
-        if (keyword && text.indexOf(keyword) === -1) return;
-        if (selectedCompetitor && highlight.competitor !== selectedCompetitor) return;
-        if (selectedTopic && (issue.tags || []).indexOf(selectedTopic) === -1) return;
-        rows.push({ issue: issue, highlight: highlight });
-      });
-    });
-    signalList.innerHTML = rows.map(function (row) {
-      var issue = row.issue;
-      var item = row.highlight;
-      return [
-        '<article class="signal-item">',
-          '<div class="signal-meta">',
-            '<span class="signal-date">' + escapeHtml(issue.period) + '</span>',
-            '<span class="mini-chip">' + escapeHtml(item.evidence || "来源待补") + '</span>',
-          '</div>',
-          '<div class="signal-body">',
-            '<div class="signal-competitor"><a href="' + competitorHref(item.competitor) + '">' +
-              escapeHtml(item.competitor) + '</a></div>',
-            '<h3>' + escapeHtml(item.action) + '</h3>',
-            '<p>' + escapeHtml(item.impact) + '</p>',
-          '</div>',
-          '<div class="signal-actions">',
-            '<a class="signal-link" href="' + viewerHref(issue) + '">查看原周报 <span aria-hidden="true">↗</span></a>',
-            '<button class="small-favorite' + (isFavorite(favoriteKey(issue, item)) ? ' is-saved' : '') +
-              '" type="button" data-favorite-key="' + escapeHtml(favoriteKey(issue, item)) + '"' +
-              ' data-favorite-issue="' + escapeHtml(issue.id) + '"' +
-              ' data-favorite-competitor="' + escapeHtml(item.competitor) + '"' +
-              ' data-favorite-action="' + escapeHtml(item.action) + '"' +
-              ' data-favorite-impact="' + escapeHtml(item.impact) + '"' +
-              ' data-favorite-period="' + escapeHtml(issue.period) + '"' +
-              ' data-favorite-file="' + escapeHtml(issue.file) + '">' +
-              (isFavorite(favoriteKey(issue, item)) ? "已收藏" : "收藏动态") + '</button>',
+          '<div class="archive-actions">',
+            '<a class="archive-open" href="' + viewerHref(issue) + '">查看周报 <span aria-hidden="true">↗</span></a>',
+            '<button class="small-action issue-favorite-button' + (isFavorite(issue) ? " is-saved" : "") +
+              '" type="button" data-favorite-issue-id="' + escapeHtml(issue.id) +
+              '" aria-pressed="' + String(isFavorite(issue)) + '">' +
+              (isFavorite(issue) ? "已收藏本期" : "收藏本期") + '</button>',
           '</div>',
         '</article>'
       ].join("");
     }).join("");
-    signalEmpty.hidden = rows.length !== 0;
+    empty.hidden = issues.length !== 0;
   }
 
   function renderProfiles(profiles) {
@@ -191,7 +189,6 @@
   function applyFilters() {
     var filtered = allIssues.filter(matchesFilters);
     renderArchive(filtered);
-    renderSignals(filtered);
     var parts = ["显示 " + filtered.length + " / " + allIssues.length + " 期"];
     if (selectedCompetitor) parts.push(selectedCompetitor);
     if (selectedTopic) parts.push(selectedTopic);
@@ -232,14 +229,27 @@
       element.addEventListener("change", applyFilters);
     });
     document.addEventListener("click", function (event) {
-      var button = event.target.closest("[data-filter-type]");
-      if (!button) return;
-      var type = button.getAttribute("data-filter-type");
-      var value = button.getAttribute("data-filter-value");
-      if (type === "competitor") selectedCompetitor = selectedCompetitor === value ? "" : value;
-      if (type === "topic") selectedTopic = selectedTopic === value ? "" : value;
-      populateFilterValues(allIssues);
-      applyFilters();
+      var filterButton = event.target.closest("[data-filter-type]");
+      if (filterButton) {
+        var type = filterButton.getAttribute("data-filter-type");
+        var value = filterButton.getAttribute("data-filter-value");
+        if (type === "competitor") selectedCompetitor = selectedCompetitor === value ? "" : value;
+        if (type === "topic") selectedTopic = selectedTopic === value ? "" : value;
+        populateFilterValues(allIssues);
+        applyFilters();
+        return;
+      }
+      var favoriteButton = event.target.closest("[data-favorite-issue-id]");
+      if (favoriteButton) {
+        event.preventDefault();
+        var issue = allIssues.find(function (item) {
+          return item.id === favoriteButton.dataset.favoriteIssueId;
+        });
+        if (issue) {
+          toggleIssueFavorite(issue);
+          updateFavoriteButton(favoriteButton, issue);
+        }
+      }
     });
     document.getElementById("clear-filters").addEventListener("click", function () {
       search.value = "";
@@ -281,39 +291,12 @@
     document.getElementById("latest-summary").textContent = latest.summary;
     document.getElementById("latest-open-link").href = viewerHref(latest);
     document.getElementById("latest-action").href = viewerHref(latest);
+    var latestFavorite = document.getElementById("latest-favorite");
+    latestFavorite.dataset.favoriteIssueId = latest.id;
+    updateFavoriteButton(latestFavorite, latest);
     applyFilters();
   }).catch(function () {
     list.innerHTML = '<div class="empty-state">周报目录暂时无法加载，请确认网站通过 HTTP 服务打开。</div>';
-    signalList.innerHTML = "";
     filterSummary.textContent = "目录加载失败";
-  });
-
-  document.addEventListener("click", function (event) {
-    var favoriteButton = event.target.closest("[data-favorite-key]");
-    if (!favoriteButton) return;
-    event.preventDefault();
-    var favorites = JSON.parse(localStorage.getItem("legal-tech-weekly:favorites") || "[]");
-    var key = favoriteButton.dataset.favoriteKey;
-    var index = favorites.findIndex(function (item) { return item.key === key; });
-    if (index === -1) {
-      favorites.push({
-        key: key,
-        issueId: favoriteButton.dataset.favoriteIssue,
-        issueFile: favoriteButton.dataset.favoriteFile,
-        period: favoriteButton.dataset.favoritePeriod,
-        competitor: favoriteButton.dataset.favoriteCompetitor,
-        action: favoriteButton.dataset.favoriteAction,
-        impact: favoriteButton.dataset.favoriteImpact,
-        topic: "未分类",
-        note: ""
-      });
-      favoriteButton.textContent = "已收藏";
-      favoriteButton.classList.add("is-saved");
-    } else {
-      favorites.splice(index, 1);
-      favoriteButton.textContent = "收藏动态";
-      favoriteButton.classList.remove("is-saved");
-    }
-    localStorage.setItem("legal-tech-weekly:favorites", JSON.stringify(favorites));
   });
 })();

@@ -71,6 +71,7 @@
 }
 .tool-button:hover,
 .tool-button:focus { filter: brightness(1.08); }
+.tool-button.is-saved { border-color: #75b9b0; background: #167d71; }
 .viewer-stats {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +90,12 @@
   font-size: 11px;
 }
 .viewer-stat strong { font-size: 13px; }
+.competitor-focus-target {
+  outline: 3px solid #dca64b !important;
+  outline-offset: 5px;
+  background: #fff8df !important;
+  transition: background .2s ease, outline-color .2s ease;
+}
 .viewer-content {
   width: min(1360px, calc(100% - 48px));
   margin: 0 auto;
