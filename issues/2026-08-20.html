@@ -828,8 +828,8 @@
                     <td>律师、诉讼团队</td>
                     <td>
                       <div class="product-shot-stack">
-                        <img src="assets/2026-08-20/alpha-1.png" alt="Alpha 产品截图 1" loading="lazy" decoding="async" onclick="openLightbox(this.src)" />
-                        <img src="assets/2026-08-20/alpha-2.png" alt="Alpha 产品截图 2" loading="lazy" decoding="async" onclick="openLightbox(this.src)" />
+                        <img src="assets/2026-08-20/alpha-1-thumb.png" data-full-src="assets/2026-08-20/alpha-1.png" alt="Alpha 产品截图 1，点击查看高清图" width="480" height="285" loading="lazy" decoding="async" tabindex="0" role="button" onclick="openLightbox(this.dataset.fullSrc)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this.dataset.fullSrc);}" />
+                        <img src="assets/2026-08-20/alpha-2-thumb.png" data-full-src="assets/2026-08-20/alpha-2.png" alt="Alpha 产品截图 2，点击查看高清图" width="480" height="285" loading="lazy" decoding="async" tabindex="0" role="button" onclick="openLightbox(this.dataset.fullSrc)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this.dataset.fullSrc);}" />
                       </div>
                     </td>
                     <td>我方已有争议焦点识别和法律培训材料生成 Skill，但类案检索覆盖与 Skill 供给较少；需补齐类案召回、观点聚合和可回源证据链。</td>
@@ -844,7 +844,7 @@
                     <td>律师、企业法务</td>
                     <td>
                       <div class="product-shot-stack">
-                        <img src="assets/2026-08-20/mework.png" alt="MeWork 产品截图" loading="lazy" decoding="async" onclick="openLightbox(this.src)" />
+                        <img src="assets/2026-08-20/mework-thumb.png" data-full-src="assets/2026-08-20/mework.png" alt="MeWork 产品截图，点击查看高清图" width="355" height="480" loading="lazy" decoding="async" tabindex="0" role="button" onclick="openLightbox(this.dataset.fullSrc)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this.dataset.fullSrc);}" />
                       </div>
                     </td>
                     <td>我方模型选择更丰富；MeWork 在法条检索过程可视化、结果回源超链接、报告式交付和本地处理上更完整。</td>
@@ -1077,6 +1077,10 @@
       <div class="footer">法律科技产品情报系统 · 第二期 · 2026/08/14—2026/08/20 · 内部信息整理与产品决策支持</div>
     </main>
   </div>
+  <div id="lightbox" aria-hidden="true">
+    <button type="button" id="lightbox-close" aria-label="关闭图片预览">×</button>
+    <img id="lightbox-img" alt="图片放大预览">
+  </div>
   <script>
     (function () {
       var buttons = Array.prototype.slice.call(document.querySelectorAll(".view-tab"));
@@ -1103,6 +1107,80 @@
         if (savedView === "actions" || savedView === "competitors") initialView = savedView;
       } catch (error) {}
       setView(initialView, false);
+    })();
+  </script>
+  <style>
+    .product-shot-stack img {
+      cursor: zoom-in;
+      object-fit: contain;
+      background: #f7fafc;
+    }
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(9, 18, 30, .86);
+      cursor: zoom-out;
+    }
+    #lightbox.is-open { display: flex; }
+    #lightbox-img {
+      display: block;
+      max-width: min(94vw, 1500px);
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 6px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.42);
+      object-fit: contain;
+      cursor: default;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(0,0,0,.35);
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    (function () {
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImage = document.getElementById("lightbox-img");
+      var closeButton = document.getElementById("lightbox-close");
+
+      window.openLightbox = function (src) {
+        lightboxImage.src = src;
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      };
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.removeAttribute("src");
+        document.body.style.overflow = "";
+      }
+
+      window.closeLightbox = closeLightbox;
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox || event.target === closeButton) closeLightbox();
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeLightbox();
+      });
     })();
   </script>
 </body>
