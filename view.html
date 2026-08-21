@@ -67,6 +67,12 @@
     </section>
 
     <section class="viewer-content">
+      <nav class="reader-quickbar" id="reader-quickbar" aria-label="周报快捷导航">
+        <a class="quickbar-home" id="quick-back-home" href="./">← 首页</a>
+        <div class="quickbar-sections" id="report-toc" aria-label="报告章节"></div>
+        <button class="quickbar-comment" id="comment-jump" type="button">评论区</button>
+      </nav>
+
       <div class="issue-frame-wrap issue-frame-loading" id="issue-frame-wrap">
         <div class="issue-loading-state" id="issue-loading-state" role="status" aria-live="polite">
           <span class="loading-spinner" aria-hidden="true"></span>
@@ -77,7 +83,7 @@
       </div>
 
       <div class="reader-footer-grid">
-        <section class="reader-panel">
+        <section class="reader-panel" id="discussion-panel">
           <div class="panel-heading">
             <div>
               <div class="eyebrow">DISCUSSION</div>

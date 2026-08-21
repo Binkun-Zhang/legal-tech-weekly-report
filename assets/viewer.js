@@ -12,10 +12,19 @@
   var viewCount = document.getElementById("view-count");
   var related = document.getElementById("related-issues");
   var favoriteIssueButton = document.getElementById("favorite-issue");
+  var quickBar = document.getElementById("reader-quickbar");
+  var quickBackHome = document.getElementById("quick-back-home");
+  var reportToc = document.getElementById("report-toc");
+  var commentJump = document.getElementById("comment-jump");
+  var discussionPanel = document.getElementById("discussion-panel");
   var config = null;
   var issues = [];
   var currentIssue = null;
   var frameLoadTimer = null;
+  var reportDocument = null;
+  var reportSections = [];
+  var reportResizeObserver = null;
+  var activeScrollFrame = null;
 
   function escapeHtml(value) {
     return String(value)
@@ -28,6 +37,128 @@
 
   function relativeViewer(file) {
     return "view.html?issue=" + encodeURIComponent(file);
+  }
+
+  function getReportDocument() {
+    try {
+      return frame.contentDocument || frame.contentWindow.document;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function getReaderOffset() {
+    var siteHeader = document.querySelector(".site-header");
+    var headerHeight = siteHeader ? siteHeader.getBoundingClientRect().height : 0;
+    var quickBarHeight = quickBar ? quickBar.getBoundingClientRect().height : 48;
+    return headerHeight + quickBarHeight + 18;
+  }
+
+  function getReportNodeTop(node) {
+    var frameRect = frame.getBoundingClientRect();
+    return window.scrollY + frameRect.top + node.getBoundingClientRect().top;
+  }
+
+  function resizeFrame() {
+    var doc = reportDocument || getReportDocument();
+    if (!doc || !doc.documentElement) return;
+    var body = doc.body;
+    var height = Math.max(
+      doc.documentElement.scrollHeight,
+      doc.documentElement.offsetHeight,
+      body ? body.scrollHeight : 0,
+      body ? body.offsetHeight : 0,
+      180
+    );
+    frame.style.height = height + "px";
+    updateActiveReportSection();
+  }
+
+  function injectReportLayoutStyles(doc) {
+    if (doc.getElementById("viewer-layout-overrides")) return;
+    var style = doc.createElement("style");
+    style.id = "viewer-layout-overrides";
+    style.textContent =
+      "html,body{overflow:visible!important;min-height:0!important}" +
+      "body{background:#fff!important}" +
+      ".topbar,.sidebar{display:none!important}" +
+      ".layout{display:block!important;max-width:none!important}" +
+      "main{padding:30px 34px 68px!important}" +
+      ".section{scroll-margin-top:120px!important}" +
+      "@media(max-width:760px){main{padding:24px 16px 52px!important}}";
+    (doc.head || doc.documentElement).appendChild(style);
+  }
+
+  function updateActiveReportSection() {
+    if (!reportSections.length || !reportToc) return;
+    var threshold = window.scrollY + getReaderOffset() + 12;
+    var active = reportSections[0];
+    reportSections.forEach(function (section) {
+      if (getReportNodeTop(section) <= threshold) active = section;
+    });
+    Array.prototype.forEach.call(reportToc.querySelectorAll("[data-section-id]"), function (button) {
+      button.classList.toggle("is-active", button.getAttribute("data-section-id") === active.id);
+    });
+  }
+
+  function scrollToReportNode(node) {
+    if (!node) return;
+    var top = getReportNodeTop(node) - getReaderOffset();
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    updateActiveReportSection();
+  }
+
+  function buildReportToc(doc) {
+    if (!reportToc) return;
+    reportSections = Array.prototype.filter.call(
+      doc.querySelectorAll("section.section[id]"),
+      function (section) { return section.querySelector("h2,h3"); }
+    );
+    reportToc.innerHTML = "";
+    reportSections.forEach(function (section) {
+      var heading = section.querySelector("h2,h3");
+      var number = section.querySelector(".section-no");
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "quickbar-section";
+      button.setAttribute("data-section-id", section.id);
+      button.textContent = (number ? number.textContent.trim() + " " : "") +
+        heading.textContent.trim();
+      button.addEventListener("click", function () {
+        scrollToReportNode(section);
+      });
+      reportToc.appendChild(button);
+    });
+    reportToc.hidden = reportSections.length === 0;
+    updateActiveReportSection();
+  }
+
+  function watchReportLayout(doc) {
+    if (reportResizeObserver) reportResizeObserver.disconnect();
+    var ResizeObserverCtor = window.ResizeObserver ||
+      (frame.contentWindow && frame.contentWindow.ResizeObserver);
+    if (ResizeObserverCtor) {
+      reportResizeObserver = new ResizeObserverCtor(function () {
+        resizeFrame();
+      });
+      reportResizeObserver.observe(doc.documentElement);
+      if (doc.body) reportResizeObserver.observe(doc.body);
+    }
+    Array.prototype.forEach.call(doc.images || [], function (image) {
+      image.addEventListener("load", resizeFrame);
+    });
+    window.setTimeout(resizeFrame, 0);
+    window.setTimeout(resizeFrame, 120);
+    window.setTimeout(resizeFrame, 600);
+  }
+
+  function prepareReportDocument() {
+    var doc = getReportDocument();
+    if (!doc) return;
+    reportDocument = doc;
+    injectReportLayoutStyles(doc);
+    buildReportToc(doc);
+    watchReportLayout(doc);
   }
 
   function readIssueFavorites() {
@@ -103,7 +234,7 @@
         "transition:background .2s ease,outline-color .2s ease}";
       doc.head.appendChild(style);
     }
-    target.scrollIntoView({ block: "center", behavior: "smooth" });
+    scrollToReportNode(target);
     target.classList.add("competitor-focus-target");
     window.setTimeout(function () {
       target.classList.remove("competitor-focus-target");
@@ -209,6 +340,7 @@
     frameWrap.classList.remove("issue-frame-loading");
     loadingState.hidden = true;
     if (fromPage === "competitor") focusCompetitorInFrame(fromCompetitor);
+    updateActiveReportSection();
   }
 
   function init(issueData, siteConfig) {
@@ -226,6 +358,7 @@
     publishedDate.textContent = currentIssue.publishedAt;
     document.title = currentIssue.title + "｜法律科技竞品监控周报";
     frame.addEventListener("load", function () {
+      prepareReportDocument();
       finishFrameLoading();
     }, { once: true });
     frameLoadTimer = window.setTimeout(finishFrameLoading, 10000);
@@ -236,6 +369,9 @@
       backButton.textContent = "← 返回竞品档案";
       backButton.setAttribute("aria-label", "返回竞品档案");
     }
+    quickBackHome.href = fromPage === "competitor"
+      ? "competitor.html?name=" + encodeURIComponent(fromCompetitor)
+      : "./";
     document.getElementById("discussion-link").href = config.discussionUrl || "#";
     document.getElementById("report-button").href = config.reportUrl || "#";
     updateLocalViewCount(currentIssue);
@@ -251,6 +387,18 @@
       window.history.back();
     }
   });
+
+  commentJump.addEventListener("click", function () {
+    discussionPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  window.addEventListener("scroll", function () {
+    if (activeScrollFrame) return;
+    activeScrollFrame = window.requestAnimationFrame(function () {
+      activeScrollFrame = null;
+      updateActiveReportSection();
+    });
+  }, { passive: true });
 
   document.getElementById("share-button").addEventListener("click", function () {
     var shareData = { title: document.title, text: "法律科技竞品监控周报：" + (currentIssue ? currentIssue.period : ""), url: window.location.href };

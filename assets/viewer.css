@@ -101,6 +101,72 @@
   margin: 0 auto;
   padding: 28px 0 56px;
 }
+.reader-quickbar {
+  position: sticky;
+  top: 72px;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  margin-bottom: 16px;
+  padding: 7px 9px;
+  border: 1px solid #d7e1e9;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 7px 18px rgba(20,42,67,.08);
+  backdrop-filter: blur(10px);
+}
+.quickbar-home,
+.quickbar-comment,
+.quickbar-section {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 6px 9px;
+  border: 1px solid #d7e1e9;
+  border-radius: 5px;
+  color: #53677c;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.quickbar-home:hover,
+.quickbar-home:focus,
+.quickbar-comment:hover,
+.quickbar-comment:focus,
+.quickbar-section:hover,
+.quickbar-section:focus,
+.quickbar-section.is-active {
+  border-color: #75b9b0;
+  color: #126d65;
+  background: #effaf8;
+}
+.quickbar-comment {
+  flex: 0 0 auto;
+  color: #fff;
+  border-color: #2069d7;
+  background: #2069d7;
+  cursor: pointer;
+}
+.quickbar-comment:hover,
+.quickbar-comment:focus {
+  color: #fff;
+  border-color: #185bbd;
+  background: #185bbd;
+}
+.quickbar-sections {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 6px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.quickbar-sections::-webkit-scrollbar { height: 4px; }
+.quickbar-sections::-webkit-scrollbar-thumb { background: #b8c9d7; border-radius: 999px; }
+.quickbar-section { cursor: pointer; }
 .issue-frame-wrap {
   position: relative;
   overflow: hidden;
@@ -146,6 +212,7 @@
   border: 0;
   background: #fff;
 }
+.reader-panel { scroll-margin-top: 138px; }
 .reader-footer-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(280px, .8fr);
@@ -208,6 +275,9 @@
 @media (max-width: 760px) {
   .viewer-header-inner,
   .viewer-content { width: min(100% - 30px, 1360px); }
+  .reader-quickbar { top: 62px; }
+  .quickbar-home { padding-inline: 8px; }
+  .quickbar-comment { padding-inline: 8px; }
   .viewer-title-row,
   .reader-footer-grid { grid-template-columns: 1fr; display: grid; }
   .viewer-tools { justify-content: flex-start; }
