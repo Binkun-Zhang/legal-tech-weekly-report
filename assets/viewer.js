@@ -371,7 +371,8 @@
       finishFrameLoading();
     }, { once: true });
     frameLoadTimer = window.setTimeout(finishFrameLoading, 10000);
-    frame.src = currentIssue.file;
+    var issueVersion = currentIssue.updatedAt || currentIssue.publishedAt || "latest";
+    frame.src = currentIssue.file + "?v=" + encodeURIComponent(String(issueVersion).replace(/-/g, ""));
     if (fromPage === "competitor" && fromCompetitor) {
       var backButton = document.getElementById("back-home");
       backButton.href = "competitor.html?name=" + encodeURIComponent(fromCompetitor);
