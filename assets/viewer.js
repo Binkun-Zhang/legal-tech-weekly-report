@@ -9,6 +9,8 @@
   var issueTitle = document.getElementById("issue-title");
   var issuePeriod = document.getElementById("issue-period");
   var publishedDate = document.getElementById("published-date");
+  var issueEditors = document.getElementById("issue-editors");
+  var issueReviewers = document.getElementById("issue-reviewers");
   var viewCount = document.getElementById("view-count");
   var related = document.getElementById("related-issues");
   var favoriteIssueButton = document.getElementById("favorite-issue");
@@ -33,6 +35,11 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
+  }
+
+  function formatPeople(people) {
+    if (Array.isArray(people)) return people.join("、");
+    return people ? String(people) : "—";
   }
 
   function relativeViewer(file) {
@@ -356,6 +363,8 @@
     issueTitle.textContent = currentIssue.title;
     issuePeriod.textContent = currentIssue.period;
     publishedDate.textContent = currentIssue.publishedAt;
+    issueEditors.textContent = formatPeople(currentIssue.editors);
+    issueReviewers.textContent = formatPeople(currentIssue.reviewers);
     document.title = currentIssue.title + "｜法律科技竞品监控周报";
     frame.addEventListener("load", function () {
       prepareReportDocument();
