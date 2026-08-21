@@ -15,6 +15,7 @@
   var config = null;
   var issues = [];
   var currentIssue = null;
+  var frameLoadTimer = null;
 
   function escapeHtml(value) {
     return String(value)
@@ -200,6 +201,16 @@
     target.appendChild(script);
   }
 
+  function finishFrameLoading() {
+    if (frameLoadTimer) {
+      window.clearTimeout(frameLoadTimer);
+      frameLoadTimer = null;
+    }
+    frameWrap.classList.remove("issue-frame-loading");
+    loadingState.hidden = true;
+    if (fromPage === "competitor") focusCompetitorInFrame(fromCompetitor);
+  }
+
   function init(issueData, siteConfig) {
     config = siteConfig || {};
     issues = issueData.sort(function (a, b) {
@@ -214,12 +225,11 @@
     issuePeriod.textContent = currentIssue.period;
     publishedDate.textContent = currentIssue.publishedAt;
     document.title = currentIssue.title + "｜法律科技竞品监控周报";
-    frame.src = currentIssue.file;
     frame.addEventListener("load", function () {
-      frameWrap.classList.remove("issue-frame-loading");
-      loadingState.hidden = true;
-      if (fromPage === "competitor") focusCompetitorInFrame(fromCompetitor);
+      finishFrameLoading();
     }, { once: true });
+    frameLoadTimer = window.setTimeout(finishFrameLoading, 10000);
+    frame.src = currentIssue.file;
     if (fromPage === "competitor" && fromCompetitor) {
       var backButton = document.getElementById("back-home");
       backButton.href = "competitor.html?name=" + encodeURIComponent(fromCompetitor);
@@ -267,5 +277,6 @@
   }).catch(function () {
     issueTitle.textContent = "周报加载失败";
     issuePeriod.textContent = "请从网站首页重新进入，或检查站点是否通过 HTTP 服务打开。";
+    finishFrameLoading();
   });
 })();

@@ -68,12 +68,12 @@
 
     <section class="viewer-content">
       <div class="issue-frame-wrap issue-frame-loading" id="issue-frame-wrap">
-        <div class="issue-loading-state" id="issue-loading-state">
+        <div class="issue-loading-state" id="issue-loading-state" role="status" aria-live="polite">
           <span class="loading-spinner" aria-hidden="true"></span>
           <strong>正在准备周报正文</strong>
           <span>证据截图会按需加载，不影响先阅读摘要信息。</span>
         </div>
-        <iframe id="issue-frame" title="周报正文" loading="lazy"></iframe>
+        <iframe id="issue-frame" title="周报正文"></iframe>
       </div>
 
       <div class="reader-footer-grid">

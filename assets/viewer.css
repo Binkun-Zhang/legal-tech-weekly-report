@@ -108,19 +108,21 @@
   background: #fff;
   box-shadow: 0 15px 36px rgba(20,42,67,.08);
 }
-.issue-frame-loading {
-  min-height: 180px;
-}
 .issue-loading-state {
-  min-height: 180px;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 7px;
+  min-height: 180px;
   color: var(--muted);
+  background: #fff;
   font-size: 12px;
 }
+.issue-loading-state[hidden] { display: none; }
 .issue-loading-state strong {
   color: var(--ink);
   font-size: 15px;
@@ -139,6 +141,7 @@
 #issue-frame {
   width: 100%;
   height: min(82vh, 920px);
+  min-height: 180px;
   display: block;
   border: 0;
   background: #fff;
