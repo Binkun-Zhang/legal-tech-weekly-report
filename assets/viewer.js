@@ -478,7 +478,7 @@
   });
 
   Promise.all([
-    fetch("data/issues.json").then(function (response) { return response.json(); }),
+    fetch("data/issues.json?v=20260828-9").then(function (response) { return response.json(); }),
     fetch("data/site-config.json").then(function (response) { return response.json(); })
   ]).then(function (result) {
     init(result[0], result[1]);
