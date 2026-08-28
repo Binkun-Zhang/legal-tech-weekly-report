@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-08-27",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/08/21—2026/08/27",
+    "periodStart": "2026-08-21",
+    "periodEnd": "2026-08-27",
+    "publishedAt": "2026-08-27",
+    "updatedAt": "2026-08-28",
+    "editors": ["待补充"],
+    "reviewers": ["待补充"],
+    "file": "issues/2026-08-27.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦法律 AI 从模型回答向任务交付迁移的产品信号，覆盖竞品功能评测、行业政策、法律科技文章、论文与 GitHub Skill。",
+    "decisionSummary": {
+      "focus": "法律 AI 的竞争重点正在从单点生成质量转向材料读取、检索、判断、起草、校验、交付和留痕的完整闭环。",
+      "risk": "模型、Skill、连接器和专业数据快速组合，若只比较问答效果，容易忽略证据回源、权限、成本和结果可验证性。",
+      "action": "将缺失事实追问、法规版本核验、合同终审错误检测、证据回源和人工复核指标纳入产品建设与专项评测。"
+    },
+    "competitors": ["Alpha AI", "幂律智能", "北大法宝", "威科先行", "WorkBuddy"],
+    "highlights": [
+      {
+        "competitor": "得理法搜",
+        "action": "地产工程专家上线",
+        "impact": "通过建工专属法规、案例、工程文件和四类专项 Skill 深入垂直场景，显示法律 AI 正在围绕行业任务拆解能力。",
+        "evidence": "3A.1 / S04"
+      },
+      {
+        "competitor": "威科先行",
+        "action": "Libra AI Workspace 强化知识底座",
+        "impact": "将受信法律内容组织为可供 AI 使用的知识图谱，强化法律研究中的上下文关联和可追溯性。",
+        "evidence": "3A.3 / S02"
+      },
+      {
+        "competitor": "WorkBuddy",
+        "action": "接入 GLM-5.3-Flash",
+        "impact": "模型入口与政务工作流结合，说明组织级智能体正在成为法律与合规产品可借鉴的集成入口。",
+        "evidence": "3A.3 / S03"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "记忆能力与自研模型并进",
+        "impact": "长期工作流记忆和模型层控制同时推进，法律 AI 竞争从应用层延伸到模型栈、任务路由和组织协作。",
+        "evidence": "3A.2 / S10 / S11"
+      },
+      {
+        "competitor": "LexisNexis",
+        "action": "Protégé Skills 与创新实验室推进交付",
+        "impact": "专业内容、Skill 和客户共创形成闭环，体现法律 AI 从功能发布走向复杂工作流交付。",
+        "evidence": "3A.3 / 3A.5 / S06 / S20"
+      },
+      {
+        "competitor": "GitHub 生态",
+        "action": "法律 Skill 与 Agent 上下文基础设施升温",
+        "impact": "claude-for-legal、awesome-legal-skills 和 OpenViking 等项目，分别从法律工作流、可移植技能和统一上下文层提供开源参考。",
+        "evidence": "GitHub Skill / S30-S33"
+      }
+    ]
+  },
+  {
     "id": "2026-08-20",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/08/14—2026/08/20",
