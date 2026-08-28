@@ -38,7 +38,7 @@
 .viewer-title-row h1 {
   max-width: 780px;
   margin: 7px 0 3px;
-  font-size: clamp(26px, 4vw, 42px);
+  font-size: 42px;
   line-height: 1.2;
 }
 .viewer-period {
@@ -90,6 +90,33 @@
   font-size: 11px;
 }
 .viewer-stat strong { font-size: 13px; }
+.viewer-insight-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+.viewer-insight {
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+}
+.viewer-insight span {
+  display: block;
+  margin-bottom: 6px;
+  color: #9eb4c6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+.viewer-insight strong {
+  display: block;
+  color: #f4f8fb;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 600;
+}
 .competitor-focus-target {
   outline: 3px solid #dca64b !important;
   outline-offset: 5px;
@@ -280,8 +307,11 @@
   .quickbar-comment { padding-inline: 8px; }
   .viewer-title-row,
   .reader-footer-grid { grid-template-columns: 1fr; display: grid; }
+  .viewer-title-row h1 { font-size: 30px; }
   .viewer-tools { justify-content: flex-start; }
   .viewer-stats { gap: 17px; }
+  .viewer-insight-strip { grid-template-columns: 1fr; }
   #issue-frame { height: 78vh; }
   .reader-panel { padding: 20px; }
+  .article-item-bottom { align-items: flex-start; flex-direction: column; gap: 7px; }
 }

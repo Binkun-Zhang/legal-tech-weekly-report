@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="法律科技竞品监控周报单期阅读页">
   <title>周报阅读｜法律科技竞品监控周报</title>
-  <link rel="stylesheet" href="assets/site.css">
-  <link rel="stylesheet" href="assets/viewer.css?v=20260821">
+  <link rel="stylesheet" href="assets/site.css?v=20260828-6">
+  <link rel="stylesheet" href="assets/viewer.css?v=20260828-8">
 </head>
 <body class="viewer-page">
   <header class="site-header">
@@ -71,6 +71,20 @@
             <strong id="issue-reviewers">—</strong>
           </div>
         </div>
+        <div class="viewer-insight-strip" aria-label="本期决策摘要">
+          <div class="viewer-insight">
+            <span>本期看点</span>
+            <strong id="issue-focus">—</strong>
+          </div>
+          <div class="viewer-insight">
+            <span>主要风险</span>
+            <strong id="issue-risk">—</strong>
+          </div>
+          <div class="viewer-insight">
+            <span>建议动作</span>
+            <strong id="issue-action">—</strong>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -114,6 +128,23 @@
     </section>
   </main>
 
+  <div class="guide-backdrop" id="feature-guide" hidden>
+    <section class="feature-guide" role="dialog" aria-modal="true" aria-labelledby="feature-guide-title">
+      <div class="guide-kicker">READER GUIDE</div>
+      <h2 id="feature-guide-title">这份周报可以这样使用</h2>
+      <p class="guide-intro">先用一分钟了解阅读、整期收藏和讨论功能，再开始查看本期内容。</p>
+      <div class="guide-grid">
+        <div class="guide-step"><span>01</span><strong>收藏本期</strong><p>顶部的“收藏本期”只保存完整周报，之后可在工作台继续查看和备注。</p></div>
+        <div class="guide-step"><span>02</span><strong>来源核验</strong><p>正文中的证据编号和来源均可点击，支持回到原始页面核验日期与事实。</p></div>
+        <div class="guide-step"><span>03</span><strong>讨论与回看</strong><p>底部可进入讨论区，右上角可返回首页、查看相关期次或分享本期。</p></div>
+      </div>
+      <label class="guide-preference"><input id="guide-dismiss" type="checkbox" checked> 下次不再显示功能指引</label>
+      <div class="guide-actions">
+        <button class="primary-action" id="guide-confirm" type="button">开始阅读 <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <span>法律科技产品情报系统</span>
@@ -122,6 +153,6 @@
   </footer>
 
   <script defer src="https://events.vercount.one/js"></script>
-  <script src="assets/viewer.js?v=20260821"></script>
+  <script src="assets/viewer.js?v=20260828-8"></script>
 </body>
 </html>

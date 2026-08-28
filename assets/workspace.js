@@ -6,6 +6,12 @@
   var issues = [];
   var currentTopic = "";
   var latestIssue = null;
+  var favoriteChannel = null;
+  try {
+    favoriteChannel = window.BroadcastChannel ? new BroadcastChannel("legal-tech-weekly:favorites") : null;
+  } catch (error) {
+    favoriteChannel = null;
+  }
 
   var defaultTopics = [
     "未分类",
@@ -148,6 +154,14 @@
     renderTopic();
   }
 
+  function refreshFavoritesFromStorage() {
+    favorites = readJson(favoriteStorageKey, []).filter(function (favorite) {
+      return favorite && favorite.issueId && favorite.issueFile &&
+        (!favorite.type || favorite.type === "issue");
+    });
+    renderAll();
+  }
+
   function toggleIssueFavorite(issue) {
     var key = issueFavoriteKey(issue);
     var index = favorites.findIndex(function (favorite) { return favorite.key === key; });
@@ -228,6 +242,20 @@
     renderStats();
   });
 
+  window.addEventListener("storage", function (event) {
+    if (event.key === favoriteStorageKey) refreshFavoritesFromStorage();
+  });
+
+  if (favoriteChannel) {
+    favoriteChannel.addEventListener("message", function () {
+      refreshFavoritesFromStorage();
+    });
+  }
+
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) refreshFavoritesFromStorage();
+  });
+
   document.getElementById("create-topic").addEventListener("click", function () {
     var input = document.getElementById("new-topic");
     var value = input.value.trim();
@@ -247,7 +275,8 @@
     });
     latestIssue = issues[0];
     favorites = readJson(favoriteStorageKey, []).filter(function (favorite) {
-      return favorite && favorite.issueId && favorite.issueFile && !favorite.competitor && !favorite.action;
+      return favorite && favorite.issueId && favorite.issueFile &&
+        (!favorite.type || favorite.type === "issue");
     });
     renderAll();
   }).catch(function () {

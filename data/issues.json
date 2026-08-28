@@ -12,14 +12,17 @@
     "file": "issues/2026-08-20.html",
     "tags": ["竞品", "行业政策", "法律科技论文", "GitHub Skill", "测评与技术文章"],
     "summary": "本期重点跟踪 iCourt Alpha 与幂律智能 MeWork 的产品功能突破，并补充法律科技论文、GitHub Skill、行业政策与技术测评。",
+    "decisionSummary": {
+      "focus": "AlphaGPT 类案检索 Pro、AlphaClaw 法律 Skill 与 MeWork 内测，显示法律 AI 正从单点问答走向可核验的连续工作流。",
+      "risk": "产品竞争正在向证据回源、跨产品协作、模型记忆和训练数据基础设施延伸，单纯比较问答效果已不足以解释竞争力。",
+      "action": "优先验证证据链、报告交付、任务记忆和 Skill 编排能力，并围绕高频法律场景设计可量化的对比评测。"
+    },
     "competitors": [
       "Alpha AI",
       "幂律智能",
-      "WorkBuddy",
-      "Harvey",
-      "DeepJudge",
-      "Seedless",
-      "Qwen"
+      "北大法宝",
+      "威科先行",
+      "WorkBuddy"
     ],
     "highlights": [
       {
@@ -73,13 +76,17 @@
     "file": "issues/2026-08-12.html",
     "tags": ["竞品", "行业政策", "法律科技论文", "测评与技术文章"],
     "summary": "本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。",
+    "decisionSummary": {
+      "focus": "Alpha 的功能迭代、幂律智能的责任险设计，以及北大法宝和威科先行的数据库增值路径，是本期最值得跟进的产品信号。",
+      "risk": "法律 AI 的差异化同时受到责任保障、专业数据库、MCP 生态和垂直工作流的影响，通用模型能力可能快速同质化。",
+      "action": "补齐产品责任与证据可核验设计，持续评测 MCP 接入和专业内容增值，并把合同审查、类案检索等场景拆成可复用工作流。"
+    },
     "competitors": [
       "Alpha AI",
       "幂律智能",
       "北大法宝",
       "威科先行",
-      "BigHand / Ayora",
-      "DeepSeek"
+      "WorkBuddy"
     ],
     "highlights": [
       {

@@ -62,7 +62,7 @@
 
   function loadData() {
     return Promise.all([
-      fetch("data/competitors.json").then(function (r) { return r.json(); }),
+      fetch("data/competitors.json?v=20260828-8").then(function (r) { return r.json(); }),
       fetch("data/issues.json").then(function (r) { return r.json(); }),
       fetch("data/glossary.json").then(function (r) { return r.json(); })
     ]).then(function (data) {

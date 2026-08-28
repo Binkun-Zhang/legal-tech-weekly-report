@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="法律科技产品竞品监控周报，持续追踪法律 AI 产品、行业政策、论文与技术测评。">
   <title>法律科技竞品监控周报</title>
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=20260828-6">
 </head>
 <body>
   <header class="site-header">
@@ -81,6 +81,63 @@
         </div>
       </article>
 
+      <section class="decision-dashboard" id="decision-dashboard" aria-labelledby="decision-dashboard-title">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">WEEKLY DECISION BRIEF</div>
+            <h2 id="decision-dashboard-title">本周决策摘要</h2>
+          </div>
+          <span class="section-note" id="dashboard-period">—</span>
+        </div>
+        <div class="metric-grid">
+          <a class="metric-card metric-card-blue" href="#monitor-console">
+            <span>本周新增动态</span>
+            <strong id="metric-signal-count">0</strong>
+            <small>进入检索查看重点动态</small>
+          </a>
+          <a class="metric-card metric-card-red" href="#monitor-console">
+            <span>P0 重点动态</span>
+            <strong id="metric-priority-count">0</strong>
+            <small>进入检索查看重点动态</small>
+          </a>
+          <a class="metric-card metric-card-teal" href="#competitor-directory">
+            <span>重点竞品</span>
+            <strong id="metric-competitor-count">0</strong>
+            <small>进入竞品档案追踪</small>
+          </a>
+          <a class="metric-card metric-card-amber" href="#monitor-console">
+            <span>待核验事项</span>
+            <strong id="metric-review-count">0</strong>
+            <small>进入检索查看重点动态</small>
+          </a>
+        </div>
+        <div class="dashboard-columns">
+          <div class="focus-panel">
+            <div class="panel-heading">
+              <div>
+                <div class="eyebrow">TOP SIGNALS</div>
+                <h3>本周重点</h3>
+              </div>
+              <span class="section-note">3—5 条</span>
+            </div>
+            <div class="focus-list" id="focus-list"></div>
+          </div>
+          <div class="brief-panel">
+            <div class="eyebrow">PRODUCT READOUT</div>
+            <h3>产品判断</h3>
+            <p id="dashboard-focus">—</p>
+            <div class="brief-row">
+              <span>主要风险</span>
+              <strong id="dashboard-risk">—</strong>
+            </div>
+            <div class="brief-row">
+              <span>建议动作</span>
+              <strong id="dashboard-action">—</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="monitor-console" id="monitor-console">
         <div class="section-heading">
           <div>
@@ -89,11 +146,14 @@
           </div>
           <button class="ghost-button" id="clear-filters" type="button">清除筛选</button>
         </div>
-        <div class="filter-grid">
+        <form class="search-field-row" id="archive-search-form">
           <label class="filter-field">
             <span>关键词</span>
             <input id="archive-search" type="search" placeholder="搜索周报、竞品、主题或摘要" autocomplete="off">
           </label>
+          <button class="search-submit" id="search-submit" type="submit">搜索</button>
+        </form>
+        <div class="filter-grid">
           <label class="filter-field">
             <span>开始日期</span>
             <input id="date-from" type="date">
@@ -115,6 +175,18 @@
           <span id="filter-summary">正在加载周报目录…</span>
           <span class="filter-tip">筛选条件会同步到网址，可直接分享给同事</span>
         </div>
+        <section class="search-results-panel" id="search-results-panel" aria-labelledby="search-results-title" hidden>
+          <div class="section-heading search-results-heading">
+            <div>
+              <div class="eyebrow">SEARCH RESULTS</div>
+              <h3 id="search-results-title">检索结果</h3>
+            </div>
+            <span class="section-note" id="search-result-summary">—</span>
+          </div>
+          <p class="panel-copy" id="search-result-hint">输入关键词后点击搜索，结果会按相关度排序。</p>
+          <div class="search-result-list" id="search-result-list" aria-live="polite"></div>
+          <div class="empty-state" id="search-empty-state" hidden>没有找到匹配的周报，请换一个关键词试试。</div>
+        </section>
       </section>
 
       <section class="profile-directory" id="competitor-directory">
@@ -161,6 +233,6 @@
     </div>
   </footer>
 
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=20260828-6"></script>
 </body>
 </html>

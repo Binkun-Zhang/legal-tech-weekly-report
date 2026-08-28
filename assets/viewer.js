@@ -11,6 +11,9 @@
   var publishedDate = document.getElementById("published-date");
   var issueEditors = document.getElementById("issue-editors");
   var issueReviewers = document.getElementById("issue-reviewers");
+  var issueFocus = document.getElementById("issue-focus");
+  var issueRisk = document.getElementById("issue-risk");
+  var issueAction = document.getElementById("issue-action");
   var viewCount = document.getElementById("view-count");
   var related = document.getElementById("related-issues");
   var favoriteIssueButton = document.getElementById("favorite-issue");
@@ -19,6 +22,9 @@
   var reportToc = document.getElementById("report-toc");
   var commentJump = document.getElementById("comment-jump");
   var discussionPanel = document.getElementById("discussion-panel");
+  var featureGuide = document.getElementById("feature-guide");
+  var guideConfirm = document.getElementById("guide-confirm");
+  var guideDismiss = document.getElementById("guide-dismiss");
   var config = null;
   var issues = [];
   var currentIssue = null;
@@ -27,6 +33,7 @@
   var reportSections = [];
   var reportResizeObserver = null;
   var activeScrollFrame = null;
+  var fromAction = params.get("action") || "";
 
   function escapeHtml(value) {
     return String(value)
@@ -64,6 +71,10 @@
   function getReportNodeTop(node) {
     var frameRect = frame.getBoundingClientRect();
     return window.scrollY + frameRect.top + node.getBoundingClientRect().top;
+  }
+
+  function priorityForHighlight(highlight, index) {
+    return highlight.priority || (index < 2 ? "P0" : "P1");
   }
 
   function resizeFrame() {
@@ -171,7 +182,10 @@
   function readIssueFavorites() {
     try {
       var favorites = JSON.parse(localStorage.getItem("legal-tech-weekly:issue-favorites") || "[]");
-      return Array.isArray(favorites) ? favorites : [];
+      return Array.isArray(favorites) ? favorites.filter(function (item) {
+        return item && item.issueId && item.issueFile &&
+          (!item.type || item.type === "issue");
+      }) : [];
     } catch (error) {
       return [];
     }
@@ -193,6 +207,7 @@
     if (index === -1) {
       favorites.push({
         key: key,
+        type: "issue",
         issueId: currentIssue.id,
         issueFile: currentIssue.file,
         period: currentIssue.period,
@@ -208,10 +223,10 @@
     updateFavoriteIssueButton();
   }
 
-  function focusCompetitorInFrame(name) {
-    if (!name || !frame.contentDocument) return;
+  function focusCompetitorInFrame(name, action) {
+    if ((!name && !action) || !frame.contentDocument) return;
     var doc = frame.contentDocument;
-    var normalizedName = name.replace(/\s+/g, "");
+    var normalizedName = (name || "").replace(/\s+/g, "");
     var aliases = {
       "AlphaAI": ["Alpha AI", "iCourt", "AlphaClaw"],
       "幂律智能": ["幂律智能", "吾律AI", "MeFlow"],
@@ -220,14 +235,25 @@
       "BigHand/Ayora": ["BigHand", "Ayora"],
       "DeepSeek": ["DeepSeek"]
     };
-    var terms = aliases[normalizedName] || [name];
+    var terms = aliases[normalizedName] || (name ? [name] : []);
+    var actionTerm = action ? action.replace(/\s+/g, "") : "";
     function containsTerm(node) {
       var text = (node.textContent || "").replace(/\s+/g, "");
+      if (!terms.length) return true;
       return terms.some(function (term) {
         return text.indexOf(term.replace(/\s+/g, "")) !== -1;
       });
     }
-    var target = Array.prototype.slice.call(doc.querySelectorAll(".competitor-sheet")).find(containsTerm);
+    var target = Array.prototype.slice.call(doc.querySelectorAll("section.section:not(#appendix) tbody tr")).find(function (row) {
+      var text = (row.textContent || "").replace(/\s+/g, "");
+      return containsTerm(row) && (!actionTerm || text.indexOf(actionTerm) !== -1);
+    });
+    if (!target) {
+      target = Array.prototype.slice.call(doc.querySelectorAll(".competitor-sheet")).find(function (node) {
+        var text = (node.textContent || "").replace(/\s+/g, "");
+        return containsTerm(node) && (!actionTerm || text.indexOf(actionTerm) !== -1);
+      });
+    }
     if (!target) {
       target = Array.prototype.slice.call(doc.querySelectorAll(".competitor-name,h2,h3,h4,td")).find(containsTerm);
     }
@@ -246,6 +272,14 @@
     window.setTimeout(function () {
       target.classList.remove("competitor-focus-target");
     }, 4200);
+  }
+
+  function renderDecisionSummary() {
+    var summary = currentIssue && currentIssue.decisionSummary;
+    var highlights = (currentIssue && currentIssue.highlights) || [];
+    issueFocus.textContent = (summary && summary.focus) || (highlights[0] ? highlights[0].impact : "本期暂无摘要。");
+    issueRisk.textContent = (summary && summary.risk) || "重点关注来源日期、产品自述与独立验证之间的差异。";
+    issueAction.textContent = (summary && summary.action) || "进入重点竞品档案，继续观察后续变化。";
   }
 
   function localViewKey(issue) {
@@ -339,6 +373,20 @@
     target.appendChild(script);
   }
 
+  function setupFeatureGuide() {
+    if (!featureGuide || !guideConfirm) return;
+    var guideKey = "legal-tech-weekly:feature-guide-seen:v1";
+    if (localStorage.getItem(guideKey) === "1") return;
+    featureGuide.hidden = false;
+    document.body.classList.add("guide-is-open");
+    guideConfirm.addEventListener("click", function () {
+      if (guideDismiss && guideDismiss.checked) localStorage.setItem(guideKey, "1");
+      else localStorage.removeItem(guideKey);
+      featureGuide.hidden = true;
+      document.body.classList.remove("guide-is-open");
+    });
+  }
+
   function finishFrameLoading() {
     if (frameLoadTimer) {
       window.clearTimeout(frameLoadTimer);
@@ -346,7 +394,7 @@
     }
     frameWrap.classList.remove("issue-frame-loading");
     loadingState.hidden = true;
-    if (fromPage === "competitor") focusCompetitorInFrame(fromCompetitor);
+    if (fromPage === "competitor") focusCompetitorInFrame(fromCompetitor, fromAction);
     updateActiveReportSection();
   }
 
@@ -365,6 +413,7 @@
     publishedDate.textContent = currentIssue.publishedAt;
     issueEditors.textContent = formatPeople(currentIssue.editors);
     issueReviewers.textContent = formatPeople(currentIssue.reviewers);
+    renderDecisionSummary();
     document.title = currentIssue.title + "｜法律科技竞品监控周报";
     frame.addEventListener("load", function () {
       prepareReportDocument();
@@ -389,10 +438,11 @@
     renderRelated();
     loadGiscus();
     updateFavoriteIssueButton();
+    setupFeatureGuide();
   }
 
   document.getElementById("back-home").addEventListener("click", function (event) {
-    if (document.referrer && window.history.length > 1) {
+    if (document.referrer && window.history.length > 1 && document.referrer.indexOf(window.location.origin) === 0) {
       event.preventDefault();
       window.history.back();
     }

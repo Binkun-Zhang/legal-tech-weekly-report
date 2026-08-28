@@ -40,6 +40,12 @@
 .saved-item-meta span + span { color: var(--muted); font-weight: 400; }
 .saved-item-body h3 { margin: 0 0 4px; font-size: 16px; }
 .saved-item-body p { margin: 0; color: var(--muted); font-size: 13px; }
+.saved-evidence {
+  margin-top: 7px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+}
 .saved-item-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; margin-top: 10px; }
 .small-action { padding: 3px 7px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); background: #fff; cursor: pointer; font-size: 11px; }
 .small-action:hover { color: var(--blue); border-color: #9ebcdc; }
