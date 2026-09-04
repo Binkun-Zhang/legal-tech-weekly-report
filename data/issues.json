@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-09-03",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/08/28—2026/09/03",
+    "periodStart": "2026-08-28",
+    "periodEnd": "2026-09-03",
+    "publishedAt": "2026-09-03",
+    "updatedAt": "2026-09-04",
+    "editors": ["胡文颖"],
+    "reviewers": ["苏旖旎", "张井"],
+    "file": "issues/2026-09-03.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦 WorkBuddy 法律生态扩张、北大法宝与吾律的平台接入、威科国企合规产品矩阵，以及 Harvey 多智能体合同审查与引证核验能力。",
+    "decisionSummary": {
+      "focus": "法律 AI 的竞争正在从单体产品转向“通用 Agent 底座、专业数据、可组合 Skill 与任务交付”的生态协作。",
+      "risk": "通用 Agent 平台快速吸收法律数据库和垂直技能，专业产品若缺少开放接口、证据核验和工作流优势，入口价值可能被压缩。",
+      "action": "评估将合同审核、文书起草和法律检索能力封装为 Skill 或 MCP，并建立引证核验、多智能体审查和单位任务成本专项评测。"
+    },
+    "competitors": ["Alpha AI", "北大法宝", "威科先行", "WorkBuddy", "Harvey", "Filevine", "吾律", "iManage", "Thomson Reuters"],
+    "highlights": [
+      {
+        "competitor": "WorkBuddy",
+        "action": "开放 Agent 基座并扩充法律生态",
+        "impact": "北大法宝·律爱多与吾律进入 WorkBuddy 平台，显示通用 Agent 正通过 Skill、Expert 和连接器聚合法律能力。",
+        "evidence": "S10 / S12 / S17"
+      },
+      {
+        "competitor": "威科先行",
+        "action": "上线国企合规 AI 产品矩阵",
+        "impact": "以合规问答、制度起草和制度审核覆盖国企制度治理闭环，并通过法规与案例溯源强化专业可信度。",
+        "evidence": "S11"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "合同审查多智能体化并接入 Fable 5.1",
+        "impact": "同时推进模型接入、合同审查架构重构和律所规模化部署，竞争重点进一步转向复杂任务协作与交付稳定性。",
+        "evidence": "S14 / S15 / S22"
+      },
+      {
+        "competitor": "Filevine",
+        "action": "推出引证核验与防幻觉能力",
+        "impact": "把引用有效性和幻觉控制直接产品化，为法律研究和文书生成提供可复用的可靠性设计。",
+        "evidence": "S16"
+      },
+      {
+        "competitor": "北大法宝",
+        "action": "平台应用与 MCP 双线接入",
+        "impact": "法律数据既作为 WorkBuddy 应用触达用户，也通过 MCP 接入通用 Agent，数据库能力正在转化为可调用基础设施。",
+        "evidence": "S10 / S17"
+      },
+      {
+        "competitor": "iManage / Thomson Reuters",
+        "action": "通过 MCP 集成 CoCounsel",
+        "impact": "文档管理、权限体系与法律 AI 工作流进一步互连，专业系统间的数据边界和上下文调用能力成为竞争要素。",
+        "evidence": "S18"
+      }
+    ]
+  },
+  {
     "id": "2026-08-27",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/08/21—2026/08/27",

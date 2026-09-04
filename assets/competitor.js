@@ -63,7 +63,7 @@
   function loadData() {
     return Promise.all([
       fetch("data/competitors.json?v=20260828-8").then(function (r) { return r.json(); }),
-      fetch("data/issues.json").then(function (r) { return r.json(); }),
+      fetch("data/issues.json?v=20260904-1").then(function (r) { return r.json(); }),
       fetch("data/glossary.json").then(function (r) { return r.json(); })
     ]).then(function (data) {
       var profiles = data[0];

@@ -542,7 +542,7 @@
   }
 
   Promise.all([
-    fetch("data/issues.json?v=20260828-9").then(function (response) {
+    fetch("data/issues.json?v=20260904-1").then(function (response) {
       if (!response.ok) throw new Error("issues.json unavailable");
       return response.json();
     }),
