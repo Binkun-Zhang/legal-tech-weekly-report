@@ -268,7 +268,7 @@
   });
 
   Promise.all([
-    fetch("data/issues.json?v=20260904-1").then(function (response) { return response.json(); })
+    fetch("data/issues.json?v=20260911-1").then(function (response) { return response.json(); })
   ]).then(function (result) {
     issues = result[0].sort(function (a, b) {
       return String(b.publishedAt).localeCompare(String(a.publishedAt));

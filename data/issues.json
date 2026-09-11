@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-09-10",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/09/04—2026/09/10",
+    "periodStart": "2026-09-04",
+    "periodEnd": "2026-09-10",
+    "publishedAt": "2026-09-10",
+    "updatedAt": "2026-09-11",
+    "editors": ["胡文颖"],
+    "reviewers": ["苏旖旎", "张井"],
+    "file": "issues/2026-09-10.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦 iCourt 法律咨询 Pro、幂律智能 MeWork 更新、Harvey 合同审查智能体，以及 WorkBuddy 接入 DeepSeek V4.1-Flash 等法律 Agent 产品信号。",
+    "decisionSummary": {
+      "focus": "国内外法律 AI 正集中升级为可连续执行的 Agent，竞争重点从单点问答转向专业数据、专项 Skill、连接器与可核验交付。",
+      "risk": "司法规则进一步明确 AI 内容使用者的核验责任，缺少来源回溯、执行日志、异常识别和人工审批的产品将面临更直接的合规风险。",
+      "action": "建立法律 Agent 长链路和执行轨迹级评测，并将合同规则库、引用核验、版本留痕和异常转人工纳入默认产品能力。"
+    },
+    "competitors": ["Alpha AI", "幂律智能", "WorkBuddy", "DeepSeek", "Harvey", "Thomson Reuters", "Wolters Kluwer", "Litera", "Intapp", "Legora"],
+    "highlights": [
+      {
+        "competitor": "Alpha AI",
+        "action": "上线法律咨询 Pro 并推进团体标准",
+        "impact": "通过专业数据、专项 Skill 和连续任务能力升级法律咨询产品，同时参与法律 AI 标准建设，强化产品与行业规则双重影响力。",
+        "evidence": "S02 / S03"
+      },
+      {
+        "competitor": "幂律智能",
+        "action": "发布 MeWork v0.3.12",
+        "impact": "新增分屏处理和外部连接器，继续将法律工作平台从单点功能扩展为材料处理、外部工具连接和连续协作环境。",
+        "evidence": "S04"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "发布合同审查智能体",
+        "impact": "将规则提取、条款审查和结果交付组织为多步骤 Agent 工作流，并同步扩展尽调编排、安全能力和客户部署。",
+        "evidence": "S10 / S16 / S18 / S25 / S27"
+      },
+      {
+        "competitor": "WorkBuddy",
+        "action": "接入 DeepSeek V4.1-Flash",
+        "impact": "借助长上下文模型和限时免费策略扩展 Agent 平台能力，模型价格下降也将进一步压低法律任务自动化成本。",
+        "evidence": "S05 / S06 / S07"
+      },
+      {
+        "competitor": "Thomson Reuters",
+        "action": "升级 CoCounsel 代理式起草",
+        "impact": "Westlaw 专业数据与代理式起草继续融合，体现传统法律数据库正在把内容优势转化为可执行的文书工作流。",
+        "evidence": "S14"
+      },
+      {
+        "competitor": "Wolters Kluwer",
+        "action": "在欧洲推出 Libra Academy",
+        "impact": "通过培训体系推动法律 AI 的组织级采用，说明产品竞争已延伸到用户教育、治理方法和规模化落地。",
+        "evidence": "S09"
+      }
+    ]
+  },
+  {
     "id": "2026-09-03",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/08/28—2026/09/03",
