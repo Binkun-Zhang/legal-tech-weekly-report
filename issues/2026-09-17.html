@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>法律科技产品竞品监控周报｜第六期｜2026/09/11-2026/09/17</title>
+  <style>
+    :root {
+      --ink: #152338;
+      --muted: #64748b;
+      --line: #dbe4ee;
+      --soft-line: #e9eff5;
+      --bg: #f4f7fb;
+      --paper: #ffffff;
+      --navy: #142a43;
+      --blue: #1f6feb;
+      --teal: #0f9f8b;
+      --amber: #c77b12;
+      --red: #c94b55;
+      --purple: #6f5bd3;
+      --shadow: 0 10px 28px rgba(21, 35, 56, 0.08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
+        "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.6;
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 0 30px;
+      color: #fff;
+      background: var(--navy);
+      box-shadow: 0 4px 16px rgba(20, 42, 67, 0.18);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      color: var(--navy);
+      background: #c9f1e9;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .topbar-meta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #c4d2e3;
+      font-size: 13px;
+    }
+    .period-pill {
+      padding: 5px 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 999px;
+      color: #e8f6f3;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 248px minmax(0, 1fr);
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+    .sidebar {
+      position: sticky;
+      top: 68px;
+      align-self: start;
+      height: calc(100vh - 68px);
+      overflow: auto;
+      padding: 26px 18px 30px;
+      background: #edf3f8;
+      border-right: 1px solid var(--line);
+    }
+    .sidebar-title {
+      margin: 0 12px 10px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .toc a {
+      display: flex;
+      align-items: baseline;
+      gap: 9px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #36506d;
+      font-size: 13px;
+    }
+    .toc a:hover, .toc a:focus {
+      color: var(--blue);
+      background: #fff;
+      outline: none;
+    }
+    .toc .num {
+      min-width: 22px;
+      color: #8ca0b7;
+      font-variant-numeric: tabular-nums;
+    }
+    .sidebar-note {
+      margin: 24px 12px 0;
+      padding: 13px 14px;
+      border-left: 3px solid var(--teal);
+      color: #52667d;
+      background: #fff;
+      font-size: 12px;
+    }
+
+    main {
+      min-width: 0;
+      padding: 42px 44px 70px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+    h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
+    h1 {
+      max-width: 780px;
+      font-size: clamp(30px, 4vw, 52px);
+      letter-spacing: -0.02em;
+    }
+    .hero-desc {
+      max-width: 780px;
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .meta-panel {
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px 18px;
+    }
+    .meta-item span, .field-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .placeholder {
+      min-height: 28px;
+      padding: 4px 0;
+      border-bottom: 1px dashed #a9b8c8;
+      color: #8a9aae;
+      font-size: 13px;
+    }
+
+    .section {
+      scroll-margin-top: 90px;
+      margin-top: 38px;
+    }
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-no {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      color: #fff;
+      background: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .section h2 { font-size: 23px; }
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+
+    .intro {
+      padding: 15px 18px;
+      border-left: 4px solid var(--teal);
+      color: #3d526b;
+      background: #e8f6f3;
+      font-size: 13px;
+    }
+    .callout {
+      padding: 16px 18px;
+      border: 1px solid #d6e5f6;
+      border-radius: var(--radius);
+      background: #f8fbff;
+    }
+    .callout strong { color: var(--blue); }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      min-height: 112px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    .stat-label { color: var(--muted); font-size: 12px; }
+    .stat-value {
+      margin: 8px 0 4px;
+      color: var(--ink);
+      font-size: 29px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .stat-hint { color: #8a9aae; font-size: 11px; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .summary-box {
+      min-height: 132px;
+      padding: 17px 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    .summary-box h3 { margin-bottom: 8px; font-size: 15px; }
+    .summary-box p { margin: 0; color: #42566d; font-size: 13px; }
+
+    .product-shot-stack { display: flex; flex-wrap: wrap; gap: 4px; align-items: flex-start; width: 116px; }
+    .product-shot-stack img { display: block; width: auto; height: auto; max-width: 52px; max-height: 58px; object-fit: contain; border: 1px solid #e8e8e8; border-radius: 4px; cursor: pointer; }
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    table {
+      width: 100%;
+      min-width: 920px;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      padding: 12px 13px;
+      border-bottom: 1px solid var(--soft-line);
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      color: #52667d;
+      background: #f3f7fb;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    tr:last-child td { border-bottom: 0; }
+    td { color: #42566d; }
+    td.muted-cell { color: #97a5b4; }
+    .empty-row td {
+      height: 74px;
+      color: #9aa8b8;
+      text-align: center;
+      background: #fcfdff;
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 7px;
+      border-radius: 4px;
+      color: #31506c;
+      background: #e8eef5;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    .tag.blue { color: #1e5ab7; background: #e5f0ff; }
+    .tag.teal { color: #087e6e; background: #def5f0; }
+    .tag.amber { color: #995e0c; background: #fff0d7; }
+    .tag.red { color: #a73540; background: #ffe5e8; }
+    .tag.purple { color: #5a49b5; background: #eeeafd; }
+
+    .subsection {
+      margin: 26px 0 0;
+      scroll-margin-top: 90px;
+    }
+    .subsection-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .subsection-title::before {
+      content: "";
+      width: 4px;
+      height: 17px;
+      border-radius: 2px;
+      background: var(--teal);
+    }
+    .hint {
+      margin: -3px 0 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    [hidden] { display: none !important; }
+    .view-switcher {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+      padding: 13px 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 5px 18px rgba(21, 35, 56, 0.05);
+    }
+    .view-switcher-copy strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 13px;
+    }
+    .view-switcher-copy span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .view-tabs {
+      display: inline-grid;
+      grid-template-columns: repeat(2, minmax(178px, 1fr));
+      flex: 0 0 auto;
+      padding: 3px;
+      border: 1px solid #c9d6e3;
+      border-radius: 7px;
+      background: #edf3f8;
+    }
+    .view-tab {
+      min-height: 38px;
+      padding: 7px 12px;
+      border: 0;
+      border-radius: 5px;
+      color: #52667d;
+      background: transparent;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .view-tab:hover { color: var(--blue); }
+    .view-tab:focus-visible {
+      outline: 3px solid rgba(31, 111, 235, 0.25);
+      outline-offset: 2px;
+    }
+    .view-tab.is-active {
+      color: #fff;
+      background: var(--navy);
+      box-shadow: 0 2px 7px rgba(20, 42, 67, 0.2);
+    }
+    .view-panel {
+      animation: view-in 160ms ease-out;
+    }
+    @keyframes view-in {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .competitor-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .competitor-sheet {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 5px 18px rgba(21, 35, 56, 0.05);
+    }
+    .competitor-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 17px 18px;
+      color: #fff;
+      background: var(--navy);
+    }
+    .competitor-kicker {
+      margin-bottom: 3px;
+      color: #9fb5cc;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+    }
+    .competitor-name {
+      font-size: 19px;
+    }
+    .competitor-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+    }
+    .competitor-tags .tag {
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #dce8f5;
+      background: rgba(255,255,255,0.08);
+    }
+    .competitor-lead {
+      display: grid;
+      grid-template-columns: 1.45fr repeat(3, minmax(120px, 0.55fr));
+      border-bottom: 1px solid var(--line);
+      background: #f8fbff;
+    }
+    .competitor-lead > div {
+      min-height: 77px;
+      padding: 13px 15px;
+      border-right: 1px solid var(--soft-line);
+    }
+    .competitor-lead > div:last-child { border-right: 0; }
+    .competitor-lead strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+    .competitor-lead p {
+      margin: 0;
+      color: #7b8da1;
+      font-size: 12px;
+    }
+    .competitor-body {
+      padding: 16px 17px 17px;
+    }
+    .competitor-body .table-wrap {
+      box-shadow: none;
+    }
+    .competitor-judgment {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1fr;
+      margin-top: 13px;
+      border: 1px solid var(--soft-line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fbfcfe;
+    }
+    .competitor-judgment > div {
+      min-height: 76px;
+      padding: 12px 14px;
+      border-right: 1px solid var(--soft-line);
+    }
+    .competitor-judgment > div:last-child { border-right: 0; }
+    .competitor-judgment strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+    .competitor-judgment p {
+      margin: 0;
+      color: #8494a6;
+      font-size: 12px;
+    }
+    .copy-note {
+      padding: 14px 16px;
+      border: 1px dashed #9fb2c7;
+      border-radius: var(--radius);
+      color: #60758b;
+      background: #f7fafc;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .panel {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    .panel h3 { margin-bottom: 12px; font-size: 15px; }
+    .field-list { display: grid; gap: 11px; }
+    .field {
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--soft-line);
+    }
+    .field:last-child { padding-bottom: 0; border-bottom: 0; }
+    .field-value {
+      min-height: 25px;
+      color: #42566d;
+      font-size: 12px;
+    }
+    .field-value.multiline {
+      min-height: 58px;
+      padding: 8px 10px;
+      border: 1px dashed #b9c7d6;
+      background: #fbfcfe;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(4, 1fr);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--paper);
+    }
+    .matrix > div {
+      min-height: 64px;
+      padding: 12px 13px;
+      border-right: 1px solid var(--soft-line);
+      border-bottom: 1px solid var(--soft-line);
+      color: #60758b;
+      font-size: 12px;
+    }
+    .matrix > div:nth-child(5n) { border-right: 0; }
+    .matrix > div:nth-last-child(-n + 5) { border-bottom: 0; }
+    .matrix .head {
+      min-height: 42px;
+      color: #52667d;
+      background: #f3f7fb;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .matrix .row-title {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 0;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 112px 18px minmax(0, 1fr);
+      gap: 12px;
+      min-height: 77px;
+    }
+    .timeline-date {
+      padding-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+    .timeline-dot {
+      position: relative;
+    }
+    .timeline-dot::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 4px #e5f0ff;
+    }
+    .timeline-dot::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      bottom: -1px;
+      left: 8px;
+      width: 2px;
+      background: #d6e3f1;
+    }
+    .timeline-item:last-child .timeline-dot::after { display: none; }
+    .timeline-card {
+      min-height: 58px;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    .timeline-card h4 { margin-bottom: 3px; font-size: 13px; }
+    .timeline-card p { margin: 0; color: #8a9aae; font-size: 12px; }
+
+    .score-guide {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .score {
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    .score b { display: block; margin-bottom: 4px; font-size: 13px; }
+    .score p { margin: 0; color: var(--muted); font-size: 11px; }
+
+    .footer {
+      margin-top: 42px;
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      color: #8a9aae;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 1050px) {
+      .layout { grid-template-columns: 210px minmax(0, 1fr); }
+      main { padding: 34px 28px 60px; }
+      .hero { grid-template-columns: 1fr; align-items: start; }
+      .stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      .topbar { padding: 0 16px; }
+      .topbar-meta { display: none; }
+      .layout { display: block; }
+      .sidebar {
+        position: static;
+        height: auto;
+        padding: 13px 14px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .sidebar-title { display: none; }
+      .toc {
+        display: flex;
+        overflow-x: auto;
+        gap: 3px;
+        padding-bottom: 1px;
+      }
+      .toc a { flex: 0 0 auto; padding: 7px 9px; font-size: 12px; }
+      .toc .num { min-width: auto; }
+      .sidebar-note { display: none; }
+      main { padding: 28px 16px 50px; }
+      h1 { font-size: 32px; }
+      .hero-desc { font-size: 14px; }
+      .meta-grid, .summary-grid, .two-col { grid-template-columns: 1fr; }
+      .view-switcher { align-items: stretch; flex-direction: column; }
+      .view-tabs {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .view-tab { min-height: 48px; padding: 7px 8px; }
+      .competitor-head { flex-direction: column; }
+      .competitor-tags { justify-content: flex-start; }
+      .competitor-lead { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .competitor-lead > div { border-bottom: 1px solid var(--soft-line); }
+      .competitor-lead > div:nth-child(2n) { border-right: 0; }
+      .competitor-lead > div:nth-last-child(-n + 2) { border-bottom: 0; }
+      .competitor-judgment { grid-template-columns: 1fr; }
+      .competitor-judgment > div {
+        border-right: 0;
+        border-bottom: 1px solid var(--soft-line);
+      }
+      .competitor-judgment > div:last-child { border-bottom: 0; }
+      .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-header { align-items: flex-start; flex-direction: column; }
+      .section-subtitle { text-align: left; }
+      .matrix { grid-template-columns: 1.2fr repeat(4, 100px); overflow-x: auto; }
+      .score-guide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline-item { grid-template-columns: 72px 18px minmax(0, 1fr); }
+    }
+    @media print {
+      .topbar, .sidebar { display: none; }
+      .view-switcher { display: none; }
+      body { background: #fff; }
+      .layout { display: block; }
+      main { padding: 0; }
+      .section { break-inside: avoid; }
+      .meta-panel, .stat, .summary-box, .panel, .table-wrap { box-shadow: none; }
+      a { color: inherit; }
+    }
+  
+    .status-note { margin: 14px 0 0; padding: 12px 14px; border-left: 3px solid var(--amber); background: #fff7e8; color: #5f4a2c; font-size: 13px; }
+    a[href^="http"]:hover { text-decoration: underline; }
+  
+    .source-link { color: #1f6feb; text-decoration: underline; text-underline-offset: 3px; }
+    .small-note { margin: 14px 0 0; color: var(--muted); font-size: 12px; }
+
+    .feature-summary-link {
+      color: inherit;
+      text-decoration: none;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .feature-summary-link:hover,
+    .feature-summary-link:focus-visible {
+      text-decoration: underline;
+    }
+    .feature-summary-link:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+    }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">法</div><span>法律科技产品情报系统</span></div>
+    <div class="topbar-meta">
+      <span>2026 年第 38 周</span>
+      <span class="period-pill">报告周期：2026年09月11日—09月17日</span>
+      <span class="period-pill">编辑：章彬坤</span>
+      <span class="period-pill">审核：苏旖旎、张井</span>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">Report Map</p>
+      <nav class="toc" aria-label="周报目录">
+        <a href="#summary"><span class="num">01</span>核心摘要</a>
+        <a href="#industry"><span class="num">02</span>行业与政策</a>
+        <a href="#moves"><span class="num">03</span>竞品动态</a>
+        <a href="#evaluations"><span class="num">04</span>评测文章</a>
+        <a href="#legal-articles"><span class="num">05</span>法律科技文章</a>
+        <a href="#research"><span class="num">06</span>法律科技论文</a>
+        <a href="#github-skills"><span class="num">07</span>GitHub Skill</a>
+        <a href="#insight"><span class="num">08</span>深度洞察</a>
+        <a href="#appendix"><span class="num">09</span>来源与口径</a>
+      </nav>
+    </aside>
+    <main>
+      <section class="hero" id="overview">
+        <div>
+          <p class="eyebrow">LEGAL AI COMPETITIVE INTELLIGENCE · ISSUE 06</p>
+          <h1>法律科技产品<br />竞品监控周报</h1>
+          <p class="hero-desc">聚焦国内外法律科技政策、重点竞品、法律 AI 工作流、前沿论文和产品工程信号。</p>
+        </div>
+        <div class="meta-panel">
+          <div class="meta-grid">
+            <div class="meta-item"><span>报告周期</span><div class="placeholder">2026/09/11—2026/09/17</div></div>
+            <div class="meta-item"><span>编辑人</span><div class="placeholder">章彬坤</div></div>
+            <div class="meta-item"><span>审核人</span><div class="placeholder">苏旖旎、张井</div></div>
+            <div class="meta-item"><span>入选资讯</span><div class="placeholder">37 条</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="summary" aria-labelledby="summary-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">01</span><h2 id="summary-title">核心摘要</h2></div><div class="section-subtitle">结论先行</div></div>
+        <div class="summary-grid">
+          <div class="summary-box"><h3>一句话总结</h3><p>法律 AI 正从单点工具进入“专业数据 + Skill / MCP + Agent 工作空间”的组合竞争，产品价值越来越取决于证据回源、连续执行和结果进入后续业务流程的能力。</p></div>
+          <div class="summary-box"><h3>最重要的竞品动作</h3><p>北大法宝推出法规文件智能审查，幂律智能更新 MeWork，iCourt 上线庭审证据 Skill，得理与法天使分别通过 MCP 进入通用 Agent 平台。</p></div>
+          <div class="summary-box"><h3>最大风险或威胁</h3><p>专业内容平台正把数据库封装成知识图谱和 MCP；通用 Agent 同时补齐应用生成与多工具协作，可能压缩单点法律工具的入口价值。</p></div>
+          <div class="summary-box"><h3>建议关注的机会</h3><p>优先建设可复用法律 Skill、专业数据连接和合同审查公开评测体系，并用引用核验、版本控制和人工复核构成可信交付闭环。</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="industry" aria-labelledby="industry-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">02</span><h2 id="industry-title">行业与政策</h2></div><div class="section-subtitle">关注会改变产品边界、客户需求或交付方式的变化</div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th style="width:90px">国家 / 地区</th><th>政策或行业动态</th><th style="width:90px">时间</th><th style="width:110px">来源</th></tr></thead>
+          <tbody><tr><td>中国</td><td>工信部提出到 2028 年推动智能编程工具和智能开发平台覆盖 2 万家规模以上软件企业，实施 100 项智能化技改并打造 100 个智能体软件标杆应用。该方案将扩大企业级 Agent 的政策支持和应用空间，也会提高产品工程化、开源生态与规模交付要求。</td><td>2026-09-11</td><td><a class="source-link" href="https://www.ithome.com/1/001/103.htm" target="_blank" rel="noopener noreferrer">S01 / 原文 ↗</a></td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section class="section" id="moves" aria-labelledby="moves-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">03</span><h2 id="moves-title">竞品动态</h2></div><div class="section-subtitle">按产品动作与法律工作流价值整理</div></div>
+        <div class="subsection">
+          <div class="subsection-title"><h3>3A.1 模型、产品底座与成本治理</h3><span>关注知识底座、推理部署和单位任务成本。</span></div>
+          <div class="table-wrap"><table><thead><tr><th style="width:160px">监控对象</th><th style="width:145px">动作类型</th><th>本周动态</th><th style="width:70px">日期</th><th style="width:58px">优先级</th><th style="width:105px">来源</th></tr></thead><tbody><tr><td><strong>Wolters Kluwer / Libra</strong></td><td><span class='tag'>知识底座 / 法律知识图谱</span></td><td>威科集团升级 Libra 法律 AI 工作空间，将法律、裁决、专家评注和实务指引组织为可供 AI 推理的结构化知识图谱。传统内容优势正进一步转化为上下文关联、来源追踪和专业推理能力。</td><td>09-11</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://www.legalreader.com/wolters-kluwer-transforms-trusted-legal-content-into-structured-ai-ready-intelligence-that-powers-the-next-wave-of-legal-ai/" target="_blank" rel="noopener noreferrer">S02 / 原文 ↗</a></td></tr><tr><td><strong>DeepSeek-V4.1-Flash 上线阿里云</strong></td><td><span class='tag'>模型 / 云平台接入与定价</span></td><td>DeepSeek-V4.1-Flash 进入阿里云 Token Plan，提供 1M 上下文、快速推理和高吞吐能力，并以每月 6 美元起的套餐服务 Agent 工作负载。模型接入门槛和推理成本继续下降。</td><td>09-15</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://x.com/alibaba_cloud/status/2099723404136038750" target="_blank" rel="noopener noreferrer">S03 / 原文 ↗</a></td></tr><tr><td><strong>Qwen3.8-27B 上线 Cerebras 快速推理</strong></td><td><span class='tag'>模型 / 推理部署</span></td><td>Qwen3.8-27B 上线 Cerebras 推理平台，重点强调开源权重模型的高速服务能力。对法律 AI 产品而言，模型质量之外的吞吐、时延和部署组合正在成为任务成本的重要变量。</td><td>09-12</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://x.com/Alibaba_Qwen/status/2098676748972122394" target="_blank" rel="noopener noreferrer">S04 / 原文 ↗</a></td></tr></tbody></table></div>
+        </div>
+        <div class="subsection">
+          <div class="subsection-title"><h3>3A.2 产品、系统功能与场景突破</h3><span>关注法律产品功能、垂直场景与系统交付能力。</span></div>
+          <div class="table-wrap"><table><thead><tr><th style="width:160px">监控对象</th><th style="width:145px">动作类型</th><th>本周动态</th><th style="width:70px">日期</th><th style="width:58px">优先级</th><th style="width:105px">来源</th></tr></thead><tbody><tr><td><strong>北大法宝法规文件合法性智能审查技术服务</strong></td><td><span class='tag'>产品 / 智能立法审查</span></td><td>北大法宝推出法规文件合法性智能审查服务，以结构化法规库、自研法条比对算法和大模型完成上位法定位、逐条风险研判、修改建议及报告生成，并延伸到起草、审查和意见征集流程。其公开口径称已承接近千篇法规文件审查。</td><td>09-17</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/7pTp_xKT8fB0us637wt0nQ" target="_blank" rel="noopener noreferrer">S05 / 原文 ↗</a></td></tr><tr><td><strong>幂律智能 / MeWork</strong></td><td><span class='tag'>产品 / MeWork 更新</span></td><td>幂律智能发布 MeWork v0.3.14，继续优化案件梳理与日常操作体验，延续围绕真实法律工作流程快速迭代的路线。产品仍处于内测阶段，会员额度暂时免费，并向已获账号用户提供邀请码。</td><td>09-14</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/xHKgqKkXQIqJgQ4cTL1vBQ" target="_blank" rel="noopener noreferrer">S06 / 原文 ↗</a></td></tr><tr><td><strong>得理AI「找类案」全面升级，新增5种类案检索场景</strong></td><td><span class='tag'>产品 / 类案检索</span></td><td>得理 AI 升级“找类案”，覆盖以案例、案号、案由、批量案件和事实材料为入口的 5 类检索场景。该迭代将类案检索从单次关键词查询扩展到材料理解、裁判尺度比较和多路径检索。</td><td>09-16</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/67~lwyGF0EfDkEf64I-95g" target="_blank" rel="noopener noreferrer">S07 / 原文 ↗</a></td></tr><tr><td><strong>WorkBuddy「应用生成能力」来了！点单系统、小工具有手就能做</strong></td><td><span class='tag'>平台 / 应用生成</span></td><td>WorkBuddy 新增应用生成能力，可搭建带数据库、文件存储、注册登录、权限和访问统计的网页应用。虽然并非法律专属功能，但可用于快速构建案件协作、法务台账和内部审批类轻应用。</td><td>09-17</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/aHUmlqYLEHXgdwJw7tHHQw" target="_blank" rel="noopener noreferrer">S08 / 原文 ↗</a></td></tr><tr><td><strong>面壁智能发布CPM for Legal法律AI工作平台，称打造18个法律专家智能体</strong></td><td><span class='tag'>产品 / 法律 Agent 平台</span></td><td>面壁智能发布 CPM for Legal，公开口径称内置 18 个法律专家智能体、覆盖 5 大领域和 100 余项技能，并连接模型、行业知识库与专业工具。其产品定位强调工作流交付、安全审计和结果可追溯。</td><td>09-14</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://m.sohu.com/a/1075717371_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334" target="_blank" rel="noopener noreferrer">S09 / 原文 ↗</a></td></tr><tr><td><strong>Harvey</strong></td><td><span class='tag'>产品 / 记忆与定制 Agent</span></td><td>Harvey 9 月更新加入用户级记忆、Word 内定制 Agent、大规模文档审阅、Vault 检索与自然语言建表，并新增 150 余个法律研究数据源。产品正把个人偏好、文档工作和专业数据统一进持续性工作流。</td><td>09-17</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://www.harvey.ai/fr-FR/blog/the-brief-september-2026" target="_blank" rel="noopener noreferrer">S10 / 原文 ↗</a></td></tr><tr><td><strong>法律AI平台8rney推出面向律师与律所的Agentic法律工作空间</strong></td><td><span class='tag'>产品 / Agentic 工作空间</span></td><td>8rney 推出面向律师、律所和法学生的 Agentic 法律工作空间，整合法律研究、起草、文档和案件管理。平台强调实时法律来源、逐条引用核验、关键操作审批以及网页、Word 和本地桌面多端交付。</td><td>09-16</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://www.barandbench.com/news/8rney-introduces-agentic-legal-ai-workspace-for-lawyers-law-firms-and-law-students" target="_blank" rel="noopener noreferrer">S11 / 原文 ↗</a></td></tr><tr><td><strong>Google Legal / Gemini</strong></td><td><span class='tag'>产品 / 企业法律助手</span></td><td>Google Legal 展示 Gemini Enterprise、NotebookLM 与定制法律助手的组合用法，可对密集法律资料进行检索、交叉比对并搭建专用 Agent。大型云厂商正在以模型、资料库和可配置助手切入法律工作流。</td><td>09-17</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://www.artificiallawyer.com/2026/09/17/google-shows-off-cloud-legal-ai-helpers-more/" target="_blank" rel="noopener noreferrer">S12 / 原文 ↗</a></td></tr></tbody></table></div>
+        </div>
+        <div class="subsection">
+          <div class="subsection-title"><h3>3A.3 Skill、Agent 与数据连接</h3><span>关注专业方法封装、工作流集成和法律数据调用。</span></div>
+          <div class="table-wrap"><table><thead><tr><th style="width:160px">监控对象</th><th style="width:145px">动作类型</th><th>本周动态</th><th style="width:70px">日期</th><th style="width:58px">优先级</th><th style="width:105px">来源</th></tr></thead><tbody><tr><td><strong>法天使 / 多平台</strong></td><td><span class='tag'>MCP / 合同数据连接</span></td><td>法天使合同库上线 MCP，可接入 WorkBuddy、千问办公、豆包工作和 Codex 等支持 MCP 的工具，让通用 Agent 直接调用专业合同模板与条款内容。法律内容库由独立产品入口向可调用的数据基础设施迁移。</td><td>09-15</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/TnIldi1cReo4bZut3jVPEA" target="_blank" rel="noopener noreferrer">S13 / 原文 ↗</a></td></tr><tr><td><strong>iCourt / AlphaClaw</strong></td><td><span class='tag'>Skill / 庭审证据</span></td><td>iCourt 在 AlphaClaw 中推出“庭审证据助手 Skill”，围绕证据组织、举证和质证整理材料，并与 Alpha 数据库及 AlphaGPT 打通。该动作进一步把律师方法论封装为可复用、可连续执行的法律 Skill。</td><td>09-16</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/Riprogf7EodBMcybKMjAiA" target="_blank" rel="noopener noreferrer">S14 / 原文 ↗</a></td></tr><tr><td><strong>得理法搜 / WorkBuddy</strong></td><td><span class='tag'>MCP / 法律数据接入</span></td><td>得理法律数据 MCP 正式接入腾讯 WorkBuddy，使 Agent 在处理法律任务时调用可核对的法条、案号和案例来源。专业法律数据与通用 Agent 平台的组合，可降低无依据生成并扩展法律任务入口。</td><td>09-15</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://mp.weixin.qq.com/s/ZFoytJqg6uaYwheqLXZlag" target="_blank" rel="noopener noreferrer">S15 / 原文 ↗</a></td></tr></tbody></table></div>
+        </div>
+        <div class="subsection">
+          <div class="subsection-title"><h3>3A.4 生态合作、融资与商业化</h3><span>关注投入、获客、融资和规模化采用信号。</span></div>
+          <div class="table-wrap"><table><thead><tr><th style="width:160px">监控对象</th><th style="width:145px">动作类型</th><th>本周动态</th><th style="width:70px">日期</th><th style="width:58px">优先级</th><th style="width:105px">来源</th></tr></thead><tbody><tr><td><strong>Morgan &amp; Morgan / MX2</strong></td><td><span class='tag'>战略 / 自研平台投入</span></td><td>Morgan &amp; Morgan 宣布未来十年投入至少 10 亿美元发展法律科技与 AI，并推出自研平台 MX2，覆盖 Agent 工作流、文书初稿、医疗记录提取和语义搜索。头部律所正通过自研平台把技术投入转化为案件生产能力。</td><td>09-14</td><td><span class="tag red">高</span></td><td><a class="source-link" href="https://www.artificiallawyer.com/2026/09/14/morgan-morgan-commits-to-1-billion-for-legal-tech-ai/" target="_blank" rel="noopener noreferrer">S16 / 原文 ↗</a></td></tr><tr><td><strong>Harvey借美网等体育赞助推广法律AI，瞄准企业高管与客户</strong></td><td><span class='tag'>商业化 / 品牌营销</span></td><td>Harvey 通过美国网球公开赛等体育赞助触达企业高管、公司律师和潜在客户，扩大品牌认知。法律 AI 头部厂商开始采用面向大众与决策层的品牌营销，商业竞争已超出专业渠道。</td><td>09-11</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://observer.com/2026/09/harvey-sponsors-us-open-marketing-strategy/" target="_blank" rel="noopener noreferrer">S17 / 原文 ↗</a></td></tr><tr><td><strong>本周初创融资综述</strong></td><td><span class='tag'>融资 / 市场热度</span></td><td>融资综述将 Harvey 列为本周法律科技重点融资事件，说明资本仍持续向法律 AI 头部平台集中。该信息适合用于观察市场热度，但报道未披露完整交易细节，金额与估值应以后续权威披露为准。</td><td>09-11</td><td><span class="tag amber">中</span></td><td><a class="source-link" href="https://www.analyticsinsight.net/amp/story/ipo/weekly-startup-funding-roundup-ai-legal-tech-mobility-lead-this-weeks-deals" target="_blank" rel="noopener noreferrer">S18 / 原文 ↗</a></td></tr></tbody></table></div>
+        </div>
+      </section>
+
+      <section class="section" id="evaluations" aria-labelledby="evaluations-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">04</span><h2 id="evaluations-title">评测文章</h2></div><div class="section-subtitle">模型、Agent 和法律任务的实际使用体验与横向比较</div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>文章 / 来源</th><th style="width:110px">发布方</th><th style="width:145px">评测对象</th><th>测试任务</th><th>结论摘要</th><th>可信度</th><th>可复用测试点</th></tr></thead>
+          <tbody><tr><td><strong>我们做了一个合同审查智能体的公开评测平台</strong><br><a class="source-link" href="https://mp.weixin.qq.com/s/Fgq8kjwKoZAVO_M4yoa2hQ" target="_blank" rel="noopener noreferrer">S19 / 原文 ↗</a></td><td>法天使</td><td>合同审查智能体</td><td>统一合同、统一立场和统一规则下的风险识别与修改建议</td><td>法天使上线合同审查智能体公开评测平台，以相同合同、审查立场和评分规则比较参评产品，首阶段规划 3 组共 30 份合同。指标包括问题识别、召回率、精确率和修改建议可用性，并采用模型初评与专家复核。</td><td>方法与样本计划披露较清楚；完整数据集和评分细则仍待开放</td><td>召回率、精确率、建议可用性、专家复核一致性</td></tr><tr><td><strong>Fireworks 评测 2026 年九款最佳开源 LLM，GLM 5.2 与 Kimi K3 领跑基准</strong><br><a class="source-link" href="https://fireworks.ai/blog/best-open-source-llms" target="_blank" rel="noopener noreferrer">S20 / 原文 ↗</a></td><td>Fireworks AI（网页）</td><td>9 款开源大模型</td><td>综合基准、推理能力与部署选型</td><td>Fireworks 对 9 款开源模型进行选型比较，覆盖 GLM、Kimi、DeepSeek、MiniMax、Qwen、gpt-oss 和 Gemma。结果可作为模型候选池信号，但法律场景仍需补测长文档、引用准确率和单位任务成本。</td><td>厂商发布的横向选型指南，适合作为候选信号，不等于独立法律评测</td><td>法律任务完成率、上下文长度、吞吐、延迟与成本</td></tr><tr><td><strong>Arena 评测 7 个模型在 Claude Code、Codex 和 Pi 下的编码表现：harness 选择对成功率影响小但显著影响成本</strong><br><a class="source-link" href="https://x.com/arena/status/2100280949661667413" target="_blank" rel="noopener noreferrer">S21 / 原文 ↗</a></td><td>X：Arena (@arena)</td><td>7 个模型 × 3 种 Agent harness</td><td>编码任务成功率与成本比较</td><td>Arena 比较 7 个模型在 Claude Code、Codex 和 Pi 三种执行框架中的表现，共形成 21 个模型与 harness 组合。结果提示框架选择未必显著改变成功率，却可能明显影响 Token 消耗和任务成本。</td><td>公开实验摘要，具体任务集、重复次数和统计显著性需回看原文</td><td>同模型跨框架成功率、Token 成本、重试次数和完成时长</td></tr><tr><td><strong>Andon Labs 评测：GPT-6 Astra 在 Vending-Bench 2 和 Drone-Bench 上大幅领先 Claude Fable 5.1</strong><br><a class="source-link" href="https://the-decoder.com/gpt-6-astra-pilots-a-surveillance-drone-and-runs-a-business-on-its-own" target="_blank" rel="noopener noreferrer">S22 / 原文 ↗</a></td><td>The Decoder：AI News（RSS）</td><td>GPT-6 Astra、Claude Fable 5.1 等前沿模型</td><td>长期规划、经营模拟与无人机 Agent 任务</td><td>Andon Labs 使用经营模拟和无人机任务基准比较前沿 Agent，报道显示 GPT-6 Astra 领先既有模型。该结果说明复杂环境中的持续规划与工具执行值得关注，但与法律任务的迁移关系仍需单独验证。</td><td>二手技术报道；与法律工作流的外部有效性有限</td><td>长链路完成率、违规动作、恢复能力和人工接管率</td></tr><tr><td><strong>Anthropic Claude Opus 5.2 疑似在 Claude Code 中灰度测试，开发者实测更快更不偷懒</strong><br><a class="source-link" href="https://www.ithome.com/1/002/365.htm" target="_blank" rel="noopener noreferrer">S23 / 原文 ↗</a></td><td>IT之家（RSS）</td><td>疑似 Claude Opus 5.2</td><td>Claude Code 长任务速度、连续执行和输出质量</td><td>开发者观察到 Claude Code 中疑似灰度路由到 Opus 5.2，并反馈响应更快、长任务连续性更好。由于信息来自非正式实测，适合列为产品观察信号，不应直接视为官方版本结论。</td><td>非官方灰度观察，版本身份和测试条件尚未充分核验</td><td>长任务中断率、续写次数、响应速度和修改完整性</td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section class="section" id="legal-articles" aria-labelledby="legal-articles-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">05</span><h2 id="legal-articles-title">法律科技文章</h2></div><div class="section-subtitle">工作流、可信度、知识治理与产品落地方法</div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th style="width:27%">文章 / 来源</th><th style="width:16%">发布方</th><th>核心内容</th><th style="width:26%">产品研究价值</th></tr></thead>
+          <tbody><tr><td><strong>e签宝：合同审查软件分四档，从孤立报告到直连签署</strong><br><a class="source-link" href="https://www.esign.cn/blog/contract-review-software-landing-depth-review-202609" target="_blank" rel="noopener noreferrer">S24 / 原文 ↗</a></td><td>e签宝</td><td>e签宝按审查结论的落地深度将合同审查软件划分为孤立报告、可修订文本、结构化字段进入审批单，以及审查审批签署共用文件对象四档。文章强调产品价值取决于结论能否进入后续流程与版本校验。</td><td>可用于梳理合同审查从发现风险到审批、签署和版本控制的产品成熟度模型。</td></tr><tr><td><strong>评论：法律AI落地成效取决于组织能力而非技术本身</strong><br><a class="source-link" href="https://abovethelaw.com/2026/09/the-future-of-legal-ai-isnt-about-ai/" target="_blank" rel="noopener noreferrer">S25 / 原文 ↗</a></td><td>Above the Law</td><td>文章结合 500 余名法律负责人的调查指出，同一 AI 平台在不同法务部门产生的价值差异主要来自流程、治理和法律运营能力。多数机构仍难以量化投资回报，仅少数完成规模化应用。</td><td>产品设计应同步提供采用路径、治理指标和价值度量，不能只交付模型功能。</td></tr><tr><td><strong>汤森路透法律研究专题：AI检索的可信度与来源核验</strong><br><a class="source-link" href="https://legal.thomsonreuters.com/en/legal/topics/legal-research" target="_blank" rel="noopener noreferrer">S26 / 原文 ↗</a></td><td>Thomson Reuters Legal</td><td>汤森路透法律研究专题强调，AI 检索的效率建立在权威来源和可回溯引用之上；黑箱答案会把核验成本重新转移给律师。页面同时展示 Westlaw 与 CoCounsel 的深度研究和引用核验能力。</td><td>可作为法律检索产品的可信度设计参照，重点关注来源定位、引用展开和核验路径。</td></tr><tr><td><strong>AI幻觉波及法庭文件，法律科技工具主打引证核验</strong><br><a class="source-link" href="https://minnlawyer.com/2026/09/14/as-ai-hallucinations-hit-court-filings-new-tech-tools-aim-to-keep-lawyers-out-of-trouble/" target="_blank" rel="noopener noreferrer">S27 / 原文 ↗</a></td><td>Minnesota Lawyer</td><td>报道总结生成式 AI 在法庭文件中产生虚假引证和虚构案件的风险，并介绍 Clearbrief 等确定性核验工具如何并列展示来源、核查引证与支撑材料。律师仍需承担逐字审阅责任。</td><td>应把引证真实性、证据支撑和人工复核设计为文书生成与法律研究的默认步骤。</td></tr><tr><td><strong>HackerNoon 谈「氛围律师」：聊天机器人做法律检索的风险</strong><br><a class="source-link" href="https://hackernoon.com/the-embarrassing-rise-of-vibe-lawyering" target="_blank" rel="noopener noreferrer">S28 / 原文 ↗</a></td><td>HackerNoon</td><td>文章以“氛围律师”概括未核验聊天机器人输出即用于法律检索和起草的做法，并列举虚构案件、错误引文及律师受罚案例。其核心问题是便利性掩盖了来源核验责任。</td><td>适合用于用户教育、风险提示和高风险输出拦截规则设计。</td></tr><tr><td><strong>NetDocuments：当各律所都用同一大模型，差异化来自自有知识数据</strong><br><a class="source-link" href="https://www.lawyersweekly.com.au/biglaw/45004-if-every-firm-uses-the-same-llm-where-is-your-edge" target="_blank" rel="noopener noreferrer">S29 / 原文 ↗</a></td><td>Lawyers Weekly</td><td>NetDocuments 认为，当律所使用相近的大模型时，差异化将转向可发现、可关联且持续更新的自有案件与知识数据。其引用的调查显示，92% 的受访律师每天至少使用一种 AI 工具。</td><td>产品竞争力应从模型能力扩展到知识治理、权限继承、数据更新和上下文组织。</td></tr><tr><td><strong>vLLM 优化 Kimi K3 服务性能：吞吐提升 2.2-2.8 倍</strong><br><a class="source-link" href="https://vllm.ai/blog/2026-09-13-kimi-k3-performance-optimization" target="_blank" rel="noopener noreferrer">S30 / 原文 ↗</a></td><td>vLLM 官方博客（RSS）</td><td>vLLM 团队披露 Kimi K3 服务优化结果：在指定测试条件下，延迟降低 56%–60%，吞吐提升 2.2–2.8 倍，首 Token 延迟下降 72%–85%。结果说明推理框架优化可显著改变模型的实际部署成本。</td><td>模型选型应同时记录服务框架、并发条件、首 Token 延迟和单位任务吞吐。</td></tr><tr><td><strong>杨植麟谈Kimi砍娱乐业务押注Scaling Law</strong><br><a class="source-link" href="https://x.com/AYi_AInotes/status/2099404001854771668" target="_blank" rel="noopener noreferrer">S31 / 原文 ↗</a></td><td>X：阿易 AI Notes (@AYi_AInotes)</td><td>杨植麟在对谈中将 Kimi 的重点放在科研、金融和法律等知识生产场景，并认为长文本只是基础门槛，真正难点是长窗口内的规划、工具调用和逻辑稳定性。</td><td>法律 AI 产品应把长上下文能力转化为连续任务完成率，而非只宣传可读取的字数。</td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">06</span><h2 id="research-title">法律科技论文</h2></div><div class="section-subtitle">法律 RAG、奖励模型、金额预测与事前合规规划</div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th style="width:23%">标题 / 链接</th><th style="width:70px">平台</th><th>研究问题</th><th>方法</th><th>关键结论</th><th>产品研究价值</th></tr></thead>
+          <tbody><tr><td><strong>Building Legal Reward Models for Grounding and Abstention</strong><br><a class="source-link" href="https://arxiv.org/abs/2609.14739v1" target="_blank" rel="noopener noreferrer">S32 / 原文 ↗</a></td><td>arXiv</td><td>奖励模型能否准确评价法律 RAG 的证据依赖、拒答和上下文充分性？</td><td>构建法律上下文偏好数据，使用 contextual DPO 训练并在法律及通用外部基准上测试跨法域迁移。</td><td>论文提出将法律问答数据转换为上下文偏好数据，并构建 LegalRewardBench，评测模型在噪声或证据不足的 RAG 环境中能否基于证据作答并适时拒答。长度平衡增强使最佳配置较基线最高提升 25.6 个百分点。</td><td>可直接用于建设引用忠实度、证据不足拒答和噪声检索条件下的内部评分器。</td></tr><tr><td><strong>How Much is a Human Right Worth? ECtHR-NPD: A Benchmark for Predicting Non-Pecuniary Damage Awards</strong><br><a class="source-link" href="https://arxiv.org/abs/2609.18908v1" target="_blank" rel="noopener noreferrer">S33 / 原文 ↗</a></td><td>arXiv</td><td>在缺少明确法定计算公式时，模型能否根据案件信息预测非财产损害赔偿额？</td><td>构建按时间划分的案件数据集，比较常数、树模型、检索、微调编码器、提示式大模型和知识增强 Agent。</td><td>论文发布 ECtHR-NPD，包含 14,575 件欧洲人权法院案件，用于预测非财产损害赔偿金额。实验显示复杂语言模型和 Agent 并未稳定超过最强特征基线，所有方法在零赔偿识别、高额赔偿校准和困难样本上均表现不足。</td><td>可用于设计金额预测任务的时间切分、校准误差、零值识别和高额异常样本评测。</td></tr><tr><td><strong>Bridging the First-Hour Gap: Evaluating AI Reliability and Benchmarking Deficiencies in Cyber Incident Response for Law Enforcement</strong><br><a class="source-link" href="https://arxiv.org/abs/2609.12681v1" target="_blank" rel="noopener noreferrer">S34 / 原文 ↗</a></td><td>arXiv</td><td>AI 能否在网络事件处置的首小时提供符合法律与取证要求的可靠指导？</td><td>系统比较 playbook、LLM、RAG 和 Agent 架构，并审视现有网络安全基准对执法场景的覆盖不足。</td><td>论文综述执法人员在网络事件首小时使用 playbook、LLM、RAG 和 Agent 的决策支持方案，认为 RAG 是相对可行的中间路径，但提示敏感性、幻觉和证据损耗风险仍突出。作者主张建立面向新手查询稳健性和证据保存的新基准。</td><td>可借鉴到证据保全、操作顺序、低专业度用户鲁棒性和错误不可逆性评测。</td></tr><tr><td><strong>Legislating World-Model-Based Planning with Legal Reasoning</strong><br><a class="source-link" href="https://arxiv.org/abs/2609.15113v1" target="_blank" rel="noopener noreferrer">S35 / 原文 ↗</a></td><td>arXiv</td><td>如何在智能体执行动作之前，将法律规则转化为可审计的规划约束？</td><td>以可废止义务逻辑约束世界模型规划，并测量事实 grounding 与规则解释的两类映射缺口。</td><td>论文把可废止义务逻辑接入基于世界模型的规划器，在模拟机械臂任务中于行动前判断法律约束。实验显示该方法提高规则遵循率且可审计，但感知错误及法律规则向运行约束的多种映射会导致明显偏差。</td><td>适合参考到法律 Agent 的事前合规检查、规则冲突处理和执行轨迹审计。</td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section class="section" id="github-skills" aria-labelledby="github-skills-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">07</span><h2 id="github-skills-title">GitHub Skill</h2></div><div class="section-subtitle">可复用的法律 Agent、Skill 与工作流参考</div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th style="width:20%">项目</th><th style="width:18%">核心类型</th><th>主要功能</th><th>观察价值</th><th style="width:118px">证据与日期</th></tr></thead>
+          <tbody><tr><td><strong>anthropics / claude-for-legal</strong></td><td>法律 Agent Skill / 工作流参考</td><td>Anthropic 提供的法律 Agent、Skill 和数据连接器参考集合，覆盖商事、隐私、产品、公司、劳动、诉讼、监管、AI 治理和知识产权等工作流。</td><td>适合研究法律任务拆解、Skill 目录结构、连接器配置和跨场景复用方式。</td><td>截至 09-17<br><a class="source-link" href="https://github.com/anthropics/claude-for-legal" target="_blank" rel="noopener noreferrer">打开仓库 ↗</a></td></tr><tr><td><strong>lawve-ai / awesome-legal-skills</strong></td><td>法律 Agent Skill / 工作流参考</td><td>面向律师、法务、学者和法律科技人员的开放法律 Skill 清单，强调以可移植标准封装法律检索、审查、引用和专业流程知识。</td><td>可用于建立内部 Skill 分类、发现开源实现并比较不同 Agent 平台的可迁移性。</td><td>截至 09-17<br><a class="source-link" href="https://github.com/lawve-ai/awesome-legal-skills" target="_blank" rel="noopener noreferrer">打开仓库 ↗</a></td></tr></tbody>
+        </table></div>
+      </section>
+
+      <section class="section" id="insight" aria-labelledby="insight-title">
+        <div class="section-header"><div class="section-title"><span class="section-no">08</span><h2 id="insight-title">深度洞察</h2></div><div class="section-subtitle">从“发生了什么”走向“为什么”和“怎么办”</div></div>
+        <div class="two-col">
+          <div class="panel"><h3>主题洞察一：专业数据正在成为 Agent 的基础设施</h3><div class="field-list">
+            <div class="field"><span class="field-label">观察到的共性动作</span><div class="field-value multiline">北大法宝将法规库用于智能审查，威科把权威内容构造成知识图谱，得理与法天使通过 MCP 把法律数据接入通用 Agent。</div></div>
+            <div class="field"><span class="field-label">可能的用户需求变化</span><div class="field-value multiline">用户将要求答案不仅“看起来合理”，还要能回到法条、案例、合同模板和原始材料，并在常用工作平台直接调用。</div></div>
+            <div class="field"><span class="field-label">对我方的判断</span><div class="field-value multiline">应将来源定位、权限继承、版本有效性和引用核验做成底层能力，并考虑以 MCP / API 输出专业能力。</div></div>
+          </div></div>
+          <div class="panel"><h3>主题洞察二：合同审查竞争转向流程闭环与公开评测</h3><div class="field-list">
+            <div class="field"><span class="field-label">产品信号</span><div class="field-value multiline">法天使开始建设公开评测平台，e签宝强调审查结论进入审批与签署，行业关注点从报告质量延伸到结论落地和版本一致性。</div></div>
+            <div class="field"><span class="field-label">评测信号</span><div class="field-value multiline">召回率、精确率和建议可用性仍是基础指标，但还需增加版本校验、引用支撑、误报处置和人工复核成本。</div></div>
+            <div class="field"><span class="field-label">建议结论</span><div class="field-value multiline">建立覆盖审查、修改、审批、签署与归档的端到端评测，避免只以单轮风险识别准确率衡量产品价值。</div></div>
+          </div></div>
+        </div>
+      </section>
+
+      <section class="section" id="appendix">
+        <div class="section-header"><div class="section-title"><span class="section-no">09</span><h2>来源与口径</h2></div><div class="section-subtitle">每条结论可追溯、可复核</div></div>
+        <p class="small-note">本期内容按公开页面发布时间整理，报告周期为 2026 年 9 月 11 日至 9 月 17 日。涉及厂商效果、融资和模型版本的信息按原始来源口径呈现，使用时应点击原文复核。</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th style="width:55px">编号</th><th>来源标题</th><th style="width:175px">平台 / 来源</th><th style="width:92px">日期</th><th style="width:105px">链接</th></tr></thead>
+          <tbody><tr><td><strong>S01</strong></td><td>工信部印发《人工智能+软件》专项行动实施方案：2028 年推广至 2 万家规上软件企业、打造 100 个智能体软件标杆应用</td><td>IT之家（RSS）</td><td>2026-09-11</td><td><a class="source-link" href="https://www.ithome.com/1/001/103.htm" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S02</strong></td><td>威科集团将权威法律内容转为结构化AI知识图谱，升级Libra工作空间</td><td>Legal Reader</td><td>2026-09-11</td><td><a class="source-link" href="https://www.legalreader.com/wolters-kluwer-transforms-trusted-legal-content-into-structured-ai-ready-intelligence-that-powers-the-next-wave-of-legal-ai/" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S03</strong></td><td>DeepSeek-V4.1-Flash 上线阿里云</td><td>X：阿里云 / Alibaba Cloud (@alibaba_cloud)</td><td>2026-09-15</td><td><a class="source-link" href="https://x.com/alibaba_cloud/status/2099723404136038750" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S04</strong></td><td>Qwen3.8-27B 上线 Cerebras 快速推理</td><td>X：通义千问 / Qwen (@Alibaba_Qwen)</td><td>2026-09-12</td><td><a class="source-link" href="https://x.com/Alibaba_Qwen/status/2098676748972122394" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S05</strong></td><td>北大法宝法规文件合法性智能审查技术服务</td><td>北大法宝</td><td>2026-09-17</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/7pTp_xKT8fB0us637wt0nQ" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S06</strong></td><td>产品更新｜MeWork v0.3.14，案件梳理有新招，日常操作更便捷</td><td>幂律智能</td><td>2026-09-14</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/xHKgqKkXQIqJgQ4cTL1vBQ" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S07</strong></td><td>得理AI「找类案」全面升级，新增5种类案检索场景</td><td>得理法律科技</td><td>2026-09-16</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/67~lwyGF0EfDkEf64I-95g" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S08</strong></td><td>WorkBuddy「应用生成能力」来了！点单系统、小工具有手就能做</td><td>腾讯WorkBuddy</td><td>2026-09-17</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/aHUmlqYLEHXgdwJw7tHHQw" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S09</strong></td><td>面壁智能发布CPM for Legal法律AI工作平台，称打造18个法律专家智能体</td><td>Sohu</td><td>2026-09-14</td><td><a class="source-link" href="https://m.sohu.com/a/1075717371_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S10</strong></td><td>Harvey发布9月更新：用户记忆、定制Agent与150余个法律研究数据源</td><td>Harvey</td><td>2026-09-17</td><td><a class="source-link" href="https://www.harvey.ai/fr-FR/blog/the-brief-september-2026" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S11</strong></td><td>法律AI平台8rney推出面向律师与律所的Agentic法律工作空间</td><td>Bar and Bench</td><td>2026-09-16</td><td><a class="source-link" href="https://www.barandbench.com/news/8rney-introduces-agentic-legal-ai-workspace-for-lawyers-law-firms-and-law-students" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S12</strong></td><td>Google Legal展示Gemini Enterprise法律AI助手与定制代理</td><td>Artificial Lawyer</td><td>2026-09-17</td><td><a class="source-link" href="https://www.artificiallawyer.com/2026/09/17/google-shows-off-cloud-legal-ai-helpers-more/" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S13</strong></td><td>法天使合同库 MCP 上线</td><td>法天使</td><td>2026-09-15</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/TnIldi1cReo4bZut3jVPEA" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S14</strong></td><td>律师用「庭审证据助手 Skill」梳理证据，开庭一目了然丨iCourt</td><td>iCourt法秀</td><td>2026-09-16</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/Riprogf7EodBMcybKMjAiA" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S15</strong></td><td>「得理法律数据」MCP正式上架腾讯WorkBuddy ！</td><td>得理法律科技</td><td>2026-09-15</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/ZFoytJqg6uaYwheqLXZlag" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S16</strong></td><td>Morgan &amp; Morgan宣布十年投入10亿美元并推出自研法律AI平台MX2</td><td>Artificial Lawyer</td><td>2026-09-14</td><td><a class="source-link" href="https://www.artificiallawyer.com/2026/09/14/morgan-morgan-commits-to-1-billion-for-legal-tech-ai/" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S17</strong></td><td>Harvey借美网等体育赞助推广法律AI，瞄准企业高管与客户</td><td>observer.com</td><td>2026-09-11</td><td><a class="source-link" href="https://observer.com/2026/09/harvey-sponsors-us-open-marketing-strategy/" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S18</strong></td><td>本周初创融资综述：AI与法律科技受关注，Harvey宣布重大融资</td><td>Analytics Insight</td><td>2026-09-11</td><td><a class="source-link" href="https://www.analyticsinsight.net/amp/story/ipo/weekly-startup-funding-roundup-ai-legal-tech-mobility-lead-this-weeks-deals" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S19</strong></td><td>我们做了一个合同审查智能体的公开评测平台</td><td>法天使</td><td>2026-09-12</td><td><a class="source-link" href="https://mp.weixin.qq.com/s/Fgq8kjwKoZAVO_M4yoa2hQ" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S20</strong></td><td>Fireworks 评测 2026 年九款最佳开源 LLM，GLM 5.2 与 Kimi K3 领跑基准</td><td>Fireworks AI（网页）</td><td>2026-09-13</td><td><a class="source-link" href="https://fireworks.ai/blog/best-open-source-llms" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S21</strong></td><td>Arena 评测 7 个模型在 Claude Code、Codex 和 Pi 下的编码表现：harness 选择对成功率影响小但显著影响成本</td><td>X：Arena (@arena)</td><td>2026-09-17</td><td><a class="source-link" href="https://x.com/arena/status/2100280949661667413" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S22</strong></td><td>Andon Labs 评测：GPT-6 Astra 在 Vending-Bench 2 和 Drone-Bench 上大幅领先 Claude Fable 5.1</td><td>The Decoder：AI News（RSS）</td><td>2026-09-13</td><td><a class="source-link" href="https://the-decoder.com/gpt-6-astra-pilots-a-surveillance-drone-and-runs-a-business-on-its-own" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S23</strong></td><td>Anthropic Claude Opus 5.2 疑似在 Claude Code 中灰度测试，开发者实测更快更不偷懒</td><td>IT之家（RSS）</td><td>2026-09-15</td><td><a class="source-link" href="https://www.ithome.com/1/002/365.htm" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S24</strong></td><td>e签宝：合同审查软件分四档，从孤立报告到直连签署</td><td>e签宝</td><td>2026-09-15</td><td><a class="source-link" href="https://www.esign.cn/blog/contract-review-software-landing-depth-review-202609" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S25</strong></td><td>评论：法律AI落地成效取决于组织能力而非技术本身</td><td>Above the Law</td><td>2026-09-12</td><td><a class="source-link" href="https://abovethelaw.com/2026/09/the-future-of-legal-ai-isnt-about-ai/" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S26</strong></td><td>汤森路透法律研究专题：AI检索的可信度与来源核验</td><td>Thomson Reuters Legal</td><td>2026-09-16</td><td><a class="source-link" href="https://legal.thomsonreuters.com/en/legal/topics/legal-research" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S27</strong></td><td>AI幻觉波及法庭文件，法律科技工具主打引证核验</td><td>Minnesota Lawyer</td><td>2026-09-14</td><td><a class="source-link" href="https://minnlawyer.com/2026/09/14/as-ai-hallucinations-hit-court-filings-new-tech-tools-aim-to-keep-lawyers-out-of-trouble/" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S28</strong></td><td>HackerNoon 谈「氛围律师」：聊天机器人做法律检索的风险</td><td>HackerNoon</td><td>2026-09-12</td><td><a class="source-link" href="https://hackernoon.com/the-embarrassing-rise-of-vibe-lawyering" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S29</strong></td><td>NetDocuments：当各律所都用同一大模型，差异化来自自有知识数据</td><td>Lawyers Weekly</td><td>2026-09-17</td><td><a class="source-link" href="https://www.lawyersweekly.com.au/biglaw/45004-if-every-firm-uses-the-same-llm-where-is-your-edge" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S30</strong></td><td>vLLM 优化 Kimi K3 服务性能：吞吐提升 2.2-2.8 倍</td><td>vLLM 官方博客（RSS）</td><td>2026-09-13</td><td><a class="source-link" href="https://vllm.ai/blog/2026-09-13-kimi-k3-performance-optimization" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S31</strong></td><td>杨植麟谈Kimi砍娱乐业务押注Scaling Law</td><td>X：阿易 AI Notes (@AYi_AInotes)</td><td>2026-09-14</td><td><a class="source-link" href="https://x.com/AYi_AInotes/status/2099404001854771668" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S32</strong></td><td>Building Legal Reward Models for Grounding and Abstention</td><td>arXiv</td><td>2026-09-14</td><td><a class="source-link" href="https://arxiv.org/abs/2609.14739v1" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S33</strong></td><td>How Much is a Human Right Worth? ECtHR-NPD: A Benchmark for Predicting Non-Pecuniary Damage Awards</td><td>arXiv</td><td>2026-09-17</td><td><a class="source-link" href="https://arxiv.org/abs/2609.18908v1" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S34</strong></td><td>Bridging the First-Hour Gap: Evaluating AI Reliability and Benchmarking Deficiencies in Cyber Incident Response for Law Enforcement</td><td>arXiv</td><td>2026-09-11</td><td><a class="source-link" href="https://arxiv.org/abs/2609.12681v1" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S35</strong></td><td>Legislating World-Model-Based Planning with Legal Reasoning</td><td>arXiv</td><td>2026-09-14</td><td><a class="source-link" href="https://arxiv.org/abs/2609.15113v1" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S36</strong></td><td>anthropics / claude-for-legal</td><td>GitHub 法律 skill 补充</td><td>截至 09-17</td><td><a class="source-link" href="https://github.com/anthropics/claude-for-legal" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr><tr><td><strong>S37</strong></td><td>lawve-ai / awesome-legal-skills</td><td>GitHub 法律 skill 补充</td><td>截至 09-17</td><td><a class="source-link" href="https://github.com/lawve-ai/awesome-legal-skills" target="_blank" rel="noopener noreferrer">打开原文 ↗</a></td></tr></tbody>
+        </table></div>
+      </section>
+      <div class="footer">法律科技产品情报系统 · 第六期 · 2026/09/11—2026/09/17 · 内部信息整理与产品决策支持</div>
+    </main>
+  </div>
+</body>
+</html>

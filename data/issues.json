@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-09-17",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/09/11—2026/09/17",
+    "periodStart": "2026-09-11",
+    "periodEnd": "2026-09-17",
+    "publishedAt": "2026-09-17",
+    "updatedAt": "2026-09-18",
+    "editors": ["章彬坤"],
+    "reviewers": ["苏旖旎", "张井"],
+    "file": "issues/2026-09-17.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦北大法宝法规文件智能审查、幂律智能 MeWork v0.3.14、iCourt 庭审证据 Skill，以及得理和法天使通过 MCP 接入通用 Agent 平台。",
+    "decisionSummary": {
+      "focus": "法律 AI 正从单点工具进入“专业数据、Skill / MCP 与 Agent 工作空间”的组合竞争，产品价值越来越取决于证据回源和连续交付。",
+      "risk": "专业内容平台正把数据库封装为知识图谱和 MCP，通用 Agent 同时补齐应用生成与多工具协作，可能压缩单点法律工具的入口价值。",
+      "action": "优先建设可复用法律 Skill、专业数据连接和合同审查公开评测体系，并以引用核验、版本控制和人工复核形成可信交付闭环。"
+    },
+    "competitors": ["Alpha AI", "幂律智能", "北大法宝", "威科先行", "WorkBuddy", "得理法搜", "法天使", "Harvey", "Google Gemini", "面壁智能", "DeepSeek", "Qwen"],
+    "highlights": [
+      {
+        "competitor": "北大法宝",
+        "action": "推出法规文件合法性智能审查服务",
+        "impact": "以结构化法规库、自研法条比对算法和大模型完成上位法定位、风险研判、修改建议与审查报告生成。",
+        "evidence": "S05"
+      },
+      {
+        "competitor": "幂律智能",
+        "action": "发布 MeWork v0.3.14",
+        "impact": "继续优化案件梳理和日常操作体验，保持围绕真实法律工作流程快速迭代的产品路线。",
+        "evidence": "S06"
+      },
+      {
+        "competitor": "Alpha AI",
+        "action": "上线庭审证据助手 Skill",
+        "impact": "将证据组织、举证和质证方法封装为可复用 Skill，并与 Alpha 数据库及 AlphaGPT 打通。",
+        "evidence": "S14"
+      },
+      {
+        "competitor": "WorkBuddy",
+        "action": "扩展应用生成与法律数据连接",
+        "impact": "新增带数据库、登录、权限和访问统计的应用生成能力，并接入得理法律数据 MCP，进一步强化组织级 Agent 平台。",
+        "evidence": "S08 / S15"
+      },
+      {
+        "competitor": "威科先行",
+        "action": "将权威法律内容转为结构化知识图谱",
+        "impact": "把法律、裁决、专家评注和实务指引组织为可供 AI 推理的知识底座，强化上下文关联和来源追踪。",
+        "evidence": "S02"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "升级记忆、定制 Agent 与法律数据源",
+        "impact": "将个人偏好、Word 内 Agent、大规模文档审阅和 150 余个法律数据源统一进持续性工作流。",
+        "evidence": "S10 / S17 / S18"
+      }
+    ]
+  },
+  {
     "id": "2026-09-10",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/09/04—2026/09/10",
