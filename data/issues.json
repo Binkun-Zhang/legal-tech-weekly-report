@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-09-23",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/09/18—2026/09/23",
+    "periodStart": "2026-09-18",
+    "periodEnd": "2026-09-23",
+    "publishedAt": "2026-09-23",
+    "updatedAt": "2026-09-24",
+    "editors": ["胡文颖"],
+    "reviewers": ["苏旖旎", "张井"],
+    "file": "issues/2026-09-23.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦 OpenAI Astra for Law、北大法宝法宝灵境、幂律智能 MeWork v0.3.16，以及法律能力通过 MCP 与技能包进入通用平台的趋势。",
+    "decisionSummary": {
+      "focus": "法律 AI 竞争正同时争夺专业入口和权威数据层，独立法律产品与通用办公平台的边界进一步模糊。",
+      "risk": "ChatGPT 企业版、WorkBuddy 与千问等平台正在成为法律能力分发入口，无法提供标准化 Skill、MCP 或数据服务的产品可能被边缘化。",
+      "action": "把合同审查标准封装为可分发的 Skill 与 MCP 服务，同时建设可核验的专业数据层、内部评测基准和使用留痕能力。"
+    },
+    "competitors": ["Alpha AI", "幂律智能", "北大法宝", "威科先行", "WorkBuddy", "OpenAI", "Harvey", "Legora", "Thomson Reuters", "Wolters Kluwer", "LexisNexis", "DeepSeek", "Qwen"],
+    "highlights": [
+      {
+        "competitor": "北大法宝",
+        "action": "发布智能工作空间法宝灵境",
+        "impact": "将律爱多升级为八大智能体并新增智能脱敏，同时扩展智能法务、智能政府、MCP 2.0 与 WorkBuddy 平台分发。",
+        "evidence": "S04"
+      },
+      {
+        "competitor": "幂律智能",
+        "action": "发布 MeWork v0.3.16",
+        "impact": "强化五十余类合同场景的多 Agent 审查、个性化配置与文件引用核验，继续深化合同审查工作流。",
+        "evidence": "S03"
+      },
+      {
+        "competitor": "OpenAI",
+        "action": "推出 Astra for Law",
+        "impact": "通过专用法律检索索引与 CourtListener 判例数据进入律所专业检索和法律工作流市场。",
+        "evidence": "S09"
+      },
+      {
+        "competitor": "Thomson Reuters",
+        "action": "通过 MCP 接入 ChatGPT 企业版",
+        "impact": "将 CoCounsel Legal 与 HighQ 嵌入通用 AI 入口，体现专业法律能力正在转为可调用的平台服务。",
+        "evidence": "S15"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "转向自研开源模型底座",
+        "impact": "基于开源模型降低推理成本并改善毛利，显示法律 AI 厂商开始把模型成本治理纳入核心竞争力。",
+        "evidence": "S05"
+      },
+      {
+        "competitor": "Legora",
+        "action": "推出法律研究基础层并加速商业化",
+        "impact": "以法律数据、本体和引证器强化研究可信度，同时 ARR 突破 1 亿美元并推进新一轮融资。",
+        "evidence": "S11 / S19 / S20"
+      }
+    ]
+  },
+  {
     "id": "2026-09-17",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/09/11—2026/09/17",
