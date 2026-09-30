@@ -1,4 +1,84 @@
 [
+{
+  "id": "2026-09-30",
+  "title": "法律科技产品竞品监控周报",
+  "period": "2026/09/25—2026/09/30",
+  "periodStart": "2026-09-25",
+  "periodEnd": "2026-09-30",
+  "publishedAt": "2026-09-30",
+  "updatedAt": "2026-09-30",
+  "editors": [
+    "章彬坤"
+  ],
+  "reviewers": [
+    "苏旖旎",
+    "张井"
+  ],
+  "file": "issues/2026-09-30.html",
+  "tags": [
+    "竞品",
+    "行业政策",
+    "评测文章",
+    "法律科技论文",
+    "GitHub Skill",
+    "深度洞察"
+  ],
+  "summary": "本期重点关注 WorkBuddy、e签宝、典典 APP 与 DeepSeek 桌面版等产品动作，并将欧盟 AI 法案和白宫自愿安全标准纳入行业政策跟踪。",
+  "decisionSummary": {
+    "focus": "国内法律 AI 产品正在从单点功能升级为工作空间、合同审查、个人法律档案和桌面 Agent 等连续工作流。",
+    "risk": "产品能力快速扩展的同时，政策要求、证据可核验性、权限控制和桌面 Agent 的执行边界需要同步纳入产品设计。",
+    "action": "优先对比竞品的任务完成、证据回源、版本迭代、插件生态和单位任务成本，并把政策变化映射到产品合规与评测指标。"
+  },
+  "competitors": [
+    "Alpha AI",
+    "WorkBuddy",
+    "e签宝",
+    "典典 APP",
+    "DeepSeek",
+    "得理法搜",
+    "Harvey",
+    "Anthropic",
+    "千问 / Qwen"
+  ],
+  "highlights": [
+    {
+      "competitor": "WorkBuddy",
+      "action": "推进企业级智能助手落地",
+      "impact": "鲁信集团在多家直管企业和多个业务场景推进 WorkBuddy，显示企业级 Agent 正从试点走向集团化部署，数据安全与专业流程适配成为落地条件。",
+      "evidence": "S07"
+    },
+    {
+      "competitor": "e签宝",
+      "action": "强化 AI 合同增量审查与批量审查",
+      "impact": "通过版本差异识别和批量规则处理降低重复审查成本，体现合同产品从单次问答向可积累、可复用的审查工作流演进。",
+      "evidence": "S09"
+    },
+    {
+      "competitor": "典典 APP",
+      "action": "发布 3.0 版本并推出 AI 律师与个人法律档案",
+      "impact": "通过语音、文字和拍照输入，结合主动追问、法律依据和类案参考，强化面向个人用户的持续法律服务入口。",
+      "evidence": "S11"
+    },
+    {
+      "competitor": "DeepSeek",
+      "action": "推出 Harness 桌面版预览并扩展插件生态",
+      "impact": "桌面应用、插件管理和第三方扩展降低了 Agent 使用门槛，值得重点观察其在文件处理、终端执行和办公工作流中的产品边界。",
+      "evidence": "S17 / S19"
+    },
+    {
+      "competitor": "Alpha AI",
+      "action": "持续推进法律 Skill 与任务型工作流",
+      "impact": "AlphaClaw 继续以法律数据库、Skill 和任务交付为核心，说明国内法律 AI 的竞争重点正在从答案生成转向专业流程复用。",
+      "evidence": "S05"
+    },
+    {
+      "competitor": "Harvey / Anthropic",
+      "action": "推进法律模型、合同审查与模型能力升级",
+      "impact": "海外厂商继续强化专业法律数据、合同审查和模型性能，但本期重点仍应放在国内竞品的产品化速度与场景落地。",
+      "evidence": "S06 / S13 / S24"
+    }
+  ]
+},
   {
     "id": "2026-09-23",
     "title": "法律科技产品竞品监控周报",
