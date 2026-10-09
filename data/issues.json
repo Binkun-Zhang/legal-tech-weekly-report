@@ -1,4 +1,62 @@
 [
+  {
+    "id": "2026-10-08",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/10/01—2026/10/08",
+    "periodStart": "2026-10-01",
+    "periodEnd": "2026-10-08",
+    "publishedAt": "2026-10-08",
+    "updatedAt": "2026-10-09",
+    "editors": ["胡文颖"],
+    "reviewers": ["苏旖旎", "张井"],
+    "file": "issues/2026-10-08.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦 Harvey、Legora、Clio 等法律 AI 厂商的并购与产品扩张，Ivo 基于 DeepSeek 开源合同模型，以及 ROSS 案对法律 AI 训练数据边界的影响。",
+    "decisionSummary": {
+      "focus": "海外法律 AI 进入并购扩张与开源底座并行的竞争周期，平台型厂商正通过收购、法律 Skill 和专业工作流快速补齐能力。",
+      "risk": "ROSS 案终审认定使用竞品整理数据训练替代性法律检索产品不构成合理使用，法律 AI 训练数据来源与用途面临更严格的合规审查。",
+      "action": "评估公开语料、领域专家合成数据与开源模型后训练路径，同时系统核查训练数据授权、来源记录和竞品编辑性内容使用边界。"
+    },
+    "competitors": ["Harvey", "Legora", "Clio", "Ivo", "DeepSeek", "Anthropic", "LexisNexis", "Wolters Kluwer", "Thomson Reuters", "Filevine", "NetDocuments"],
+    "highlights": [
+      {
+        "competitor": "Ivo",
+        "action": "开源合同 AI 模型 Sage",
+        "impact": "基于 DeepSeek V4 Flash 使用公开数据、律师指导的合成数据进行后训练，展示低成本开源底座与法律垂直数据结合的产品路径。",
+        "evidence": "S10"
+      },
+      {
+        "competitor": "Legora",
+        "action": "推出 250 多个法律智能体技能",
+        "impact": "通过大规模法律 Skill 覆盖更多专业任务，继续推动法律 AI 从单点助手向可组合工作流平台演进。",
+        "evidence": "S22"
+      },
+      {
+        "competitor": "Clio",
+        "action": "收购法院 AI 公司 Learned Hand",
+        "impact": "将产品边界从律所管理与法律服务进一步扩展至法院和法官场景，反映平台厂商通过并购快速补齐垂直能力。",
+        "evidence": "S28"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "推出诉讼工作流并建设 MCP 策略引擎",
+        "impact": "一方面与 LexisNexis 推出动议起草流程，另一方面加强 Agent 工具调用治理，兼顾任务交付与运行时控制。",
+        "evidence": "S16 / S23"
+      },
+      {
+        "competitor": "Anthropic",
+        "action": "发布 Claude Haiku 5.5",
+        "impact": "运行成本平均降低约 75%，进一步降低法律场景采用多模型路由和低成本任务执行的门槛。",
+        "evidence": "S11 / S35"
+      },
+      {
+        "competitor": "DeepSeek",
+        "action": "扩展开源工具链并成为法律模型底座",
+        "impact": "开源昇腾工具链与 Ivo 合同模型共同表明，国产开源模型正在同时进入基础设施和法律垂直后训练场景。",
+        "evidence": "S10 / S14"
+      }
+    ]
+  },
 {
   "id": "2026-09-30",
   "title": "法律科技产品竞品监控周报",
