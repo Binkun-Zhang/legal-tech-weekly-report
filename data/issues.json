@@ -1,5 +1,63 @@
 [
   {
+    "id": "2026-10-16",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/10/09—2026/10/16",
+    "periodStart": "2026-10-09",
+    "periodEnd": "2026-10-16",
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "editors": ["胡文颖"],
+    "reviewers": ["苏旖旎", "张井"],
+    "file": "issues/2026-10-16.html",
+    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "summary": "本期聚焦 MeWork 法律 Skills 与项目工作台、智谱 GLM-Legal、Harvey 与 Legora 的法务受理入口和事项级工作编排，以及 Microsoft Copilot for Legal 对办公入口的整合。",
+    "decisionSummary": {
+      "focus": "法律 AI 的竞争焦点正从单点功能转向可复用 Skills、持续事项工作区、法务受理入口和多 Agent 工作编排。",
+      "risk": "Microsoft 将二十多项法律技能直接放进 Word，通用办公平台正在把法律能力、文件入口和跨应用 Agent 工作流合并为统一产品。",
+      "action": "围绕项目记忆、证据回源、可审计工具调用和单位任务成本建立统一评测，并把高频法律方法封装为可复用 Skill。"
+    },
+    "competitors": ["MeWork", "幂律智能", "智谱 / GLM-Legal", "WorkBuddy", "Harvey", "Legora", "Microsoft", "Thomson Reuters", "NetDocuments", "Anthropic", "MyCase"],
+    "highlights": [
+      {
+        "competitor": "MeWork / 幂律智能",
+        "action": "上新法律 Skills 与项目工作台",
+        "impact": "法律计算、证据整理、诉状和庭审发问等方法被封装为可复用 Skill，同时以共享资料夹贯通案件对话、材料与成果。",
+        "evidence": "S05 / S06"
+      },
+      {
+        "competitor": "智谱 / GLM-Legal",
+        "action": "发布法律专用 Agent 模型",
+        "impact": "覆盖合同审查、卷宗证据分析和企业合规调研，并通过 AutoClaw 把修订痕迹与批注直接写回 Word。",
+        "evidence": "S07"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "推出 Intake 与 Legal Work Orchestration",
+        "impact": "把多渠道法务请求受理、任务分派、事项阶段、文档、Agent 与律师审核节点纳入同一工作流。",
+        "evidence": "S24 / S25"
+      },
+      {
+        "competitor": "Legora",
+        "action": "上线 Intake 并扩展企业法律技术栈集成",
+        "impact": "从 Slack 接收法律请求并依据团队 Skills 生成初稿，同时通过 MCP 连接文档、合同和企业搜索系统。",
+        "evidence": "S23 / S26"
+      },
+      {
+        "competitor": "Microsoft",
+        "action": "发布 Copilot for Legal",
+        "impact": "在 Word 中集成二十多项法律技能，并通过 Cowork 支持跨文件、跨应用的多步骤代理工作流，直接争夺法律办公入口。",
+        "evidence": "S19"
+      },
+      {
+        "competitor": "WorkBuddy / 阶跃星辰",
+        "action": "接入 Step 5 Preview",
+        "impact": "强化自主任务拆解、工具调用、深度研究、数据分析和文档生成能力，继续扩展通用 Agent 平台的专业任务覆盖。",
+        "evidence": "S08"
+      }
+    ]
+  },
+  {
     "id": "2026-10-08",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/10/01—2026/10/08",
