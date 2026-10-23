@@ -407,6 +407,13 @@
       return issue.file === issueFile;
     }) || issues[0];
     if (!currentIssue) throw new Error("Issue not found");
+    if (currentIssue.reader === "four-modes" && /^issues\/[a-zA-Z0-9-]+\.html$/.test(currentIssue.file)) {
+      var readerParams = new URLSearchParams(window.location.search);
+      readerParams.delete("issue");
+      var readerQuery = readerParams.toString();
+      window.location.replace(currentIssue.file + (readerQuery ? "?" + readerQuery : "") + window.location.hash);
+      return;
+    }
 
     issueTitle.textContent = currentIssue.title;
     issuePeriod.textContent = currentIssue.period;
@@ -478,7 +485,7 @@
   });
 
   Promise.all([
-    fetch("data/issues.json?v=20260924-1").then(function (response) { return response.json(); }),
+    fetch("data/issues.json?v=20261023-1").then(function (response) { return response.json(); }),
     fetch("data/site-config.json").then(function (response) { return response.json(); })
   ]).then(function (result) {
     init(result[0], result[1]);

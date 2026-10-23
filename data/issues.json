@@ -1,5 +1,68 @@
 [
-  {
+{
+  "id": "2026-10-23",
+  "title": "法律科技产品竞品监控周报",
+  "period": "2026/10/17—2026/10/23",
+  "periodStart": "2026-10-17",
+  "periodEnd": "2026-10-23",
+  "publishedAt": "2026-10-23",
+  "updatedAt": "2026-10-23",
+  "file": "issues/2026-10-23.html",
+  "reader": "four-modes",
+  "editors": [],
+  "reviewers": [],
+  "tags": [
+    "竞品",
+    "行业政策",
+    "评测文章",
+    "法律科技文章",
+    "法律科技论文",
+    "GitHub Skill",
+    "深度洞察"
+  ],
+  "summary": "本期收录51条资讯，关注MeWork合同审查与交付、AlphaGPT类案检索Pro、得理AI律师版与Harvey数据连接，并提供杂志、折叠、列表详情和并排对照四种阅读方式。",
+  "competitors": [
+    "Alpha AI",
+    "幂律智能",
+    "WorkBuddy",
+    "得理法搜",
+    "Harvey",
+    "DeepSeek",
+    "LexisNexis"
+  ],
+  "decisionSummary": {
+    "focus": "合同审查闭环、多轮类案检索与专业数据连接，正把竞争重点推向可复核的工作交付。",
+    "risk": "厂商发布口径、评测条件与实际使用效果需要分开判断，避免把不可比成绩作为能力排名。",
+    "action": "优先验证条款定位、修订保真、可编辑导出与证据回溯，并统一评测样本、工具权限及成本口径。"
+  },
+  "highlights": [
+    {
+      "competitor": "幂律智能",
+      "action": "MeWork v0.3.20升级审查与交付",
+      "impact": "风险与原文联动、批量修订、清洁版导出及项目状态记忆，产品仍处内测。",
+      "evidence": "s09"
+    },
+    {
+      "competitor": "Alpha AI",
+      "action": "类案检索Pro支持多轮追问与报告交付",
+      "impact": "支持持续追问与可编辑报告，强化可复核的专业检索工作流。",
+      "evidence": "s10"
+    },
+    {
+      "competitor": "得理法搜",
+      "action": "AI律师版连接办案工具与案源服务",
+      "impact": "整合法律检索、研究、文书、合同和案情证据分析，并提供案源匹配。",
+      "evidence": "s11"
+    },
+    {
+      "competitor": "WorkBuddy",
+      "action": "企业微信机器人与文档任务入口",
+      "impact": "将办公任务带入企业协作入口，关注文档处理和组织内使用体验。",
+      "evidence": "s12"
+    }
+  ]
+},
+{
     "id": "2026-10-16",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/10/09—2026/10/16",
