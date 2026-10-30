@@ -1,68 +1,133 @@
 [
-{
-  "id": "2026-10-23",
-  "title": "法律科技产品竞品监控周报",
-  "period": "2026/10/17—2026/10/23",
-  "periodStart": "2026-10-17",
-  "periodEnd": "2026-10-23",
-  "publishedAt": "2026-10-23",
-  "updatedAt": "2026-10-23",
-  "file": "issues/2026-10-23.html",
-  "reader": "four-modes",
-  "editors": [],
-  "reviewers": [],
-  "tags": [
-    "竞品",
-    "行业政策",
-    "评测文章",
-    "法律科技文章",
-    "法律科技论文",
-    "GitHub Skill",
-    "深度洞察"
-  ],
-  "summary": "本期收录51条资讯，关注MeWork合同审查与交付、AlphaGPT类案检索Pro、得理AI律师版与Harvey数据连接，并提供杂志、折叠、列表详情和并排对照四种阅读方式。",
-  "competitors": [
-    "Alpha AI",
-    "幂律智能",
-    "WorkBuddy",
-    "得理法搜",
-    "Harvey",
-    "DeepSeek",
-    "LexisNexis"
-  ],
-  "decisionSummary": {
-    "focus": "合同审查闭环、多轮类案检索与专业数据连接，正把竞争重点推向可复核的工作交付。",
-    "risk": "厂商发布口径、评测条件与实际使用效果需要分开判断，避免把不可比成绩作为能力排名。",
-    "action": "优先验证条款定位、修订保真、可编辑导出与证据回溯，并统一评测样本、工具权限及成本口径。"
+  {
+    "id": "2026-10-29",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/10/23—2026/10/29",
+    "periodStart": "2026-10-23",
+    "periodEnd": "2026-10-29",
+    "publishedAt": "2026-10-30",
+    "updatedAt": "2026-10-30",
+    "file": "issues/2026-10-29.html",
+    "reader": "four-modes",
+    "editors": [],
+    "reviewers": [],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
+    "summary": "本期收录78条资讯，关注MeWork正式发布、Alpha民商事助手与合同比对审查、法宝灵境Buddy、得理研究与案源升级，以及Claude for Legal生态连接。",
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "北大法宝",
+      "WorkBuddy",
+      "得理法搜",
+      "Harvey",
+      "Anthropic",
+      "DeepSeek",
+      "智谱 / GLM-Legal"
+    ],
+    "decisionSummary": {
+      "focus": "法律AI竞品从单点功能走向工作台、数字员工与生态连接。",
+      "risk": "基准难度、发布方利益及信息核验程度影响评测解读，部分消息为区间外延伸补充。",
+      "action": "对标引用核验、合同比对、多轮研究和文书交付，评估项目经验沉淀与数据连接能力。"
+    },
+    "highlights": [
+      {
+        "competitor": "幂律智能",
+        "action": "幂律智能 MeWork 正式发布：法律人的 AI 工作台",
+        "impact": "“查得准—想得细—核得动—交得出”的交付闭环与审级核查是差异化锚点，值得逐项对标验收。",
+        "evidence": "s23"
+      },
+      {
+        "competitor": "Alpha AI",
+        "action": "AlphaGPT 上线合同比对审查，支持参考材料语境审查",
+        "impact": "立场化比对+参考材料语境审查贴近真实谈判流；“修订稿风险复查”是合同产品必补一环。",
+        "evidence": "s26"
+      },
+      {
+        "competitor": "北大法宝",
+        "action": "北大法宝携法宝灵境 Buddy 应用亮相腾讯全球数字生态大会",
+        "impact": "从“让用户来法宝”到“让法宝进入每个 AI”：数据厂商原子化输出能力的平台路线确认，留意其 MCP 积分计费模式。",
+        "evidence": "s36"
+      },
+      {
+        "competitor": "得理法搜",
+        "action": "得理AI「法律研究」五维升级：从问答走向办案工作流",
+        "impact": "“反问确认—路径适配—成果可追问”把研究做成多轮工作流，反问环节对降低答非所问值得借鉴。",
+        "evidence": "s28"
+      }
+    ]
   },
-  "highlights": [
-    {
-      "competitor": "幂律智能",
-      "action": "MeWork v0.3.20升级审查与交付",
-      "impact": "风险与原文联动、批量修订、清洁版导出及项目状态记忆，产品仍处内测。",
-      "evidence": "s09"
+  {
+    "id": "2026-10-23",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/10/17—2026/10/23",
+    "periodStart": "2026-10-17",
+    "periodEnd": "2026-10-23",
+    "publishedAt": "2026-10-23",
+    "updatedAt": "2026-10-23",
+    "file": "issues/2026-10-23.html",
+    "reader": "four-modes",
+    "editors": [],
+    "reviewers": [],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
+    "summary": "本期收录51条资讯，关注MeWork合同审查与交付、AlphaGPT类案检索Pro、得理AI律师版与Harvey数据连接，并提供杂志、折叠、列表详情和并排对照四种阅读方式。",
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "WorkBuddy",
+      "得理法搜",
+      "Harvey",
+      "DeepSeek",
+      "LexisNexis"
+    ],
+    "decisionSummary": {
+      "focus": "合同审查闭环、多轮类案检索与专业数据连接，正把竞争重点推向可复核的工作交付。",
+      "risk": "厂商发布口径、评测条件与实际使用效果需要分开判断，避免把不可比成绩作为能力排名。",
+      "action": "优先验证条款定位、修订保真、可编辑导出与证据回溯，并统一评测样本、工具权限及成本口径。"
     },
-    {
-      "competitor": "Alpha AI",
-      "action": "类案检索Pro支持多轮追问与报告交付",
-      "impact": "支持持续追问与可编辑报告，强化可复核的专业检索工作流。",
-      "evidence": "s10"
-    },
-    {
-      "competitor": "得理法搜",
-      "action": "AI律师版连接办案工具与案源服务",
-      "impact": "整合法律检索、研究、文书、合同和案情证据分析，并提供案源匹配。",
-      "evidence": "s11"
-    },
-    {
-      "competitor": "WorkBuddy",
-      "action": "企业微信机器人与文档任务入口",
-      "impact": "将办公任务带入企业协作入口，关注文档处理和组织内使用体验。",
-      "evidence": "s12"
-    }
-  ]
-},
-{
+    "highlights": [
+      {
+        "competitor": "幂律智能",
+        "action": "MeWork v0.3.20升级审查与交付",
+        "impact": "风险与原文联动、批量修订、清洁版导出及项目状态记忆，产品仍处内测。",
+        "evidence": "s09"
+      },
+      {
+        "competitor": "Alpha AI",
+        "action": "类案检索Pro支持多轮追问与报告交付",
+        "impact": "支持持续追问与可编辑报告，强化可复核的专业检索工作流。",
+        "evidence": "s10"
+      },
+      {
+        "competitor": "得理法搜",
+        "action": "AI律师版连接办案工具与案源服务",
+        "impact": "整合法律检索、研究、文书、合同和案情证据分析，并提供案源匹配。",
+        "evidence": "s11"
+      },
+      {
+        "competitor": "WorkBuddy",
+        "action": "企业微信机器人与文档任务入口",
+        "impact": "将办公任务带入企业协作入口，关注文档处理和组织内使用体验。",
+        "evidence": "s12"
+      }
+    ]
+  },
+  {
     "id": "2026-10-16",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/10/09—2026/10/16",
@@ -70,17 +135,42 @@
     "periodEnd": "2026-10-16",
     "publishedAt": "2026-10-16",
     "updatedAt": "2026-10-16",
-    "editors": ["胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-10-16.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦 MeWork 法律 Skills 与项目工作台、智谱 GLM-Legal、Harvey 与 Legora 的法务受理入口和事项级工作编排，以及 Microsoft Copilot for Legal 对办公入口的整合。",
     "decisionSummary": {
       "focus": "法律 AI 的竞争焦点正从单点功能转向可复用 Skills、持续事项工作区、法务受理入口和多 Agent 工作编排。",
       "risk": "Microsoft 将二十多项法律技能直接放进 Word，通用办公平台正在把法律能力、文件入口和跨应用 Agent 工作流合并为统一产品。",
       "action": "围绕项目记忆、证据回源、可审计工具调用和单位任务成本建立统一评测，并把高频法律方法封装为可复用 Skill。"
     },
-    "competitors": ["MeWork", "幂律智能", "智谱 / GLM-Legal", "WorkBuddy", "Harvey", "Legora", "Microsoft", "Thomson Reuters", "NetDocuments", "Anthropic", "MyCase"],
+    "competitors": [
+      "MeWork",
+      "幂律智能",
+      "智谱 / GLM-Legal",
+      "WorkBuddy",
+      "Harvey",
+      "Legora",
+      "Microsoft",
+      "Thomson Reuters",
+      "NetDocuments",
+      "Anthropic",
+      "MyCase"
+    ],
     "highlights": [
       {
         "competitor": "MeWork / 幂律智能",
@@ -128,17 +218,42 @@
     "periodEnd": "2026-10-08",
     "publishedAt": "2026-10-08",
     "updatedAt": "2026-10-09",
-    "editors": ["胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-10-08.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦 Harvey、Legora、Clio 等法律 AI 厂商的并购与产品扩张，Ivo 基于 DeepSeek 开源合同模型，以及 ROSS 案对法律 AI 训练数据边界的影响。",
     "decisionSummary": {
       "focus": "海外法律 AI 进入并购扩张与开源底座并行的竞争周期，平台型厂商正通过收购、法律 Skill 和专业工作流快速补齐能力。",
       "risk": "ROSS 案终审认定使用竞品整理数据训练替代性法律检索产品不构成合理使用，法律 AI 训练数据来源与用途面临更严格的合规审查。",
       "action": "评估公开语料、领域专家合成数据与开源模型后训练路径，同时系统核查训练数据授权、来源记录和竞品编辑性内容使用边界。"
     },
-    "competitors": ["Harvey", "Legora", "Clio", "Ivo", "DeepSeek", "Anthropic", "LexisNexis", "Wolters Kluwer", "Thomson Reuters", "Filevine", "NetDocuments"],
+    "competitors": [
+      "Harvey",
+      "Legora",
+      "Clio",
+      "Ivo",
+      "DeepSeek",
+      "Anthropic",
+      "LexisNexis",
+      "Wolters Kluwer",
+      "Thomson Reuters",
+      "Filevine",
+      "NetDocuments"
+    ],
     "highlights": [
       {
         "competitor": "Ivo",
@@ -178,86 +293,86 @@
       }
     ]
   },
-{
-  "id": "2026-09-30",
-  "title": "法律科技产品竞品监控周报",
-  "period": "2026/09/25—2026/09/30",
-  "periodStart": "2026-09-25",
-  "periodEnd": "2026-09-30",
-  "publishedAt": "2026-09-30",
-  "updatedAt": "2026-09-30",
-  "editors": [
-    "章彬坤"
-  ],
-  "reviewers": [
-    "苏旖旎",
-    "张井"
-  ],
-  "file": "issues/2026-09-30.html",
-  "tags": [
-    "竞品",
-    "行业政策",
-    "评测文章",
-    "法律科技论文",
-    "GitHub Skill",
-    "深度洞察"
-  ],
-  "summary": "本期重点关注 WorkBuddy、e签宝、典典 APP 与 DeepSeek 桌面版等产品动作，并将欧盟 AI 法案和白宫自愿安全标准纳入行业政策跟踪。",
-  "decisionSummary": {
-    "focus": "国内法律 AI 产品正在从单点功能升级为工作空间、合同审查、个人法律档案和桌面 Agent 等连续工作流。",
-    "risk": "产品能力快速扩展的同时，政策要求、证据可核验性、权限控制和桌面 Agent 的执行边界需要同步纳入产品设计。",
-    "action": "优先对比竞品的任务完成、证据回源、版本迭代、插件生态和单位任务成本，并把政策变化映射到产品合规与评测指标。"
+  {
+    "id": "2026-09-30",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/09/25—2026/09/30",
+    "periodStart": "2026-09-25",
+    "periodEnd": "2026-09-30",
+    "publishedAt": "2026-09-30",
+    "updatedAt": "2026-09-30",
+    "editors": [
+      "章彬坤"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
+    "file": "issues/2026-09-30.html",
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
+    "summary": "本期重点关注 WorkBuddy、e签宝、典典 APP 与 DeepSeek 桌面版等产品动作，并将欧盟 AI 法案和白宫自愿安全标准纳入行业政策跟踪。",
+    "decisionSummary": {
+      "focus": "国内法律 AI 产品正在从单点功能升级为工作空间、合同审查、个人法律档案和桌面 Agent 等连续工作流。",
+      "risk": "产品能力快速扩展的同时，政策要求、证据可核验性、权限控制和桌面 Agent 的执行边界需要同步纳入产品设计。",
+      "action": "优先对比竞品的任务完成、证据回源、版本迭代、插件生态和单位任务成本，并把政策变化映射到产品合规与评测指标。"
+    },
+    "competitors": [
+      "Alpha AI",
+      "WorkBuddy",
+      "e签宝",
+      "典典 APP",
+      "DeepSeek",
+      "得理法搜",
+      "Harvey",
+      "Anthropic",
+      "千问 / Qwen"
+    ],
+    "highlights": [
+      {
+        "competitor": "WorkBuddy",
+        "action": "推进企业级智能助手落地",
+        "impact": "鲁信集团在多家直管企业和多个业务场景推进 WorkBuddy，显示企业级 Agent 正从试点走向集团化部署，数据安全与专业流程适配成为落地条件。",
+        "evidence": "S07"
+      },
+      {
+        "competitor": "e签宝",
+        "action": "强化 AI 合同增量审查与批量审查",
+        "impact": "通过版本差异识别和批量规则处理降低重复审查成本，体现合同产品从单次问答向可积累、可复用的审查工作流演进。",
+        "evidence": "S09"
+      },
+      {
+        "competitor": "典典 APP",
+        "action": "发布 3.0 版本并推出 AI 律师与个人法律档案",
+        "impact": "通过语音、文字和拍照输入，结合主动追问、法律依据和类案参考，强化面向个人用户的持续法律服务入口。",
+        "evidence": "S11"
+      },
+      {
+        "competitor": "DeepSeek",
+        "action": "推出 Harness 桌面版预览并扩展插件生态",
+        "impact": "桌面应用、插件管理和第三方扩展降低了 Agent 使用门槛，值得重点观察其在文件处理、终端执行和办公工作流中的产品边界。",
+        "evidence": "S17 / S19"
+      },
+      {
+        "competitor": "Alpha AI",
+        "action": "持续推进法律 Skill 与任务型工作流",
+        "impact": "AlphaClaw 继续以法律数据库、Skill 和任务交付为核心，说明国内法律 AI 的竞争重点正在从答案生成转向专业流程复用。",
+        "evidence": "S05"
+      },
+      {
+        "competitor": "Harvey / Anthropic",
+        "action": "推进法律模型、合同审查与模型能力升级",
+        "impact": "海外厂商继续强化专业法律数据、合同审查和模型性能，但本期重点仍应放在国内竞品的产品化速度与场景落地。",
+        "evidence": "S06 / S13 / S24"
+      }
+    ]
   },
-  "competitors": [
-    "Alpha AI",
-    "WorkBuddy",
-    "e签宝",
-    "典典 APP",
-    "DeepSeek",
-    "得理法搜",
-    "Harvey",
-    "Anthropic",
-    "千问 / Qwen"
-  ],
-  "highlights": [
-    {
-      "competitor": "WorkBuddy",
-      "action": "推进企业级智能助手落地",
-      "impact": "鲁信集团在多家直管企业和多个业务场景推进 WorkBuddy，显示企业级 Agent 正从试点走向集团化部署，数据安全与专业流程适配成为落地条件。",
-      "evidence": "S07"
-    },
-    {
-      "competitor": "e签宝",
-      "action": "强化 AI 合同增量审查与批量审查",
-      "impact": "通过版本差异识别和批量规则处理降低重复审查成本，体现合同产品从单次问答向可积累、可复用的审查工作流演进。",
-      "evidence": "S09"
-    },
-    {
-      "competitor": "典典 APP",
-      "action": "发布 3.0 版本并推出 AI 律师与个人法律档案",
-      "impact": "通过语音、文字和拍照输入，结合主动追问、法律依据和类案参考，强化面向个人用户的持续法律服务入口。",
-      "evidence": "S11"
-    },
-    {
-      "competitor": "DeepSeek",
-      "action": "推出 Harness 桌面版预览并扩展插件生态",
-      "impact": "桌面应用、插件管理和第三方扩展降低了 Agent 使用门槛，值得重点观察其在文件处理、终端执行和办公工作流中的产品边界。",
-      "evidence": "S17 / S19"
-    },
-    {
-      "competitor": "Alpha AI",
-      "action": "持续推进法律 Skill 与任务型工作流",
-      "impact": "AlphaClaw 继续以法律数据库、Skill 和任务交付为核心，说明国内法律 AI 的竞争重点正在从答案生成转向专业流程复用。",
-      "evidence": "S05"
-    },
-    {
-      "competitor": "Harvey / Anthropic",
-      "action": "推进法律模型、合同审查与模型能力升级",
-      "impact": "海外厂商继续强化专业法律数据、合同审查和模型性能，但本期重点仍应放在国内竞品的产品化速度与场景落地。",
-      "evidence": "S06 / S13 / S24"
-    }
-  ]
-},
   {
     "id": "2026-09-23",
     "title": "法律科技产品竞品监控周报",
@@ -266,17 +381,44 @@
     "periodEnd": "2026-09-23",
     "publishedAt": "2026-09-23",
     "updatedAt": "2026-09-24",
-    "editors": ["胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-09-23.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦 OpenAI Astra for Law、北大法宝法宝灵境、幂律智能 MeWork v0.3.16，以及法律能力通过 MCP 与技能包进入通用平台的趋势。",
     "decisionSummary": {
       "focus": "法律 AI 竞争正同时争夺专业入口和权威数据层，独立法律产品与通用办公平台的边界进一步模糊。",
       "risk": "ChatGPT 企业版、WorkBuddy 与千问等平台正在成为法律能力分发入口，无法提供标准化 Skill、MCP 或数据服务的产品可能被边缘化。",
       "action": "把合同审查标准封装为可分发的 Skill 与 MCP 服务，同时建设可核验的专业数据层、内部评测基准和使用留痕能力。"
     },
-    "competitors": ["Alpha AI", "幂律智能", "北大法宝", "威科先行", "WorkBuddy", "OpenAI", "Harvey", "Legora", "Thomson Reuters", "Wolters Kluwer", "LexisNexis", "DeepSeek", "Qwen"],
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "北大法宝",
+      "威科先行",
+      "WorkBuddy",
+      "OpenAI",
+      "Harvey",
+      "Legora",
+      "Thomson Reuters",
+      "Wolters Kluwer",
+      "LexisNexis",
+      "DeepSeek",
+      "Qwen"
+    ],
     "highlights": [
       {
         "competitor": "北大法宝",
@@ -324,17 +466,43 @@
     "periodEnd": "2026-09-17",
     "publishedAt": "2026-09-17",
     "updatedAt": "2026-09-18",
-    "editors": ["章彬坤"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "章彬坤"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-09-17.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦北大法宝法规文件智能审查、幂律智能 MeWork v0.3.14、iCourt 庭审证据 Skill，以及得理和法天使通过 MCP 接入通用 Agent 平台。",
     "decisionSummary": {
       "focus": "法律 AI 正从单点工具进入“专业数据、Skill / MCP 与 Agent 工作空间”的组合竞争，产品价值越来越取决于证据回源和连续交付。",
       "risk": "专业内容平台正把数据库封装为知识图谱和 MCP，通用 Agent 同时补齐应用生成与多工具协作，可能压缩单点法律工具的入口价值。",
       "action": "优先建设可复用法律 Skill、专业数据连接和合同审查公开评测体系，并以引用核验、版本控制和人工复核形成可信交付闭环。"
     },
-    "competitors": ["Alpha AI", "幂律智能", "北大法宝", "威科先行", "WorkBuddy", "得理法搜", "法天使", "Harvey", "Google Gemini", "面壁智能", "DeepSeek", "Qwen"],
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "北大法宝",
+      "威科先行",
+      "WorkBuddy",
+      "得理法搜",
+      "法天使",
+      "Harvey",
+      "Google Gemini",
+      "面壁智能",
+      "DeepSeek",
+      "Qwen"
+    ],
     "highlights": [
       {
         "competitor": "北大法宝",
@@ -382,17 +550,41 @@
     "periodEnd": "2026-09-10",
     "publishedAt": "2026-09-10",
     "updatedAt": "2026-09-11",
-    "editors": ["胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-09-10.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦 iCourt 法律咨询 Pro、幂律智能 MeWork 更新、Harvey 合同审查智能体，以及 WorkBuddy 接入 DeepSeek V4.1-Flash 等法律 Agent 产品信号。",
     "decisionSummary": {
       "focus": "国内外法律 AI 正集中升级为可连续执行的 Agent，竞争重点从单点问答转向专业数据、专项 Skill、连接器与可核验交付。",
       "risk": "司法规则进一步明确 AI 内容使用者的核验责任，缺少来源回溯、执行日志、异常识别和人工审批的产品将面临更直接的合规风险。",
       "action": "建立法律 Agent 长链路和执行轨迹级评测，并将合同规则库、引用核验、版本留痕和异常转人工纳入默认产品能力。"
     },
-    "competitors": ["Alpha AI", "幂律智能", "WorkBuddy", "DeepSeek", "Harvey", "Thomson Reuters", "Wolters Kluwer", "Litera", "Intapp", "Legora"],
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "WorkBuddy",
+      "DeepSeek",
+      "Harvey",
+      "Thomson Reuters",
+      "Wolters Kluwer",
+      "Litera",
+      "Intapp",
+      "Legora"
+    ],
     "highlights": [
       {
         "competitor": "Alpha AI",
@@ -440,17 +632,40 @@
     "periodEnd": "2026-09-03",
     "publishedAt": "2026-09-03",
     "updatedAt": "2026-09-04",
-    "editors": ["胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-09-03.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦 WorkBuddy 法律生态扩张、北大法宝与吾律的平台接入、威科国企合规产品矩阵，以及 Harvey 多智能体合同审查与引证核验能力。",
     "decisionSummary": {
       "focus": "法律 AI 的竞争正在从单体产品转向“通用 Agent 底座、专业数据、可组合 Skill 与任务交付”的生态协作。",
       "risk": "通用 Agent 平台快速吸收法律数据库和垂直技能，专业产品若缺少开放接口、证据核验和工作流优势，入口价值可能被压缩。",
       "action": "评估将合同审核、文书起草和法律检索能力封装为 Skill 或 MCP，并建立引证核验、多智能体审查和单位任务成本专项评测。"
     },
-    "competitors": ["Alpha AI", "北大法宝", "威科先行", "WorkBuddy", "Harvey", "Filevine", "吾律", "iManage", "Thomson Reuters"],
+    "competitors": [
+      "Alpha AI",
+      "北大法宝",
+      "威科先行",
+      "WorkBuddy",
+      "Harvey",
+      "Filevine",
+      "吾律",
+      "iManage",
+      "Thomson Reuters"
+    ],
     "highlights": [
       {
         "competitor": "WorkBuddy",
@@ -498,17 +713,37 @@
     "periodEnd": "2026-08-27",
     "publishedAt": "2026-08-27",
     "updatedAt": "2026-08-28-columns-1",
-    "editors": ["章彬坤", "胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "章彬坤",
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-08-27.html",
-    "tags": ["竞品", "行业政策", "评测文章", "法律科技文章", "法律科技论文", "GitHub Skill", "深度洞察"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
     "summary": "本期聚焦法律 AI 从模型回答向任务交付迁移的产品信号，覆盖竞品功能评测、行业政策、法律科技文章、论文与 GitHub Skill。",
     "decisionSummary": {
       "focus": "法律 AI 的竞争重点正在从单点生成质量转向材料读取、检索、判断、起草、校验、交付和留痕的完整闭环。",
       "risk": "模型、Skill、连接器和专业数据快速组合，若只比较问答效果，容易忽略证据回源、权限、成本和结果可验证性。",
       "action": "将缺失事实追问、法规版本核验、合同终审错误检测、证据回源和人工复核指标纳入产品建设与专项评测。"
     },
-    "competitors": ["Alpha AI", "幂律智能", "北大法宝", "威科先行", "WorkBuddy"],
+    "competitors": [
+      "Alpha AI",
+      "幂律智能",
+      "北大法宝",
+      "威科先行",
+      "WorkBuddy"
+    ],
     "highlights": [
       {
         "competitor": "得理法搜",
@@ -556,10 +791,22 @@
     "periodEnd": "2026-08-20",
     "publishedAt": "2026-08-20",
     "updatedAt": "2026-08-21",
-    "editors": ["章彬坤", "胡文颖"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "章彬坤",
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-08-20.html",
-    "tags": ["竞品", "行业政策", "法律科技论文", "GitHub Skill", "测评与技术文章"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "法律科技论文",
+      "GitHub Skill",
+      "测评与技术文章"
+    ],
     "summary": "本期重点跟踪 iCourt Alpha 与幂律智能 MeWork 的产品功能突破，并补充法律科技论文、GitHub Skill、行业政策与技术测评。",
     "decisionSummary": {
       "focus": "AlphaGPT 类案检索 Pro、AlphaClaw 法律 Skill 与 MeWork 内测，显示法律 AI 正从单点问答走向可核验的连续工作流。",
@@ -620,10 +867,21 @@
     "periodEnd": "2026-08-12",
     "publishedAt": "2026-08-12",
     "updatedAt": "2026-08-21",
-    "editors": ["方馨瑶", "章彬坤"],
-    "reviewers": ["苏旖旎", "张井"],
+    "editors": [
+      "方馨瑶",
+      "章彬坤"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
     "file": "issues/2026-08-12.html",
-    "tags": ["竞品", "行业政策", "法律科技论文", "测评与技术文章"],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "法律科技论文",
+      "测评与技术文章"
+    ],
     "summary": "本期覆盖国内外法律 AI 竞品动态、产品功能与商业化信号，并补充法律科技论文、测评文章及证据来源。",
     "decisionSummary": {
       "focus": "Alpha 的功能迭代、幂律智能的责任险设计，以及北大法宝和威科先行的数据库增值路径，是本期最值得跟进的产品信号。",
