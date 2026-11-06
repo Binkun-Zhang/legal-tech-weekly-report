@@ -1,5 +1,93 @@
 [
   {
+    "id": "2026-11-05",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/10/30—2026/11/05",
+    "periodStart": "2026-10-30",
+    "periodEnd": "2026-11-05",
+    "publishedAt": "2026-11-06",
+    "updatedAt": "2026-11-06",
+    "file": "issues/2026-11-05.html",
+    "reader": "four-modes",
+    "editors": [],
+    "reviewers": [],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
+    "summary": "本期整理43条资讯，关注合同审查核验、法律AI工作台、模型与数据连接、评测方法、法律科技论文和GitHub Skill。",
+    "competitors": [
+      "WorkBuddy",
+      "幂律智能",
+      "千问",
+      "Kimi",
+      "Alpha AI",
+      "北大法宝",
+      "得理",
+      "法天使"
+    ],
+    "decisionSummary": {
+      "focus": "本周竞品动态集中在模型接入、合同审查、工作空间、法律数据连接与律师服务交付。",
+      "risk": "来源中包含厂商自报数据及非直接竞品技术信息，需结合原文和实际测试判断。",
+      "action": "优先对比合同审查的多文件协同、规则配置、证据定位、Word交付，以及工作台的记忆、连接器与人工接管。"
+    },
+    "highlights": [
+      {
+        "competitor": "WorkBuddy",
+        "action": "WorkBuddy首发接入混元Hy4",
+        "impact": "围绕视觉理解、Computer Use、复杂文档协作和办公任务整理扩展模型入口，值得验证其在法律材料处理中的可迁移性。",
+        "evidence": "s74"
+      },
+      {
+        "competitor": "幂律智能",
+        "action": "MeFlow以规则驱动搭建合同全生命周期闭环",
+        "impact": "把审查清单、风险标注、多版本比对、线上协同和履约预警连成企业合同管理流程。",
+        "evidence": "s72"
+      },
+      {
+        "competitor": "千问",
+        "action": "AI Office升级端内编辑与自定义模板",
+        "impact": "支持生成后继续编辑并按单位模板保留版式，直接对应法律文书格式保真和模板化交付。",
+        "evidence": "s17"
+      },
+      {
+        "competitor": "Kimi",
+        "action": "推出托管智能体 Kimi Hosted Agents",
+        "impact": "以长时间运行、多智能体协作、沙箱隔离和审计日志支持持续任务，值得对比监控型法律工作流。",
+        "evidence": "s25"
+      },
+      {
+        "competitor": "Alpha AI",
+        "action": "Alpha执行与保全数据库上线",
+        "impact": "将主体查询、诉前保全、执行攻坚和终本债权挖掘连接到数据库、API与CLI入口。",
+        "evidence": "s71"
+      },
+      {
+        "competitor": "北大法宝",
+        "action": "法宝灵境新增合同审查、制度合规审查与智能脱敏",
+        "impact": "工作空间同时加入法律Skills、自定义Skill和可控记忆，形成较完整的专业智能体组合。",
+        "evidence": "s76"
+      },
+      {
+        "competitor": "得理",
+        "action": "得理AI个人版打通AI咨询与律师匹配",
+        "impact": "把咨询、检索、文书、案情分析和人工服务串成连续服务漏斗。",
+        "evidence": "s78"
+      },
+      {
+        "competitor": "法天使",
+        "action": "智能合同审查4.1支持多文件协同与Word修订交付",
+        "impact": "审查深度、交易结构、主体信息、定位原文、批注和修订导出形成完整审查闭环。",
+        "evidence": "s79"
+      }
+    ]
+  },
+  {
     "id": "2026-10-29",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/10/23—2026/10/29",
