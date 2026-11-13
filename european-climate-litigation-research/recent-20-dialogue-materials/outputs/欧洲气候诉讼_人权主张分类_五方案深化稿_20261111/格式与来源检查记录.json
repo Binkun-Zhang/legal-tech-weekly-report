@@ -1,0 +1,416 @@
+{
+  "pages": [
+    {
+      "file": "01_保护利益分类_核心章节深化稿.html",
+      "anchors": 239,
+      "footnotes": 84,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    },
+    {
+      "file": "02_论证功能路径.html",
+      "anchors": 90,
+      "footnotes": 26,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    },
+    {
+      "file": "03_申请人处境路径.html",
+      "anchors": 92,
+      "footnotes": 26,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    },
+    {
+      "file": "04_规范来源比较路径.html",
+      "anchors": 86,
+      "footnotes": 24,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    },
+    {
+      "file": "05_主张与审查分层路径.html",
+      "anchors": 90,
+      "footnotes": 26,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    },
+    {
+      "file": "index.html",
+      "anchors": 0,
+      "footnotes": 0,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    },
+    {
+      "file": "资料与核验说明.html",
+      "anchors": 41,
+      "footnotes": 0,
+      "missing_local_targets": [],
+      "duplicate_ids": [],
+      "tables": 0
+    }
+  ],
+  "sources": [
+    {
+      "key": "peel",
+      "kind": "论文",
+      "saved_bytes": 122797
+    },
+    {
+      "key": "luporini",
+      "kind": "论文",
+      "saved_bytes": 77348
+    },
+    {
+      "key": "savaresi_setzer",
+      "kind": "论文",
+      "saved_bytes": 94102
+    },
+    {
+      "key": "nordlander",
+      "kind": "论文",
+      "saved_bytes": 83616
+    },
+    {
+      "key": "donger",
+      "kind": "论文",
+      "saved_bytes": 88414
+    },
+    {
+      "key": "healthcentric",
+      "kind": "论文",
+      "saved_bytes": 99718
+    },
+    {
+      "key": "hefti",
+      "kind": "论文",
+      "saved_bytes": 93543
+    },
+    {
+      "key": "environment",
+      "kind": "论文",
+      "saved_bytes": 68278
+    },
+    {
+      "key": "goldston",
+      "kind": "论文",
+      "saved_bytes": 54046
+    },
+    {
+      "key": "van_zeben",
+      "kind": "论文",
+      "saved_bytes": 57336
+    },
+    {
+      "key": "winter_carvalho",
+      "kind": "论文",
+      "saved_bytes": 118397
+    },
+    {
+      "key": "winter_intergen",
+      "kind": "论文",
+      "saved_bytes": 42335
+    },
+    {
+      "key": "winter_2024",
+      "kind": "论文",
+      "saved_bytes": 121136
+    },
+    {
+      "key": "sulyok",
+      "kind": "论文",
+      "saved_bytes": 102613
+    },
+    {
+      "key": "heri",
+      "kind": "论文",
+      "saved_bytes": 100187
+    },
+    {
+      "key": "zahar",
+      "kind": "论文",
+      "saved_bytes": 24031
+    },
+    {
+      "key": "keller_remedies",
+      "kind": "论文",
+      "saved_bytes": 1027
+    },
+    {
+      "key": "wewerinke_klima",
+      "kind": "论文",
+      "saved_bytes": 57822
+    },
+    {
+      "key": "human_rights_chapter",
+      "kind": "论文",
+      "saved_bytes": 101232
+    },
+    {
+      "key": "wewerinke_loss",
+      "kind": "论文",
+      "saved_bytes": 109252
+    },
+    {
+      "key": "savaresi_auz",
+      "kind": "论文",
+      "saved_bytes": 53343
+    },
+    {
+      "key": "lewis",
+      "kind": "论文",
+      "saved_bytes": 99031
+    },
+    {
+      "key": "toolan",
+      "kind": "论文",
+      "saved_bytes": 114768
+    },
+    {
+      "key": "mayer_mitigation",
+      "kind": "论文",
+      "saved_bytes": 185131
+    },
+    {
+      "key": "mayer_eia",
+      "kind": "论文",
+      "saved_bytes": 87930
+    },
+    {
+      "key": "setzer_vanhala",
+      "kind": "论文",
+      "saved_bytes": 112298
+    },
+    {
+      "key": "garcia",
+      "kind": "论文",
+      "saved_bytes": 84818
+    },
+    {
+      "key": "letwin",
+      "kind": "论文",
+      "saved_bytes": 1051
+    },
+    {
+      "key": "jodoin",
+      "kind": "论文",
+      "saved_bytes": 153157
+    },
+    {
+      "key": "gao_basis",
+      "kind": "论文",
+      "saved_bytes": 62346
+    },
+    {
+      "key": "he_wang",
+      "kind": "论文",
+      "saved_bytes": 46586
+    },
+    {
+      "key": "sun",
+      "kind": "论文",
+      "saved_bytes": 71565
+    },
+    {
+      "key": "tian",
+      "kind": "论文",
+      "saved_bytes": 55150
+    },
+    {
+      "key": "gao_paths",
+      "kind": "论文",
+      "saved_bytes": 65547
+    },
+    {
+      "key": "gao_causation",
+      "kind": "论文",
+      "saved_bytes": 79941
+    },
+    {
+      "key": "zhu_xu",
+      "kind": "论文",
+      "saved_bytes": 158130
+    },
+    {
+      "key": "yang",
+      "kind": "论文",
+      "saved_bytes": 67749
+    },
+    {
+      "key": "klima",
+      "kind": "判例",
+      "saved_bytes": 814988
+    },
+    {
+      "key": "duarte",
+      "kind": "判例",
+      "saved_bytes": 254380
+    },
+    {
+      "key": "careme",
+      "kind": "判例",
+      "saved_bytes": 67044
+    },
+    {
+      "key": "engels",
+      "kind": "判例",
+      "saved_bytes": 10214
+    },
+    {
+      "key": "fliegenschnee",
+      "kind": "判例",
+      "saved_bytes": 42629
+    },
+    {
+      "key": "greenpeace",
+      "kind": "判例",
+      "saved_bytes": 288547
+    },
+    {
+      "key": "ludes",
+      "kind": "判例",
+      "saved_bytes": 153113
+    },
+    {
+      "key": "urgenda",
+      "kind": "判例",
+      "saved_bytes": 213101
+    },
+    {
+      "key": "neubauer",
+      "kind": "判例",
+      "saved_bytes": 343197
+    },
+    {
+      "key": "carvalho",
+      "kind": "判例",
+      "saved_bytes": 93988
+    },
+    {
+      "key": "carvalho_order",
+      "kind": "判例",
+      "saved_bytes": 84502
+    },
+    {
+      "key": "fosen",
+      "kind": "判例",
+      "saved_bytes": 96774
+    },
+    {
+      "key": "ireland",
+      "kind": "判例",
+      "saved_bytes": 137321
+    },
+    {
+      "key": "uk_adaptation",
+      "kind": "判例",
+      "saved_bytes": 115849
+    },
+    {
+      "key": "norwegianair",
+      "kind": "判例",
+      "saved_bytes": 34549
+    },
+    {
+      "key": "mullner",
+      "kind": "通报案件",
+      "saved_bytes": 5667
+    },
+    {
+      "key": "uniterre",
+      "kind": "当事人材料",
+      "saved_bytes": 72386
+    },
+    {
+      "key": "turkiye_db",
+      "kind": "数据库",
+      "saved_bytes": 6186
+    },
+    {
+      "key": "il_db",
+      "kind": "数据库",
+      "saved_bytes": 7746
+    },
+    {
+      "key": "thalmann_db",
+      "kind": "数据库",
+      "saved_bytes": 6824
+    },
+    {
+      "key": "db_method",
+      "kind": "数据库",
+      "saved_bytes": 90814
+    },
+    {
+      "key": "echr_convention",
+      "kind": "法律文本",
+      "saved_bytes": 75875
+    },
+    {
+      "key": "guide14",
+      "kind": "法院指南",
+      "saved_bytes": 314402
+    },
+    {
+      "key": "hrjust",
+      "kind": "数据库",
+      "saved_bytes": 11007
+    },
+    {
+      "key": "eu_charter",
+      "kind": "法律文本",
+      "saved_bytes": 71753
+    }
+  ],
+  "statistical_checks": [
+    "六组标签次数相加为177",
+    "各组记录分别去重，未将组内记录相加当作案件总数",
+    "主稿37篇学术文献，来源登记37篇",
+    "未将补充Neubauer案例追补至历史标签频数"
+  ],
+  "sentence_marker_review": [],
+  "primary_case_identity_checks": [
+    {
+      "key": "klima",
+      "application": "53600/20",
+      "matched": true
+    },
+    {
+      "key": "duarte",
+      "application": "39371/20",
+      "matched": true
+    },
+    {
+      "key": "careme",
+      "application": "7189/21",
+      "matched": true
+    },
+    {
+      "key": "engels",
+      "application": "46906/22",
+      "matched": true
+    },
+    {
+      "key": "fliegenschnee",
+      "application": "40054/23",
+      "matched": true
+    },
+    {
+      "key": "greenpeace",
+      "application": "34068/21",
+      "matched": true
+    },
+    {
+      "key": "mullner",
+      "application": "18859/21",
+      "matched": true
+    }
+  ]
+}

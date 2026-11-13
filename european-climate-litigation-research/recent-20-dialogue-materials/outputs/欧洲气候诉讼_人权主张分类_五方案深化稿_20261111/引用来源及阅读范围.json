@@ -1,0 +1,575 @@
+{
+  "peel": {
+    "key": "peel",
+    "kind": "论文",
+    "citation": "Jacqueline Peel & Hari M. Osofsky, “A Rights Turn in Climate Change Litigation?”, Transnational Environmental Law 7(1) (2018), 37–67.",
+    "url": "https://doi.org/10.1017/S2047102517000292",
+    "text": "text/en02.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "luporini": {
+    "key": "luporini",
+    "kind": "论文",
+    "citation": "Riccardo Luporini & Annalisa Savaresi, “International human rights bodies and climate litigation: Don’t look up?”, Review of European, Comparative & International Environmental Law 32(2) (2023), 267–278.",
+    "url": "https://doi.org/10.1111/reel.12491",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "第2.5节、研究方法、其他案例分类及附录A",
+    "caution": "研究对象为特定时期国际人权机构案件，不是欧洲全量样本。"
+  },
+  "savaresi_setzer": {
+    "key": "savaresi_setzer",
+    "kind": "论文",
+    "citation": "Annalisa Savaresi & Joana Setzer, “Rights-based litigation in the climate emergency: mapping the landscape and new knowledge frontiers”, Journal of Human Rights and the Environment 13(1) (2022), 7–34.",
+    "url": "https://doi.org/10.4337/jhre.2022.01.01",
+    "text": "text/en03.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "nordlander": {
+    "key": "nordlander",
+    "kind": "论文",
+    "citation": "Linnéa Nordlander, “The road (not) taken: implications of health-focused arguments for rights-based climate change litigation in Europe”, The International Journal of Human Rights 29(3) (2025), 495–516.",
+    "url": "https://doi.org/10.1080/13642987.2024.2418480",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "研究范围及第3—5节",
+    "caution": "2024年在线，2025年卷期；PDF内读者中文批注未作为作者观点。"
+  },
+  "donger": {
+    "key": "donger",
+    "kind": "论文",
+    "citation": "Elizabeth Donger, “Children and Youth in Strategic Climate Litigation: Advancing Rights through Legal Argument and Legal Mobilization”, Transnational Environmental Law 11(2) (2022), 263–289.",
+    "url": "https://doi.org/10.1017/S2047102522000218",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "方法、儿童权利各小节、图2与结论",
+    "caution": "全球33案，不是欧洲33案。"
+  },
+  "healthcentric": {
+    "key": "healthcentric",
+    "kind": "论文",
+    "citation": "Angela Hefti, Hannah van Kolfschooten & Aminta Ossom, “A Health-Centric Intersectional Approach to Climate Litigation at the European Court of Human Rights”, Harvard Human Rights Journal 37(2) (2024), 351–378.",
+    "url": "https://journals.law.harvard.edu/hrj/wp-content/uploads/sites/83/2024/08/Hefti-van-Kolfschooten-Ossom-Final.pdf",
+    "text": "text/healthcentric.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "hefti": {
+    "key": "hefti",
+    "kind": "论文",
+    "citation": "Angela Hefti, “Intersectional Victims as Agents of Change in International Human Rights-Based Climate Litigation”, Transnational Environmental Law 13(3) (2024), 610–635.",
+    "url": "https://doi.org/10.1017/S2047102524000128",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "environment": {
+    "key": "environment",
+    "kind": "论文",
+    "citation": "Pau de Vilchez & Annalisa Savaresi, “The Right to a Healthy Environment and Climate Litigation: A Game Changer?”, Yearbook of International Environmental Law 32(1) (2021), 3–19（2023年在线出版）.",
+    "url": "https://doi.org/10.1093/yiel/yvac064",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "研究方法、环境权案例分类及结论",
+    "caution": "卷年与实际在线年份不同；全球数据不能移作欧洲频数。"
+  },
+  "goldston": {
+    "key": "goldston",
+    "kind": "论文",
+    "citation": "James A. Goldston, “Climate Litigation through an Equality Lens”, in César Rodríguez-Garavito (ed.), Litigating the Climate Emergency, Cambridge University Press, 2022, 132–144.",
+    "url": "https://doi.org/10.1017/9781009106214.008",
+    "text": "../fresh_rights_20261104/goldston.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "van_zeben": {
+    "key": "van_zeben",
+    "kind": "论文",
+    "citation": "Josephine van Zeben, “The Role of the EU Charter of Fundamental Rights in Climate Litigation”, German Law Journal 22(8) (2021), 1499–1510.",
+    "url": "https://doi.org/10.1017/glj.2021.78",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "规范范围、表1及案例讨论",
+    "caution": "表1列出8件相关国内案；不是所有欧洲气候案件的统计表。"
+  },
+  "winter_carvalho": {
+    "key": "winter_carvalho",
+    "kind": "论文",
+    "citation": "Gerd Winter, “Armando Carvalho and Others v. EU: Invoking Human Rights and the Paris Agreement for Better Climate Protection Legislation”, Transnational Environmental Law 9(1) (2020), 137–164.",
+    "url": "https://doi.org/10.1017/S2047102520000072",
+    "text": "text/winter_carvalho_full.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "winter_intergen": {
+    "key": "winter_intergen",
+    "kind": "论文",
+    "citation": "Gerd Winter, “The Intergenerational Effect of Fundamental Rights: A Contribution of the German Federal Constitutional Court to Climate Protection”, Journal of Environmental Law 34(1) (2022), 209–221.",
+    "url": "https://doi.org/10.1093/jel/eqab035",
+    "text": "text/winter_intergen_bremen.txt",
+    "read_scope": "裁判分析及跨时权利部分",
+    "caution": "作者网站保存2021年在线先行版；正式卷期为2022年。"
+  },
+  "winter_2024": {
+    "key": "winter_2024",
+    "kind": "论文",
+    "citation": "Gerd Winter, “Climate Protection before the European Court of Human Rights: The KlimaSeniorinnen and Duarte Agostinho Cases in Perspective”, Heidelberg Journal of International Law / ZaöRV 84 (2024), 457–498.",
+    "url": "https://doi.org/10.17104/0044-2348-2024-3-457",
+    "text": "text/en09.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "sulyok": {
+    "key": "sulyok",
+    "kind": "论文",
+    "citation": "Katalin Sulyok, “Transforming the Rule of Law in Environmental and Climate Litigation: Prohibiting the Arbitrary Treatment of Future Generations”, Transnational Environmental Law 13(3) (2024), 475–501.",
+    "url": "https://doi.org/10.1017/S2047102524000116",
+    "text": "text/en16.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "heri": {
+    "key": "heri",
+    "kind": "论文",
+    "citation": "Corina Heri, “Climate Change before the European Court of Human Rights: Capturing Risk, Ill-Treatment and Vulnerability”, European Journal of International Law 33(3) (2022), 925–951.",
+    "url": "https://doi.org/10.1093/ejil/chac047",
+    "text": "text/en06.txt",
+    "read_scope": "风险、脆弱性及第3条相关论述",
+    "caution": "学术解释方案须与后续裁判区分。"
+  },
+  "zahar": {
+    "key": "zahar",
+    "kind": "论文",
+    "citation": "Alexander Zahar, “The Limits of Human Rights Law: A Reply to Corina Heri”, European Journal of International Law 33(3) (2022), 953–959.",
+    "url": "https://doi.org/10.1093/ejil/chac052",
+    "text": "text/en07.txt",
+    "read_scope": "全文，尤其对影响与成因的区分",
+    "caution": "页码采用原刊PDF显示的953—959；Crossref末页另记960。2024年后实际判例须另查。"
+  },
+  "keller_remedies": {
+    "key": "keller_remedies",
+    "kind": "论文",
+    "citation": "Helen Keller, Corina Heri & Réka Piskóty, “Something Ventured, Nothing Gained?—Remedies before the ECtHR and Their Potential for Climate Change Cases”, Human Rights Law Review 22(1) (2022), ngab030.",
+    "url": "https://doi.org/10.1093/hrlr/ngab030",
+    "text": "text/crossref_keller_heri_abstract.txt",
+    "read_scope": "出版社向Crossref提供的摘要；原刊及大学库全文受访问限制",
+    "caution": "仅引用摘要明确说明的研究对象、救济问题及制度限制；不声称已经通读全文。"
+  },
+  "wewerinke_klima": {
+    "key": "wewerinke_klima",
+    "kind": "论文",
+    "citation": "Margaretha Wewerinke-Singh, “Climate Protection Obligations under the European Convention on Human Rights: The KlimaSeniorinnen Judgment”, European Constitutional Law Review 21(2) (2025), 356–374.",
+    "url": "https://doi.org/10.1017/S1574019625100576",
+    "text": "text/en08.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "human_rights_chapter": {
+    "key": "human_rights_chapter",
+    "kind": "论文",
+    "citation": "Margaretha Wewerinke-Singh & Lucy Maxwell, “Human Rights”, in Margaretha Wewerinke-Singh & Sarah Mead (eds), The Cambridge Handbook on Climate Litigation, Cambridge University Press, 2025, 171–199.",
+    "url": "https://doi.org/10.1017/9781009409155.010",
+    "text": "text/en15.txt",
+    "read_scope": "人权路径、具体权利及制度差异",
+    "caution": "出版年份按出版社元数据为2025年，未沿用旧导读年份。"
+  },
+  "wewerinke_loss": {
+    "key": "wewerinke_loss",
+    "kind": "论文",
+    "citation": "Margaretha Wewerinke-Singh, “The Rising Tide of Rights: Addressing Climate Loss and Damage through Rights-Based Litigation”, Transnational Environmental Law 12(3) (2023), 537–566.",
+    "url": "https://doi.org/10.1017/S2047102523000183",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "savaresi_auz": {
+    "key": "savaresi_auz",
+    "kind": "论文",
+    "citation": "Annalisa Savaresi & Juan Auz, “Climate Change Litigation and Human Rights: Pushing the Boundaries”, Climate Law 9(3) (2019), 244–262.",
+    "url": "https://doi.org/10.1163/18786561-00903006",
+    "text": "text/savaresi_auz_stirling.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "lewis": {
+    "key": "lewis",
+    "kind": "论文",
+    "citation": "Bridget Lewis, “Children’s Human Rights-based Climate Litigation at the Frontiers of Environmental and Children’s Rights”, Nordic Journal of Human Rights 39(2) (2021), 180–203.",
+    "url": "https://doi.org/10.1080/18918131.2021.1996002",
+    "text": "text/lewis_qut.txt",
+    "read_scope": "儿童权利与环境权利框架部分",
+    "caution": "材料可用性见下载核验记录。"
+  },
+  "toolan": {
+    "key": "toolan",
+    "kind": "论文",
+    "citation": "Narayan Toolan, Hannah Marcus, Elizabeth G. Hanna & Chadia Wannous, “Legal implications of the climate-health crisis: A case study analysis of the role of public health in climate litigation”, PLOS ONE 17(6) (2022), e0268633.",
+    "url": "https://doi.org/10.1371/journal.pone.0268633",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "mayer_mitigation": {
+    "key": "mayer_mitigation",
+    "kind": "论文",
+    "citation": "Benoit Mayer, “Climate Change Mitigation as an Obligation under Human Rights Treaties?”, American Journal of International Law 115(3) (2021), 409–451.",
+    "url": "https://doi.org/10.1017/ajil.2021.9",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "mayer_eia": {
+    "key": "mayer_eia",
+    "kind": "论文",
+    "citation": "Benoit Mayer, “Climate Effects in Environmental Impact Assessment”, Transnational Environmental Law 14(2) (2025), 342–364.",
+    "url": "https://doi.org/10.1017/S2047102524000402",
+    "text": "text/en17_parsed.txt",
+    "read_scope": "气候影响、间接影响及评价实践",
+    "caution": "为程序分析的辅助文献，不是欧洲申请人人权类型统计。"
+  },
+  "setzer_vanhala": {
+    "key": "setzer_vanhala",
+    "kind": "论文",
+    "citation": "Joana Setzer & Lisa C. Vanhala, “Climate change litigation: A review of research on courts and litigants in climate governance”, WIREs Climate Change 10(3) (2019), e580.",
+    "url": "https://doi.org/10.1002/wcc.580",
+    "text": "text/en01_parsed.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "garcia": {
+    "key": "garcia",
+    "kind": "论文",
+    "citation": "Laura García Martín, “Los derechos del niño y de las generaciones futuras en los litigios climáticos”, Deusto Journal of Human Rights 15 (2025), 13–42.",
+    "url": "https://doi.org/10.18543/djhr.3245",
+    "text": "[本机路径已脱敏]",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "letwin": {
+    "key": "letwin",
+    "kind": "论文",
+    "citation": "Jeremy Letwin, “What is Strasbourg’s theory of environmental human rights?”, Journal of Environmental Law, 2026年9月24日在线发表.",
+    "url": "https://doi.org/10.1093/jel/eqag032",
+    "text": "text/crossref_letwin_abstract.txt",
+    "read_scope": "出版社向Crossref提供的摘要；原刊及Lancaster大学库全文受访问限制",
+    "caution": "仅引用摘要明确表述的中心论点；属于作者理论解释，未编造卷期页码或声称读到全文。"
+  },
+  "jodoin": {
+    "key": "jodoin",
+    "kind": "论文",
+    "citation": "Sébastien Jodoin, Nilani Ananthamoorthy & Katherine Lofts, “A Disability Rights Approach to Climate Governance”, Ecology Law Quarterly 47(1) (2020), 73–116.",
+    "url": "https://www.ecologylawquarterly.org/print/a-disability-rights-approach-to-climate-governance/",
+    "text": "text/disability_attachment.txt",
+    "read_scope": "第I、II及III.C部分，尤其无障碍、独立生活、个人行动及参与的区分",
+    "caution": "提供分析残障利益的理论框架，不据此推定样本申请人均已援引《残疾人权利公约》。"
+  },
+  "gao_basis": {
+    "key": "gao_basis",
+    "kind": "论文",
+    "citation": "高利红：《气候诉讼的权利基础》，《法律科学（西北政法大学学报）》2022年第2期，第113—122页。",
+    "url": "",
+    "text": "text/cn04.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "he_wang": {
+    "key": "he_wang",
+    "kind": "论文",
+    "citation": "何志鹏、王菲：《以人权为基础的气候变化诉讼探究》，《青海社会科学》2021年第2期，第132—140、161页。",
+    "url": "",
+    "text": "text/cn05.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "sun": {
+    "key": "sun",
+    "kind": "论文",
+    "citation": "孙雪妍：《气候风险下人权保障的司法类型化：法理探析及路径选择》，《人权》2023年第2期，第38—61页。",
+    "url": "https://www.humanrights.cn/2023/07/03/4955845d3ff511ee87f90c42a1073f92.html",
+    "text": "text/cn13.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": "PDF作者简介出现不同字形，已用《中国人权网》期刊发布页及当期目录交叉确认署名孙雪妍。"
+  },
+  "tian": {
+    "key": "tian",
+    "kind": "论文",
+    "citation": "田静：《人权法语境下的气候变化损害救济：挑战与进路》，《北京理工大学学报（社会科学版）》2023年第6期，第46—55页。",
+    "url": "",
+    "text": "text/cn16.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "gao_paths": {
+    "key": "gao_paths",
+    "kind": "论文",
+    "citation": "高利红：《我国气候诉讼的法律路径：一个比较法的研究》，《山东大学学报（哲学社会科学版）》2022年第1期，第167—176页。",
+    "url": "",
+    "text": "text/cn01.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "gao_causation": {
+    "key": "gao_causation",
+    "kind": "论文",
+    "citation": "高利红：《气候损害诉讼中的因果关系证明》，《清华法学》2024年第6期，第190—205页。",
+    "url": "",
+    "text": "text/cn11.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": "仅辅助说明证据层次，不把侵权赔偿规则直接移作所有人权申请的标准。"
+  },
+  "zhu_xu": {
+    "key": "zhu_xu",
+    "kind": "论文",
+    "citation": "朱明哲、徐莹：《欧洲人权法院在气候变化诉讼中的演进解释及其局限》，《国际法研究》2025年第2期，第51—75页。",
+    "url": "",
+    "text": "text/cn08.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "yang": {
+    "key": "yang",
+    "kind": "论文",
+    "citation": "杨欣：《气候变化诉讼中的人权论证》，《人权》2023年第2期，第18—37页。",
+    "url": "",
+    "text": "text/cn03.txt",
+    "read_scope": "已取得原文；核对本稿使用的相关论述",
+    "caution": ""
+  },
+  "klima": {
+    "key": "klima",
+    "kind": "判例",
+    "citation": "ECtHR (GC), Verein KlimaSeniorinnen Schweiz and Others v. Switzerland, no. 53600/20, judgment of 9 April 2024.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-233206",
+    "text": "text/klima_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "第8及6§1条违反；四名个人申请不具有关受害人资格。不存在独立健康权违反结论。"
+  },
+  "duarte": {
+    "key": "duarte",
+    "kind": "判例",
+    "citation": "ECtHR (GC), Duarte Agostinho and Others v. Portugal and 32 Others, no. 39371/20, decision of 9 April 2024.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-233261",
+    "text": "text/duarte_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "不可受理决定，不是第2、3、8、14条的实体侵权裁判。"
+  },
+  "careme": {
+    "key": "careme",
+    "kind": "判例",
+    "citation": "ECtHR (GC), Carême v. France, no. 7189/21, decision of 9 April 2024.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-233174",
+    "text": "text/careme_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": ""
+  },
+  "engels": {
+    "key": "engels",
+    "kind": "判例",
+    "citation": "ECtHR, Engels and Others v. Germany, no. 46906/22, decision of 1 July 2025, notified on 28 August 2025.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-244777",
+    "text": "text/engels_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": ""
+  },
+  "fliegenschnee": {
+    "key": "fliegenschnee",
+    "kind": "判例",
+    "citation": "ECtHR, Fliegenschnee and Others v. Austria, no. 40054/23, decision adopted on 18 November 2025, notified on 11 December 2025.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-247593",
+    "text": "text/fliegenschnee_correct.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "已核对案名、案号及正文；个人第8条、协会申诉及农民财产申诉均不可受理，不能写成实体侵权判决。"
+  },
+  "greenpeace": {
+    "key": "greenpeace",
+    "kind": "判例",
+    "citation": "ECtHR, Greenpeace Nordic and Others v. Norway, no. 34068/21, judgment of 28 October 2025.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-245561",
+    "text": "text/greenpeace_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "协会第8条请求可受理，但无违反；个人第8条及第13、14条部分不可受理；第2条不另审。"
+  },
+  "ludes": {
+    "key": "ludes",
+    "kind": "判例",
+    "citation": "ECtHR, Ludes and Others v. France, applications nos. 40899/22, 41621/22 and 42956/22, judgment of 3 July 2025.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-243886",
+    "text": "text/ludes_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "官方判决原文为法文；英文官方新闻摘要可核对案件事实及第10条结论。气候行动者的表达自由案件，不是直接请求国家减排的案件。",
+    "extra_urls": [
+      [
+        "英文官方新闻摘要",
+        "https://www.echr.coe.int/w/judgment-concerning-france-20"
+      ]
+    ]
+  },
+  "urgenda": {
+    "key": "urgenda",
+    "kind": "判例",
+    "citation": "Hoge Raad, Urgenda Foundation v. State of the Netherlands, ECLI:NL:HR:2019:2007（英文译本；荷兰文ECLI:NL:HR:2019:2006）, judgment of 20 December 2019.",
+    "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:HR:2019:2007",
+    "text": "../case_dossier_20261101/urgenda_numbered.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": ""
+  },
+  "neubauer": {
+    "key": "neubauer",
+    "kind": "判例",
+    "citation": "Bundesverfassungsgericht, order of 24 March 2021, 1 BvR 2656/18 and joined proceedings (Neubauer).",
+    "url": "https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/2021/03/rs20210324_1bvr265618en.html",
+    "text": "text/neubauer_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "补充比较案例；不追补进历史69条标签频数。"
+  },
+  "carvalho": {
+    "key": "carvalho",
+    "kind": "判例",
+    "citation": "CJEU, Armando Carvalho and Others v. Parliament and Council, C-565/19 P, ECLI:EU:C:2021:252, judgment of 25 March 2021.",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62019CJ0565",
+    "text": "text/carvalho_eurlex.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "欧盟法院，不是欧洲人权法院；资格处理不能写成基本权利实体结论。"
+  },
+  "carvalho_order": {
+    "key": "carvalho_order",
+    "kind": "判例",
+    "citation": "General Court, Armando Carvalho and Others v. Parliament and Council, T-330/18, ECLI:EU:T:2019:324, order of 8 May 2019.",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62018TO0330",
+    "text": "text/carvalho_order.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "第30段记录申请人所列宪章权利，第32段记载有效司法保护理由；本案为欧盟普通法院命令。"
+  },
+  "fosen": {
+    "key": "fosen",
+    "kind": "判例",
+    "citation": "Norges Høyesterett, HR-2021-1975-S, judgment of 11 October 2021 (Fosen).",
+    "url": "https://lovdata.no/dokument/HRSIV/avgjorelse/hr-2021-1975-s",
+    "text": "text/fosen_lovdata.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "使用Lovdata发布的判决原文交叉核对；官方英文文件本轮无法读取。属公正转型对照，不是要求加强减排案件。"
+  },
+  "ireland": {
+    "key": "ireland",
+    "kind": "判例",
+    "citation": "Supreme Court of Ireland, Friends of the Irish Environment CLG v. Government of Ireland, [2020] IESC 49, judgment of 31 July 2020.",
+    "url": "https://judgments.courts.ie/judgments/44047",
+    "text": "text/ireland_judgment.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": ""
+  },
+  "uk_adaptation": {
+    "key": "uk_adaptation",
+    "kind": "判例",
+    "citation": "High Court of Justice (England and Wales), R (Friends of the Earth Ltd and Others) v. Secretary of State for Environment, Food and Rural Affairs, [2024] EWHC 2707 (Admin), judgment of 25 October 2024.",
+    "url": "https://www.judiciary.uk/wp-content/uploads/2024/10/Friends-of-the-Earth-v-Secretary-of-State-for-Environment-Food-and-Rural-Affairs.pdf",
+    "text": "text/uk_adaptation.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "此条为英国国内裁判；后续斯特拉斯堡申请属于另一阶段，不能写成该法院已经裁判。"
+  },
+  "norwegianair": {
+    "key": "norwegianair",
+    "kind": "判例",
+    "citation": "EFTA Court, Norwegian Air Shuttle ASA v. Norway, E-12/23, judgment of 9 August 2024.",
+    "url": "https://eftacourt.int/download/12-23-judgment/?wpdmdl=9726",
+    "text": "text/norwegianair_official.txt",
+    "read_scope": "核对本稿所用案情、相关理由及处理结果",
+    "caution": "机构为EFTA法院；第35段为法院有关气候及人权的重要性论述，不能直接当作申请人援引生命、私人生活权的证据。"
+  },
+  "mullner": {
+    "key": "mullner",
+    "kind": "通报案件",
+    "citation": "ECtHR, Müllner v. Austria, no. 18859/21, communicated case, 2024.",
+    "url": "https://hudoc.echr.coe.int/eng?i=001-235058",
+    "text": "text/mullner_official.txt",
+    "read_scope": "案情及向当事人提问",
+    "caution": "已核实通报文本；不声称已有实体判决或在检索日仍为某特定状态。"
+  },
+  "uniterre": {
+    "key": "uniterre",
+    "kind": "当事人材料",
+    "citation": "Uniterre及其他请求人，2024年10月24日向瑞士联邦行政法院提交的行政上诉书。",
+    "url": "https://avocatclimat.ch/wp-content/uploads/2024/10/2024-10-24-Recours-au-TAF_caviarde.pdf",
+    "text": "text/uniterre_application.txt",
+    "read_scope": "事实、权利及起诉资格相关部分",
+    "caution": "可证明当事人请求，不能证明法院已接受。"
+  },
+  "turkiye_db": {
+    "key": "turkiye_db",
+    "kind": "数据库",
+    "citation": "Climate and Human Rights Litigation Database, A.S. & S.A. & E.N.B v. Presidency of Türkiye & The Ministry of Environment, Urbanization and Climate Change.",
+    "url": "https://climaterightsdatabase.com/2023/11/10/a-s-s-a-e-n-b-v-presidency-of-turkiye-the-ministry-of-environment-urbanization-and-climate-change/",
+    "text": "text/db_63.txt",
+    "read_scope": "案件摘要及权利列表",
+    "caution": "二手材料；未取得完整申请书，未把具体条款逐项列为已核验。"
+  },
+  "il_db": {
+    "key": "il_db",
+    "kind": "数据库",
+    "citation": "Climate and Human Rights Litigation Database, I.L. v. Italian Ministry of the Interior and Attorney General at the Court of Appeal of Ancona.",
+    "url": "https://climaterightsdatabase.com/2023/11/07/i-l-v-italian-ministry-of-the-interior-and-attorney-general-at-the-court-of-appeal-of-ancon/",
+    "text": "text/db_35.txt",
+    "read_scope": "案件性质与权利标签",
+    "caution": "气候迁移相关对照，非请求国家加强减排。"
+  },
+  "thalmann_db": {
+    "key": "thalmann_db",
+    "kind": "数据库",
+    "citation": "Climate and Human Rights Litigation Database, Thalmann et al. v. Switzerland（原名Lausanne Action Climate v. Switzerland）.",
+    "url": "https://climaterightsdatabase.com/2022/08/16/lausanne-action-climate-v-switzerland/",
+    "text": "text/db_51.txt",
+    "read_scope": "事实及表达、集会相关主张",
+    "caution": "仅用以说明公共行动类；未据旧页面断言最新裁判结果。"
+  },
+  "db_method": {
+    "key": "db_method",
+    "kind": "数据库",
+    "citation": "Climate and Human Rights Litigation Database, “Method and scope”.",
+    "url": "https://climaterightsdatabase.com/database/method-and-scope/",
+    "text": "sources/database_method.data",
+    "read_scope": "方法说明全文",
+    "caution": "大学研究者运营，非政府官方总表；标签为指示性工具。"
+  },
+  "snapshot": {
+    "key": "snapshot",
+    "kind": "统计附件",
+    "citation": "前期欧洲相关69条记录历史快照；按本稿六类重新计算的原标签统计。",
+    "url": "欧洲气候诉讼_权利统计逐条索引.csv",
+    "text": "audit/group_counts_six.json",
+    "read_scope": "69条逐条重算",
+    "caution": "177次为标签出现次数，不是案件数。未完成所有申请书的统一重编码。"
+  },
+  "echr_convention": {
+    "key": "echr_convention",
+    "kind": "法律文本",
+    "citation": "European Convention on Human Rights及所附议定书，欧洲人权法院官方文本。",
+    "url": "https://www.echr.coe.int/documents/d/echr/convention_ENG",
+    "text": "text/echr_convention.txt",
+    "read_scope": "第2、3、6、8、10、11、13、14条及有关议定书",
+    "caution": ""
+  },
+  "guide14": {
+    "key": "guide14",
+    "kind": "法院指南",
+    "citation": "ECtHR Registry, Guide on Article 14 of the Convention and Article 1 of Protocol No. 12, updated on 28 February 2026.",
+    "url": "https://ks.echr.coe.int/documents/d/echr-ks/guide_art_14_art_1_protocol_12_eng",
+    "text": "text/guide14.txt",
+    "read_scope": "第3—7、35—36段及第十二议定书的适用结构",
+    "caution": "法院书记处编写的判例指南，不等同于具有独立拘束力的裁判。"
+  },
+  "hrjust": {
+    "key": "hrjust",
+    "kind": "数据库",
+    "citation": "HRJust Climate Claims, Human Rights Justification Climate Claims Visual Tool.",
+    "url": "https://www.hrjust-climate-claims.eu/",
+    "text": "text/hrjust_home.txt",
+    "read_scope": "项目说明、权利字段及数据库页面",
+    "caution": "全球研究工具，其权利标签不能直接等同于本文欧洲申请人频数。"
+  },
+  "eu_charter": {
+    "key": "eu_charter",
+    "kind": "法律文本",
+    "citation": "Charter of Fundamental Rights of the European Union, OJ C 326, 26 October 2012, 391–407.",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12012P/TXT",
+    "text": "text/eu_charter.txt",
+    "read_scope": "第15、16、17、20、21、24、37、47、51及52条",
+    "caution": ""
+  }
+}

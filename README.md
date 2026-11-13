@@ -87,3 +87,12 @@ git switch main
 网站地址通常为：
 
 `https://你的用户名.github.io/仓库名/`
+
+
+## 欧洲气候诉讼研究材料
+
+本仓库另附一份独立的欧洲气候诉讼与人权转向研究材料包：
+
+- [材料导航页](european-climate-litigation-research/index.html)
+- [数据库与官方来源汇总](european-climate-litigation-research/database-websites/official-and-research-databases.html)
+- [完整文件清单](european-climate-litigation-research/MANIFEST.md)
