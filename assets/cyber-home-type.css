@@ -1,0 +1,81 @@
+/* SIGNAL homepage display type (2026-11-12). Linked from index.html ONLY, so weekly-report pages keep their normal reading fonts.
+   - 得意黑 Smiley Sans Oblique (OFL-1.1, atelierAnchor): Chinese display titles. @font-face lives in fonts/smiley-sans/smiley-sans.css
+     (split by unicode-range, the browser fetches only the subsets the titles use).
+   - Orbitron (OFL-1.1): the SIGNAL wordmark and figures. Share Tech Mono (OFL-1.1): HUD labels.
+   Hero title = neon glow + chromatic offset; short glitch bursts run only while page motion is on and the OS allows motion. */
+@font-face{font-family:"Orbitron";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/orbitron/orbitron-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:"Orbitron";font-style:normal;font-weight:800;font-display:swap;src:url("fonts/orbitron/orbitron-latin-800-normal.woff2") format("woff2")}
+@font-face{font-family:"Orbitron";font-style:normal;font-weight:900;font-display:swap;src:url("fonts/orbitron/orbitron-latin-900-normal.woff2") format("woff2")}
+@font-face{font-family:"Share Tech Mono";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/share-tech-mono/share-tech-mono-latin-400-normal.woff2") format("woff2")}
+:root{--home-display:"Smiley Sans Oblique","PingFang SC","Microsoft YaHei",sans-serif;--home-figure:"Orbitron","Chakra Petch",ui-sans-serif,sans-serif;--home-hud:"Share Tech Mono",ui-monospace,SFMono-Regular,Consolas,monospace}
+
+/* ---------- Hero title: 得意黑 + neon + chromatic offset ---------- */
+.hero .original-headline{font-family:var(--home-display);font-weight:400;font-synthesis:none;font-size:clamp(38px,3.8vw,60px);line-height:1.1;letter-spacing:.012em;color:#f4f8ff;
+  text-shadow:-1px 0 rgba(255,60,159,.6),1px 0 rgba(100,233,255,.6),0 0 2px rgba(214,246,255,.5),0 0 16px rgba(100,233,255,.34),0 0 40px rgba(85,148,255,.24)}
+.hero .original-headline .headline-line{position:relative;width:max-content;max-width:100%}
+.hero .original-headline .headline-accent{text-shadow:none;padding-right:.04em;
+  filter:drop-shadow(-1.4px 0 rgba(255,60,159,.55)) drop-shadow(1.4px 0 rgba(100,233,255,.5)) drop-shadow(0 0 12px rgba(146,126,255,.5))}
+.hero .original-headline .headline-accent svg{bottom:-9%}
+/* glitch slices: two copies of each line, pink and cyan, hidden until a burst (alt text "" keeps the heading name single) */
+.hero .original-headline .headline-line[data-text]::before,.hero .original-headline .headline-line[data-text]::after{content:attr(data-text);content:attr(data-text) / "";position:absolute;z-index:2;left:0;top:0;white-space:nowrap;pointer-events:none;text-shadow:none;opacity:0;mix-blend-mode:screen}
+.hero .original-headline .headline-line[data-text]::before{color:#ff3c9f}
+.hero .original-headline .headline-line[data-text]::after{color:#64e9ff}
+.hero .original-headline .headline-line:nth-child(2){--glitch-delay:2.3s}
+.hero .original-headline .headline-line:nth-child(3){--glitch-delay:4.1s}
+@media (prefers-reduced-motion:no-preference){
+  body[data-motion="on"] .hero .original-headline{animation:cy-neon-on 1.15s .2s both}
+  body[data-motion="on"] .hero .original-headline .headline-line{animation:cy-glitch-jolt 7.2s var(--glitch-delay,.9s) steps(1,end) infinite}
+  body[data-motion="on"] .hero .original-headline .headline-line[data-text]::before{animation:cy-glitch-a 7.2s var(--glitch-delay,.9s) steps(1,end) infinite}
+  body[data-motion="on"] .hero .original-headline .headline-line[data-text]::after{animation:cy-glitch-b 7.2s var(--glitch-delay,.9s) steps(1,end) infinite}
+  body[data-motion="on"] .hero .original-headline:hover .headline-line{animation-duration:1.8s;animation-delay:0s}
+  body[data-motion="on"] .hero .original-headline:hover .headline-line[data-text]::before,body[data-motion="on"] .hero .original-headline:hover .headline-line[data-text]::after{animation-duration:1.8s;animation-delay:0s}
+}
+@keyframes cy-neon-on{0%{opacity:.08}7%{opacity:1}11%{opacity:.3}17%{opacity:1}23%{opacity:.55}29%,100%{opacity:1}}
+@keyframes cy-glitch-jolt{0%,86%,100%{transform:none}88%{transform:translateX(2px) skewX(-7deg)}90%{transform:translateX(-3px)}92%{transform:translateX(1px) skewX(4deg)}94%{transform:none}}
+@keyframes cy-glitch-a{0%,86%,100%{opacity:0;transform:none;clip-path:inset(0 0 100% 0)}87%{opacity:.9;transform:translateX(-6px);clip-path:inset(6% 0 66% 0)}89%{opacity:.9;transform:translateX(5px);clip-path:inset(52% 0 22% 0)}91%{opacity:.9;transform:translateX(-3px);clip-path:inset(30% 0 50% 0)}93%{opacity:.9;transform:translateX(7px);clip-path:inset(74% 0 4% 0)}95%{opacity:0}}
+@keyframes cy-glitch-b{0%,86%,100%{opacity:0;transform:none;clip-path:inset(0 0 100% 0)}87%{opacity:.9;transform:translateX(5px);clip-path:inset(60% 0 14% 0)}89%{opacity:.9;transform:translateX(-7px);clip-path:inset(14% 0 58% 0)}91%{opacity:.9;transform:translateX(4px);clip-path:inset(80% 0 2% 0)}93%{opacity:.9;transform:translateX(-4px);clip-path:inset(38% 0 40% 0)}95%{opacity:0}}
+
+/* ---------- SIGNAL wordmark: Orbitron ---------- */
+.site-header .brand-name{font-family:var(--home-figure);font-weight:900;font-style:normal;font-size:21px;letter-spacing:.035em;transform:skewX(-9deg);text-shadow:0 0 12px rgba(100,233,255,.38),0 0 1px rgba(214,246,255,.6)}
+.site-header .brand-name>span{text-shadow:0 0 10px rgba(255,60,159,.7)}
+
+/* ---------- Figures: Orbitron ---------- */
+.hero-meta.original-meta b{font-family:var(--home-figure);font-weight:700;font-size:10px;letter-spacing:.06em;color:#d8e6ff;text-shadow:0 0 8px rgba(100,233,255,.35)}
+.issue-controls .issue-number{font-family:var(--home-figure);font-weight:700;font-size:11px;letter-spacing:.14em;color:#bfe9ff;text-shadow:0 0 8px rgba(100,233,255,.45)}
+.weekly-card .story-index{font-family:var(--home-figure);font-weight:700;font-size:9px;letter-spacing:.06em}
+.content-shell .metric-card strong{font-family:var(--home-figure);font-weight:800;font-size:30px;line-height:1.15;letter-spacing:.02em;text-shadow:0 0 14px rgba(100,233,255,.3)}
+.content-shell .metric-card-red strong{text-shadow:0 0 14px rgba(255,60,159,.38)}
+.content-shell .metric-card-amber strong{text-shadow:0 0 14px rgba(255,216,77,.28)}
+.content-shell .archive-date,.content-shell #latest-period,.content-shell #dashboard-period{font-family:var(--home-figure);font-weight:700;letter-spacing:.04em}
+.content-shell .archive-date{font-size:12px;line-height:1.75}
+.content-shell #latest-period{font-size:11px}
+.content-shell #dashboard-period{font-size:11px;color:#9fb6db}
+.content-shell .profile-card-count,.personal-overview-links b{font-family:var(--home-figure);font-weight:700;letter-spacing:.03em}
+.layout-picker .layout-button b{font-family:var(--home-figure);font-weight:700}
+
+/* ---------- HUD labels: Share Tech Mono ---------- */
+.hero-copy .eyebrow,.weekly-heading span,.weekly-card .issue-date,.content-shell .eyebrow,.picker-label,.footer-note,.brand-sub,.dialog-kicker{font-family:var(--home-hud)}
+.hero-copy .eyebrow{font-size:10px;letter-spacing:.26em}
+.weekly-heading span{font-size:9px;letter-spacing:.2em}
+.weekly-card .issue-date{font-size:10px;letter-spacing:.1em}
+.content-shell .eyebrow{font-size:11px;font-weight:400;letter-spacing:.24em;text-shadow:0 0 8px rgba(100,170,255,.35)}
+.hero::before{font-family:var(--home-hud);font-size:8px}
+
+/* ---------- Section titles: 得意黑 with a soft neon edge (no motion) ---------- */
+.weekly-heading h2,.content-shell .section-heading h2,.content-shell .update-note h2,.content-shell .panel-heading h3,.content-shell .brief-panel h3,.personal-overview-head h2,.content-shell #latest-title,.dialog-head h2{font-family:var(--home-display);font-weight:400;font-synthesis:none;letter-spacing:.03em}
+.weekly-heading h2{font-size:17px;text-shadow:0 0 10px rgba(100,233,255,.3)}
+.content-shell .section-heading h2,.content-shell .update-note h2{font-size:31px;line-height:1.2;text-shadow:-1px 0 rgba(255,60,159,.45),1px 0 rgba(100,233,255,.45),0 0 18px rgba(100,233,255,.22)}
+.content-shell .panel-heading h3,.content-shell .brief-panel h3{font-size:22px;text-shadow:0 0 12px rgba(100,233,255,.22)}
+.personal-overview-head h2{font-size:20px;text-shadow:0 0 12px rgba(100,233,255,.22)}
+.content-shell #latest-title{font-size:31px;text-shadow:0 0 16px rgba(100,233,255,.25)}
+.dialog-head h2{font-size:28px;letter-spacing:.02em}
+
+@media(max-width:760px){
+  .hero .original-headline{font-size:clamp(34px,9.4vw,52px)}
+  .site-header .brand-name{font-size:19px}
+  .content-shell .section-heading h2,.content-shell .update-note h2{font-size:27px}
+  .content-shell #latest-title{font-size:26px}
+  .content-shell .metric-card strong{font-size:27px}
+}
+@media(prefers-reduced-motion:reduce){.hero .original-headline,.hero .original-headline .headline-line,.hero .original-headline .headline-line::before,.hero .original-headline .headline-line::after{animation:none!important}}
+@media print{.hero .original-headline,.hero .original-headline .headline-accent{text-shadow:none;filter:none}.hero .original-headline .headline-line::before,.hero .original-headline .headline-line::after{display:none}}

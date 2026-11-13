@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d1c">
+  <title>SIGNAL / Layout Composer</title>
+  <link rel="stylesheet" href="assets/layout-composer.css?v=20261113-web-v3">
+</head>
+<body class="composer-app">
+  <header class="composer-header">
+    <div class="composer-brand">
+      <span class="composer-mark">✦</span>
+      <div>
+        <p class="composer-kicker">SIGNAL / LOCAL COMPOSER</p>
+        <h1>路径与素材排版工作台</h1>
+      </div>
+    </div>
+    <div class="composer-header-actions">
+      <span class="storage-indicator" id="storageIndicator">LOCAL LAYOUT / READY</span>
+      <a class="ghost-button" href="index.html">返回首页</a>
+    </div>
+  </header>
+
+  <main class="composer-layout">
+    <aside class="asset-sidebar" aria-label="素材库">
+      <div class="sidebar-heading">
+        <p class="composer-kicker">01 / ASSET LIBRARY</p>
+        <h2>素材库</h2>
+        <p>选择素材加入画框，再拖到你想要的位置。隐藏的素材可以随时重新加入。</p>
+      </div>
+
+      <div class="asset-group">
+        <div class="asset-group-title">路径与骨架</div>
+        <button class="asset-button asset-button--path" type="button" data-select-layer="main-path">
+          <span class="asset-icon asset-icon--line"></span>
+          <span><b>主路径</b><small>拖动曲线控制点</small></span>
+        </button>
+        <button class="asset-button asset-button--connector" type="button" data-select-layer="phone-bridge">
+          <span class="asset-icon asset-icon--port"></span>
+          <span><b>手机接口</b><small>起点固定在手机底部</small></span>
+        </button>
+      </div>
+
+      <div class="asset-group">
+        <div class="asset-group-title">内容文件夹</div>
+        <button class="asset-button" type="button" data-add-id="folder-latest">
+          <span class="asset-icon asset-icon--folder"></span>
+          <span><b>最新一期</b><small>半屏章节封面</small></span>
+          <i data-asset-status="folder-latest">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="folder-decision">
+          <span class="asset-icon asset-icon--folder asset-icon--pink"></span>
+          <span><b>本周决策摘要</b><small>半屏章节封面</small></span>
+          <i data-asset-status="folder-decision">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="folder-competitor">
+          <span class="asset-icon asset-icon--folder asset-icon--violet"></span>
+          <span><b>竞品档案</b><small>半屏章节封面</small></span>
+          <i data-asset-status="folder-competitor">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="folder-archive">
+          <span class="asset-icon asset-icon--folder asset-icon--blue"></span>
+          <span><b>往期内容</b><small>半屏章节封面</small></span>
+          <i data-asset-status="folder-archive">+</i>
+        </button>
+      </div>
+
+      <div class="asset-group">
+        <div class="asset-group-title">液态金属猫</div>
+        <button class="asset-button" type="button" data-add-id="cat-one">
+          <img class="asset-thumb" src="assets/liquid-cats/cat-1-strut.webp" alt="">
+          <span><b>猫 01 / STRUT</b><small>沿路径出现</small></span>
+          <i data-asset-status="cat-one">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="cat-two">
+          <img class="asset-thumb" src="assets/liquid-cats/cat-2-stalk.webp" alt="">
+          <span><b>猫 02 / STALK</b><small>沿路径出现</small></span>
+          <i data-asset-status="cat-two">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="cat-three">
+          <img class="asset-thumb" src="assets/liquid-cats/cat-3-run.webp" alt="">
+          <span><b>猫 03 / RUN</b><small>沿路径出现</small></span>
+          <i data-asset-status="cat-three">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="cat-four">
+          <img class="asset-thumb" src="assets/liquid-cats/cat-4-leap.webp" alt="">
+          <span><b>猫 04 / LEAP</b><small>沿路径出现</small></span>
+          <i data-asset-status="cat-four">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="cat-five">
+          <img class="asset-thumb" src="assets/liquid-cats/cat-5-step.webp" alt="">
+          <span><b>猫 05 / STEP</b><small>沿路径出现</small></span>
+          <i data-asset-status="cat-five">+</i>
+        </button>
+      </div>
+
+      <div class="asset-group">
+        <div class="asset-group-title">装饰素材</div>
+        <button class="asset-button" type="button" data-add-id="route-caption">
+          <span class="asset-icon asset-icon--label">TX</span>
+          <span><b>路径标题</b><small>SIGNAL PATH 标签</small></span>
+          <i data-asset-status="route-caption">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="spark-one">
+          <span class="asset-icon asset-icon--spark">✦</span>
+          <span><b>青色节点闪光</b><small>装饰元素</small></span>
+          <i data-asset-status="spark-one">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="spark-two">
+          <span class="asset-icon asset-icon--spark asset-icon--pink">✦</span>
+          <span><b>粉色节点闪光</b><small>装饰元素</small></span>
+          <i data-asset-status="spark-two">+</i>
+        </button>
+        <button class="asset-button" type="button" data-add-id="spark-three">
+          <span class="asset-icon asset-icon--spark asset-icon--violet">✦</span>
+          <span><b>紫色节点闪光</b><small>装饰元素</small></span>
+          <i data-asset-status="spark-three">+</i>
+        </button>
+      </div>
+    </aside>
+
+    <section class="composer-workspace" aria-label="排版画框">
+      <div class="workspace-toolbar">
+        <div>
+          <p class="composer-kicker">02 / COMPOSITION FRAME</p>
+          <h2 id="selectionTitle">选择一个素材开始排版</h2>
+        </div>
+        <div class="toolbar-actions">
+          <button class="tool-button" type="button" id="zoomOut" aria-label="缩小画布">−</button>
+          <span id="zoomValue">68%</span>
+          <button class="tool-button" type="button" id="zoomIn" aria-label="放大画布">+</button>
+          <button class="tool-button tool-button--wide" type="button" id="fitCanvas">适配画框</button>
+        </div>
+      </div>
+
+      <div class="canvas-viewport" id="canvasViewport">
+        <div class="canvas-ruler" aria-hidden="true">
+          <span>00</span><span>01</span><span>02</span><span>03</span><span>04</span>
+        </div>
+        <div class="layout-canvas" id="layoutCanvas">
+          <svg class="editor-route" id="editorRoute" viewBox="0 0 1000 4000" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="editorPathGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#72e9ff"/>
+                <stop offset=".36" stop-color="#6f9bff"/>
+                <stop offset=".65" stop-color="#ef68c4"/>
+                <stop offset="1" stop-color="#9d82ff"/>
+              </linearGradient>
+              <linearGradient id="editorSheenGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#e5fbff" stop-opacity=".05"/>
+                <stop offset=".45" stop-color="#e5fbff" stop-opacity=".72"/>
+                <stop offset=".65" stop-color="#fff1fb" stop-opacity=".68"/>
+                <stop offset="1" stop-color="#e5fbff" stop-opacity=".06"/>
+              </linearGradient>
+            </defs>
+            <path class="editor-route-shadow" id="editorRouteShadow"></path>
+            <path class="editor-route-main" id="editorRouteMain"></path>
+            <path class="editor-route-sheen" id="editorRouteSheen"></path>
+            <path class="editor-bridge" id="editorBridge"></path>
+          </svg>
+          <div class="phone-anchor" aria-hidden="true">
+            <div class="phone-anchor-shell"><span></span><span></span><span></span></div>
+            <b>PHONE BOTTOM / START</b>
+            <i></i>
+          </div>
+          <div class="path-point-layer" id="pathPointLayer" aria-label="路径控制点"></div>
+          <div class="canvas-elements" id="canvasElements"></div>
+          <div class="canvas-empty-note" id="canvasEmptyNote">从左侧素材库选择元素，它们会作为独立图层进入画框。</div>
+        </div>
+      </div>
+      <div class="workspace-footer">
+        <span id="canvasHint">拖动元素移动；拖动右下角调整大小；拖动上方手柄旋转。</span>
+        <span id="layerCount">0 LAYERS</span>
+      </div>
+    </section>
+
+    <aside class="inspector" aria-label="元素属性">
+      <div class="inspector-heading">
+        <p class="composer-kicker">03 / INSPECTOR</p>
+        <h2>属性</h2>
+        <p id="inspectorDescription">选择素材后，可以直接输入位置和尺寸。</p>
+      </div>
+
+      <section class="inspector-panel" id="itemInspector" hidden>
+        <div class="selected-preview" id="selectedPreview"></div>
+        <div class="field-grid">
+          <label><span>X / 横向</span><input type="number" step="1" data-field="x"></label>
+          <label><span>Y / 纵向</span><input type="number" step="1" data-field="y"></label>
+          <label><span>W / 宽度</span><input type="number" min="1" step="1" data-field="w"></label>
+          <label><span>H / 高度</span><input type="number" min="1" step="1" data-field="h"></label>
+          <label><span>旋转角度</span><input type="number" step="1" data-field="rotation"></label>
+          <label><span>Z / 层级</span><input type="number" step="1" data-field="z"></label>
+        </div>
+        <label class="visibility-toggle"><input type="checkbox" data-field="hidden"><span>隐藏此素材</span></label>
+        <div class="inspector-actions">
+          <button class="small-cyber-button" type="button" id="duplicateItem">复制图层</button>
+          <button class="small-cyber-button small-cyber-button--danger" type="button" id="removeItem">移除图层</button>
+        </div>
+      </section>
+
+      <section class="inspector-panel" id="pathInspector" hidden>
+        <div class="path-inspector-title"><span class="asset-icon asset-icon--line"></span><div><b>主路径</b><small>曲线点与线条粗细</small></div></div>
+        <div class="field-stack">
+          <label><span>底层路径粗细</span><input type="number" min="18" max="150" step="1" data-path-field="baseWidth"></label>
+          <label><span>主体路径粗细</span><input type="number" min="12" max="130" step="1" data-path-field="highlightWidth"></label>
+          <label><span>反光线粗细</span><input type="number" min="0" max="28" step="1" data-path-field="sheenWidth"></label>
+          <label><span>主体不透明度</span><input type="number" min=".1" max="1" step=".05" data-path-field="highlightOpacity"></label>
+        </div>
+        <p class="inspector-note">第一点锁定为手机底部，拖动其余控制点改变 MindMarket 式 S 型流动方向。</p>
+      </section>
+
+      <section class="inspector-panel" id="bridgeInspector" hidden>
+        <div class="path-inspector-title"><span class="asset-icon asset-icon--port"></span><div><b>手机接口</b><small>自然接入主路径</small></div></div>
+        <label class="field-stack"><span>接口横向偏移</span><input type="number" min="-160" max="160" step="1" data-bridge-field="x"></label>
+        <label class="field-stack"><span>接口弯曲幅度</span><input type="number" min="-260" max="260" step="1" data-bridge-field="curve"></label>
+        <p class="inspector-note">接口会从首页手机底部实际测量位置开始，主路径的第一控制点始终平滑接出。</p>
+      </section>
+
+      <section class="inspector-panel inspector-panel--actions">
+        <div class="save-state" id="saveState">尚未保存本次排版</div>
+        <button class="primary-cyber-button" type="button" id="saveLayout">保存到本地首页</button>
+        <div class="inspector-actions inspector-actions--stack">
+          <button class="small-cyber-button" type="button" id="resetLayout">恢复默认排版</button>
+          <button class="small-cyber-button" type="button" id="exportLayout">导出布局 JSON</button>
+        </div>
+        <p class="inspector-note">布局只保存在当前浏览器的 localStorage。保存后回到首页并刷新即可查看效果。</p>
+      </section>
+    </aside>
+  </main>
+
+  <div class="composer-toast" id="composerToast" role="status" aria-live="polite"></div>
+  <script src="assets/layout-composer.js?v=20261113-web-v3"></script>
+</body>
+</html>

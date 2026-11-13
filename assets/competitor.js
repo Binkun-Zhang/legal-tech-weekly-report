@@ -90,6 +90,7 @@
       note.value = localStorage.getItem(noteKey()) || "";
       renderTerms();
       renderTimeline();
+      window.dispatchEvent(new Event("ltw:competitor-ready"));
     });
   }
 

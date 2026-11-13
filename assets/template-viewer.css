@@ -1,0 +1,50 @@
+
+/* Report reader shell adapted directly from the supplied weekly-report template. */
+:root { --signal-night:#080a14; --signal-raised:#101526; --signal-cyan:#64e9ff; --signal-blue:#5594ff; --signal-pink:#ff3c9f; --signal-purple:#a67cff; }
+.viewer-page { background:#f4f7fc; color:#25324b; }
+.viewer-page .site-header { color:#eaf2ff; background:#080a14; border-bottom:1px solid #202d4b; box-shadow:0 10px 35px rgba(2,7,20,.28); }
+.viewer-page .brand-mark { color:#080a14; background:#64e9ff; border-radius:4px; box-shadow:0 0 18px rgba(100,233,255,.25); }
+.viewer-page .brand strong { color:#f0f5ff; letter-spacing:.02em; }
+.viewer-page .brand small { color:#7b8db0; }
+.viewer-page .primary-nav a { color:#8d9cba; border-radius:0; }
+.viewer-page .primary-nav a:hover, .viewer-page .primary-nav a:focus { color:#64e9ff; background:transparent; }
+.viewer-page .viewer-header { position:relative; overflow:hidden; color:#eef5ff; background:#080a14; }
+.viewer-page .viewer-header::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.36; background:linear-gradient(120deg,transparent 30%,rgba(85,148,255,.13) 48%,transparent 51%),repeating-linear-gradient(0deg,transparent 0 3px,rgba(100,233,255,.035) 3px 4px); }
+.viewer-page .viewer-header-inner { position:relative; z-index:1; padding:42px 0 34px; }
+.viewer-page .viewer-label, .viewer-page .viewer-stat span, .viewer-page .viewer-insight span { color:#7789ad; }
+.viewer-page .back-button { border-color:#344a76; color:#aec3e8; border-radius:2px; }
+.viewer-page .back-button:hover { color:#64e9ff; background:#102442; }
+.viewer-page .viewer-title-row h1 { color:#f1f6ff; font-size:clamp(34px,4vw,56px); letter-spacing:-.055em; }
+.viewer-page .viewer-period { color:#a6b9dc; }
+.viewer-page .viewer-tools .tool-button { border-color:#3a5383; border-radius:2px; color:#dbe8ff; background:#121f3a; }
+.viewer-page .viewer-tools .tool-button:hover { border-color:#64e9ff; background:#17345c; }
+.viewer-page .viewer-tools .tool-button.is-saved { border-color:#ff3c9f; color:#ff9bd0; background:#351735; }
+.viewer-page .viewer-stats { border-top-color:#26375b; }
+.viewer-page .viewer-insight { border-color:#2c426c; background:#101a31; }
+.viewer-page .viewer-insight strong { color:#e7f0ff; }
+.viewer-page .viewer-content { width:min(1360px,calc(100% - 48px)); padding:34px 0 68px; }
+.viewer-page .reader-quickbar { border-color:#25385d; background:#0d1427; box-shadow:0 16px 38px rgba(4,9,23,.18); }
+.viewer-page .quickbar-home, .viewer-page .quickbar-comment, .viewer-page .quickbar-section { border-color:#31476f; border-radius:2px; color:#a9bad9; background:#101a31; }
+.viewer-page .quickbar-section:hover, .viewer-page .quickbar-section:focus, .viewer-page .quickbar-section.is-active, .viewer-page .quickbar-home:hover, .viewer-page .quickbar-home:focus { border-color:#64e9ff; color:#64e9ff; background:#102b4e; }
+.viewer-page .quickbar-comment { border-color:#ff3c9f; color:#fff; background:#a72b70; }
+.viewer-page .issue-frame-wrap { border-color:#d7dfec; box-shadow:0 18px 55px rgba(13,31,66,.12); }
+.viewer-page .reader-panel { border-color:#d7dfec; background:#fff; }
+.viewer-page .reader-panel .eyebrow { color:#4b6db7; }
+.viewer-page .reader-panel h2 { color:#15233b; }
+.viewer-page .related-item { border-color:#dfe6f0; background:#f7f9fd; }
+.viewer-page .related-item span { color:#3969c7; }
+.viewer-page .site-footer { color:#9aa7c0; background:#080a14; }
+@media (min-width: 980px) {
+  .viewer-page .viewer-content { display:grid; grid-template-columns:220px minmax(0,1fr); gap:24px; align-items:start; }
+  .viewer-page .reader-quickbar { position:sticky; top:92px; display:flex; align-items:stretch; flex-direction:column; min-height:420px; margin:0; padding:18px 14px; }
+  .viewer-page .reader-quickbar::before { content:"REPORT MAP"; margin:0 10px 14px; color:#7385aa; font:700 10px/1.4 ui-monospace,monospace; letter-spacing:2px; }
+  .viewer-page .quickbar-sections { display:flex; flex-direction:column; overflow:visible; gap:4px; }
+  .viewer-page .quickbar-section { justify-content:flex-start; width:100%; min-height:38px; }
+  .viewer-page .quickbar-home { margin-bottom:10px; }
+  .viewer-page .quickbar-comment { margin-top:auto; }
+  .viewer-page .issue-frame-wrap { min-width:0; }
+  .viewer-page .reader-footer-grid { grid-column:2; }
+}
+@media (max-width:979px) {
+  .viewer-page .reader-quickbar { top:72px; }
+}

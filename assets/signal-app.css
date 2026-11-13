@@ -1,0 +1,449 @@
+/* Ancillary screens use the actual weekly-report frame and palette. */
+.signal-app{--nav-width:224px;background:var(--paper);color:var(--body-ink);font-size:15px;line-height:1.8}
+.signal-app .brand-mark{display:block;background:none;border-radius:0;flex:none}
+.signal-app .brand{gap:12px}
+.signal-app .topbar{box-shadow:none}
+.signal-app .topbar-center{font-family:inherit;font-size:13px;line-height:1.5;letter-spacing:0}
+.signal-app .issue-chip{font-size:12px;letter-spacing:0;padding:5px 12px}
+.signal-app .topbar-actions .tool-button{font-size:13px}
+.signal-app .topbar-actions svg{width:17px;height:17px}
+.signal-app .app-sidebar{border-right-color:#242b42;padding-top:32px}
+.signal-app .sidebar-title{font-size:13px;color:#c4d1ec;letter-spacing:0;margin-bottom:20px}
+.signal-app .app-nav{gap:8px}
+.signal-app .app-nav a,.signal-app .workspace-tab{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;color:#a7b3ce;font-size:14px;font-weight:450;border:1px solid transparent;border-radius:2px;background:transparent;text-decoration:none;text-align:left}
+.signal-app .app-nav svg,.signal-app .workspace-tab svg{width:18px;height:18px;flex:none}
+.signal-app .app-nav a[aria-current=page]{border-color:#3e5579;background:#16233c;color:#e4f5ff}
+.signal-app .app-nav a:hover,.signal-app .workspace-tab:hover{background:#151e32;color:#e4f5ff}
+.signal-app .app-workspace-tabs{display:grid;gap:6px}
+.signal-app .workspace-tab.is-active{border-color:#3e5579;background:#16233c;color:#a9f3ff;font-weight:550}
+.signal-app .sidebar-divider{margin:25px 12px 20px;background:#252d44}
+.signal-app .sidebar-note{font-size:12px;line-height:1.9;color:#9aa8c5}
+.signal-app .sidebar-note a{color:#b1c8f0;text-decoration:none}
+.signal-app .app-private-note{margin-top:26px;color:#9aa8c5}
+.signal-app .app-hero{margin-bottom:28px;padding-bottom:25px}
+.signal-app .app-hero-inner{width:100%;padding:0;margin:0}
+.signal-app .app-hero .back-link{margin:0 0 23px;font-size:13px}
+.signal-app .app-hero .eyebrow{margin:0 0 12px;font-family:inherit;font-size:12px;letter-spacing:0;color:#53688f}
+.signal-app .app-hero h1{margin:0 0 12px;font-size:clamp(28px,2.9vw,39px);letter-spacing:-.025em;line-height:1.25;color:var(--ink)}
+.signal-app .hero-desc{font-size:15px;line-height:1.85;color:#637089;max-width:700px;margin:0}
+.signal-app .workspace-shell,.signal-app .profile-shell{width:100%;max-width:1180px;padding:0;margin:0 auto}
+.signal-app .workspace-layout{display:block}
+.signal-app .workspace-panel,.signal-app.search-page .workspace-panel{padding:0;border:0;background:transparent;max-width:none}
+.signal-app .workspace-stats{gap:0;margin:0 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.signal-app .workspace-stat{display:flex;align-items:baseline;justify-content:flex-start;gap:18px;padding:17px 22px;border:0;background:transparent}
+.signal-app .workspace-stat+.workspace-stat{border-left:1px solid var(--line)}
+.signal-app .workspace-stat span{font-size:13px;color:#647089}
+.signal-app .workspace-stat strong{font:550 25px/1.2 ui-monospace,monospace;color:var(--ink);font-variant-numeric:tabular-nums}
+.signal-app .personal-heading{border-bottom:1px solid #c6cfdf;padding-bottom:14px;margin-bottom:18px}
+.signal-app .personal-heading h2{font-size:23px;font-weight:650;line-height:1.35}
+.signal-app .personal-heading>a{display:none}
+.signal-app .personal-filters{gap:14px;margin:20px 0}
+.signal-app .personal-filters label,.signal-app .subscription-fields>label{font-size:13px;color:#53627b;gap:7px}
+.signal-app .personal-filters input,.signal-app .personal-filters select,.signal-app .subscription-fields input,.signal-app .subscription-fields select{min-height:42px;font-size:14px}
+.signal-app .personal-card{grid-template-columns:148px minmax(0,1fr);padding:24px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;gap:22px}
+.signal-app .saved-item-meta{font-size:12px;line-height:1.8;color:#63728d}
+.signal-app .personal-card h3{margin:0 0 10px;font-size:17px;line-height:1.65;letter-spacing:0;font-weight:650;color:#213254}
+.signal-app .personal-card h3 a{color:inherit}
+.signal-app .personal-excerpt{font-size:14px;line-height:1.9;color:#53617a;margin:0 0 13px}
+.signal-app .personal-record-fields{margin-top:16px}
+.signal-app .saved-note{font-size:14px;line-height:1.8;border-color:#ccd6e5;background:#fff;border-radius:3px;color:#263653}
+.signal-app .personal-select{align-items:center}
+.signal-app .personal-filter-footer{margin:0;padding:12px 0 17px;font-size:13px}
+.signal-app .personal-bulk{padding:12px 14px;background:#edf1f8;border:1px solid #dbe3ef;margin-bottom:0;gap:9px}
+.signal-app .personal-bulk label{font-size:12px}
+.signal-app .personal-empty{background:#fff;border:1px solid var(--line);margin-top:16px;border-radius:2px;padding:38px 20px}
+.signal-app .personal-empty p{font-size:14px}
+.signal-app .album-list{margin:20px 0;grid-template-columns:repeat(3,minmax(0,1fr))}
+.signal-app .album-list>button{background:#fff;border-radius:3px;border-color:#d5deeb;padding:18px}
+.signal-app .album-list>button[aria-pressed=true]{background:#edf3fd;border-color:#7b96c3}
+.signal-app .album-list>button strong{font-size:15px}
+.signal-app .album-create{gap:10px}
+.signal-app .album-create input{min-height:42px;font-size:14px}
+.signal-app .album-tag{background:#edf3fc;color:#415d88;border-radius:2px}
+.signal-app .subscription-settings{padding-bottom:25px;margin-bottom:25px}
+.signal-app .subscription-settings h3{font-size:17px}
+.signal-app .subscription-settings>p{font-size:14px;color:#637089}
+.signal-app .subscription-choices{padding:16px;background:#fff;border:1px solid var(--line);border-radius:2px;gap:12px}
+.signal-app .subscription-choices legend{font-size:13px;background:var(--paper);padding:0 7px;grid-column:auto}
+.signal-app .subscription-choices label{font-size:14px}
+.signal-app .subscription-rules{border-top:1px solid var(--line);margin-top:25px}
+.signal-app .subscription-rule p,.signal-app .rss-explanation{font-size:12px;line-height:1.85;color:#637089}
+.signal-app .subscription-form-actions span,.signal-app .subscription-fields small{font-size:12px;line-height:1.8;color:#637089}
+.signal-app .retrieval-query{position:relative;display:flex;align-items:stretch;gap:0;min-height:62px;background:#fff;border:1px solid #aebfd9;border-radius:3px;padding:5px;isolation:isolate;transition:border-color .18s,box-shadow .18s}
+.signal-app .retrieval-query::after{content:"";position:absolute;bottom:-1px;left:20px;width:64px;height:2px;background:#4d83d9;transition:width .22s,background .22s;pointer-events:none}
+.signal-app .retrieval-query:focus-within{border-color:#4972b4;box-shadow:0 0 0 3px #4a8bcb13}
+.signal-app .retrieval-query:focus-within::after{width:96px;background:#386bcc}
+.signal-app .retrieval-leading{display:flex;align-items:center;justify-content:center;width:47px;flex:none;color:#7183a2}
+.signal-app .retrieval-leading svg{width:21px;height:21px}
+.signal-app .retrieval-query input{height:auto;min-height:50px;min-width:0;padding:11px 15px 11px 1px;border:0;background:transparent;color:var(--ink);font-size:16px;line-height:1.5;outline:none;box-shadow:none;border-radius:0}
+.signal-app .retrieval-query input:focus-visible{outline:none}
+.signal-app .retrieval-query input::placeholder{color:#73809a;opacity:1}
+.signal-app .retrieval-query button{display:inline-flex;align-items:center;gap:10px;flex:none;justify-content:center;min-height:50px;min-width:139px;margin:0;padding:10px 17px!important;white-space:nowrap;font-size:14px!important}
+.signal-app .retrieval-query button svg{width:17px;height:17px;flex:none}
+.signal-app .retrieval-query kbd{font-family:ui-monospace,monospace;font-size:14px;line-height:20px;width:21px;border:1px solid #577b9c;color:#c5f5ff;border-radius:2px;opacity:.9}
+.signal-app .retrieval-filter-disclosure{margin:20px 0 12px;border-bottom:1px solid var(--line)}
+.signal-app .retrieval-filter-disclosure>summary{display:flex;align-items:center;gap:9px;width:fit-content;font-size:13px;line-height:1.7;color:#536788;padding:5px 0;cursor:pointer;list-style:none}
+.signal-app .retrieval-filter-disclosure>summary::-webkit-details-marker{display:none}
+.signal-app .retrieval-filter-disclosure>summary::before{content:"+";font:16px ui-monospace,monospace;color:#4971b0}
+.signal-app .retrieval-filter-disclosure[open]>summary::before{content:"−"}
+.signal-app .retrieval-filter-disclosure .personal-filters{margin:14px 0 20px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.signal-app .retrieval-pager{border-top:1px solid var(--line);padding-top:24px;margin-top:0}
+.signal-app .profile-meta{font-size:13px;color:#637089;margin-top:18px;gap:22px}
+.signal-app .profile-meta b{color:#253f68}
+.signal-app .profile-meta+.issue-follow-controls{margin:20px 0 0;font-size:13px}
+.signal-app .profile-grid{grid-template-columns:minmax(0,1fr) 284px;gap:26px;align-items:start}
+.signal-app .profile-section{padding:0 0 28px;border:0;background:transparent}
+.signal-app .profile-section+.profile-section{padding-top:25px;margin:0;border-top:1px solid var(--line)}
+.signal-app .profile-section .eyebrow,.signal-app .side-panel .eyebrow{display:none}
+.signal-app .profile-section h2,.signal-app .side-panel h2{font-size:22px;margin:0 0 18px;line-height:1.4}
+.signal-app .profile-intro{font-size:15px;line-height:1.9;color:#53617a}
+.signal-app .side-panel{padding:20px;background:#fff;border-color:var(--line)}
+.signal-app .side-panel h2{font-size:17px}
+.signal-app .side-panel p,.signal-app .glossary-box{font-size:14px;line-height:1.9;color:#53617a}
+.signal-app .capability-chip{border-radius:2px;background:#edf3fc;border:1px solid #d6e0ef;color:#44618c;font-size:13px;font-weight:450}
+.signal-app .timeline:before{left:105px;background:#ccd7e9}
+.signal-app .timeline-item{grid-template-columns:88px 35px minmax(0,1fr);padding-bottom:25px}
+.signal-app .timeline-date{font-size:12px;font-weight:450;color:#637caa}
+.signal-app .timeline-content h3{font-size:16px;line-height:1.7;color:#213254}
+.signal-app .timeline-content p{font-size:14px;line-height:1.85;color:#53617a}
+.signal-app .judgment-item{background:#fff;border-left-width:1px;border-color:#c6d4eb;color:#53617a}
+.signal-app .judgment-item span{font-size:13px;color:#637caa}
+.signal-app .judgment-item p{font-size:14px;line-height:1.9}
+.signal-app #competitor-note{width:100%;font-family:inherit;font-size:14px;line-height:1.8;color:var(--ink);border:1px solid #ccd6e5;background:#fff;border-radius:3px;padding:10px}
+.signal-app .app-footer{margin:40px auto 0;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:#67758f;max-width:1180px}
+.signal-app .app-footer .footer-inner{width:100%;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(min-width:1541px){.signal-app .page-layout{max-width:none;grid-template-columns:var(--nav-width) minmax(0,1fr)}.signal-app .app-sidebar{padding-left:calc(18px + max(0px,(100vw - 1540px)/5))}}
+@media(max-width:1200px){.signal-app .profile-grid{grid-template-columns:1fr}.signal-app .profile-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.signal-app .profile-side .side-panel{margin:0}.signal-app .profile-side .side-panel:last-child{grid-column:1/-1}}
+@media(max-width:1120px){.signal-app{--nav-width:200px}.signal-app .workspace-stat{padding:16px;gap:12px}.signal-app .workspace-stat span{font-size:12px}.signal-app .personal-card{grid-template-columns:122px minmax(0,1fr);gap:18px}}
+@media(max-width:860px){.signal-app .app-sidebar{z-index:80;padding:30px 20px}.signal-app .toc-overlay{z-index:70}.signal-app .topbar{z-index:40}.signal-app .app-nav a,.signal-app .workspace-tab{min-height:46px}.signal-app .app-private-note{max-width:220px}.signal-app .topbar .toc-toggle{display:inline-flex}.signal-app .topbar-actions .tool-button{min-height:40px}.signal-app .personal-card{grid-template-columns:130px minmax(0,1fr)}}
+@media(min-width:861px){.signal-app .toc-toggle{display:none!important}}
+@media(max-width:700px){.signal-app .app-hero{margin-bottom:24px;padding-bottom:22px}.signal-app .app-hero h1{font-size:29px}.signal-app .app-hero .back-link{margin-bottom:19px}.signal-app .hero-desc{font-size:14px}.signal-app .workspace-stats{display:flex;margin-bottom:26px;gap:0}.signal-app .workspace-stat{flex:1;min-width:0;flex-direction:column;gap:9px;padding:15px 12px;align-items:flex-start}.signal-app .workspace-stat strong{font-size:24px}.signal-app .workspace-stat span{font-size:12px;white-space:nowrap}.signal-app .personal-card{grid-template-columns:1fr;gap:10px;padding:22px 0}.signal-app .personal-card h3{font-size:17px}.signal-app .saved-item-meta{display:flex;flex-wrap:wrap;gap:6px 14px}.signal-app .personal-filters{grid-template-columns:1fr 1fr;gap:12px}.signal-app .personal-filters .wide-filter{grid-column:1/-1}.signal-app .album-list{grid-template-columns:1fr 1fr;gap:10px}.signal-app .album-list>button{padding:15px}.signal-app .personal-bulk{padding:11px;gap:8px}.signal-app .retrieval-query{min-height:56px;padding:4px}.signal-app .retrieval-query button{min-width:81px;min-height:46px;padding:10px 13px!important;gap:6px}.signal-app .retrieval-query button svg,.signal-app .retrieval-query kbd{display:none}.signal-app .retrieval-leading{width:34px}.signal-app .retrieval-leading svg{width:18px;height:18px}.signal-app .retrieval-query input{min-height:46px;font-size:16px;padding-right:4px}.signal-app .retrieval-filter-disclosure{margin-top:16px}.signal-app .retrieval-filter-disclosure>summary{min-height:38px}.signal-app .retrieval-filter-disclosure .personal-filters{grid-template-columns:1fr 1fr;gap:12px}.signal-app .retrieval-filter-disclosure label{font-size:12px}.signal-app .retrieval-filter-disclosure .personal-filters>:nth-child(3){grid-column:1/-1}.signal-app .personal-heading h2{font-size:22px}.signal-app .profile-side{grid-template-columns:1fr}.signal-app .profile-side .side-panel:last-child{grid-column:auto}.signal-app .timeline:before{left:8px}.signal-app .timeline-item{grid-template-columns:20px minmax(0,1fr)}.signal-app .timeline-date{grid-column:2;grid-row:1;text-align:left;margin:0 0 6px}.signal-app .timeline-marker{grid-row:1/3;grid-column:1;margin-top:6px}.signal-app .timeline-content{grid-column:2;padding:0}.signal-app .subscription-fields{grid-template-columns:1fr}.signal-app .subscription-fields .subscription-keywords{grid-column:auto}.signal-app .subscription-choices{grid-template-columns:1fr 1fr}.signal-app .personal-filter-footer{gap:10px}.signal-app .personal-filter-footer .saved-item-actions{gap:8px}.signal-app .app-footer .footer-inner{flex-direction:column;gap:5px}}
+@media print{.signal-app .app-footer{display:none}.signal-app .workspace-shell,.signal-app .profile-shell{width:100%}.signal-app .personal-filters,.signal-app .personal-bulk,.signal-app .album-create,.signal-app #retrieval-form{display:none}}
+
+/* Cyberpunk surface system shared by the workbench, profile and retrieval
+   screens. The homepage stays the visual anchor; these surfaces reuse its
+   night-blue ground, cyan signal lines and restrained pink/violet accents. */
+.signal-app {
+  --app-ground: #080d1c;
+  --app-ground-raised: #0c1630;
+  --app-surface: rgba(12, 22, 46, .9);
+  --app-surface-strong: rgba(16, 29, 59, .96);
+  --app-line: rgba(90, 125, 185, .46);
+  --app-line-soft: rgba(77, 107, 166, .3);
+  --app-ink: #edf6ff;
+  --app-body: #c1d0e8;
+  --app-muted: #8194b8;
+  position: relative;
+  min-height: 100svh;
+  color: var(--app-body);
+  background:
+    radial-gradient(circle at 82% 8%, rgba(91, 111, 255, .18), transparent 27rem),
+    radial-gradient(circle at 12% 76%, rgba(239, 104, 196, .1), transparent 25rem),
+    linear-gradient(180deg, #070c1a 0%, var(--app-ground) 48%, #060a17 100%);
+}
+
+.signal-app::before {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: .2;
+  background-image:
+    linear-gradient(rgba(114, 233, 255, .09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 104, 196, .07) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, transparent, black 12%, black 86%, transparent);
+}
+
+.signal-app > :is(.topbar, .page-layout, .toc-overlay, .site-footer) {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-app .topbar {
+  border-bottom-color: rgba(114, 233, 255, .2);
+  background: rgba(6, 10, 23, .92);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .22);
+  backdrop-filter: blur(16px);
+}
+
+.signal-app .page-layout {
+  max-width: none;
+}
+
+.signal-app .app-sidebar {
+  background: rgba(7, 13, 29, .9);
+  border-right-color: rgba(90, 125, 185, .36);
+  box-shadow: 12px 0 38px rgba(2, 6, 17, .16);
+}
+
+.signal-app .app-sidebar::after {
+  content: "SIGNAL / PERSONAL CONSOLE";
+  display: block;
+  margin: 26px 12px 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(114, 233, 255, .18);
+  color: rgba(126, 159, 207, .52);
+  font: 700 8px/1.6 var(--cy-font, ui-monospace, monospace);
+  letter-spacing: .12em;
+}
+
+.signal-app .sidebar-title {
+  color: #e4f3ff;
+}
+
+.signal-app .app-nav a[aria-current="page"],
+.signal-app .workspace-tab.is-active {
+  border-color: rgba(114, 233, 255, .44);
+  background:
+    linear-gradient(110deg, rgba(19, 52, 86, .86), rgba(34, 22, 65, .84)),
+    rgba(17, 30, 58, .8);
+  color: #dffaff;
+  box-shadow: inset 2px 0 0 #72e9ff, 0 0 22px rgba(114, 233, 255, .08);
+}
+
+.signal-app .app-nav a:hover,
+.signal-app .workspace-tab:hover {
+  background: rgba(27, 47, 82, .72);
+  color: #f0f8ff;
+}
+
+.signal-app .signal-main {
+  min-width: 0;
+  position: relative;
+}
+
+.signal-app .app-hero {
+  max-width: none;
+  margin-bottom: 34px;
+  padding: 54px clamp(28px, 5vw, 76px) 36px;
+  border-bottom-color: rgba(91, 129, 191, .38);
+  background:
+    linear-gradient(100deg, rgba(5, 12, 27, .4), transparent 48%, rgba(49, 19, 66, .18)),
+    radial-gradient(circle at 84% 20%, rgba(114, 233, 255, .13), transparent 24rem);
+}
+
+.signal-app .app-hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.signal-app .app-hero h1 {
+  color: var(--app-ink);
+  text-shadow: 0 0 24px rgba(114, 233, 255, .1);
+}
+
+.signal-app .app-hero .eyebrow {
+  color: #72e9ff;
+}
+
+.signal-app .app-hero .hero-desc,
+.signal-app .profile-meta,
+.signal-app .profile-meta b {
+  color: var(--app-muted);
+}
+
+.signal-app .app-hero .back-link,
+.signal-app .text-link,
+.signal-app .secondary-action {
+  color: #72e9ff;
+}
+
+.signal-app .workspace-shell,
+.signal-app .profile-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-app .workspace-stats,
+.signal-app .workspace-panel,
+.signal-app .profile-section,
+.signal-app .side-panel,
+.signal-app .personal-empty,
+.signal-app .retrieval-query,
+.signal-app .retrieval-filter-disclosure,
+.signal-app .personal-bulk,
+.signal-app .subscription-choices,
+.signal-app .album-list > button,
+.signal-app .album-active,
+.signal-app .album-picker,
+.signal-app .topic-switcher,
+.signal-app .workspace-tab-panel {
+  border-color: var(--app-line);
+  background: var(--app-surface);
+  color: var(--app-body);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, .14), inset 0 0 26px rgba(114, 233, 255, .025);
+}
+
+.signal-app .workspace-stats {
+  border-top-color: rgba(114, 233, 255, .52);
+  border-bottom-color: rgba(239, 104, 196, .28);
+  background: linear-gradient(110deg, rgba(15, 35, 68, .94), rgba(23, 22, 55, .88));
+}
+
+.signal-app .workspace-stat + .workspace-stat {
+  border-left-color: var(--app-line-soft);
+}
+
+.signal-app .workspace-stat span,
+.signal-app .personal-heading h2,
+.signal-app .personal-heading > a,
+.signal-app .panel-copy,
+.signal-app .personal-filters label,
+.signal-app .subscription-fields > label,
+.signal-app .subscription-settings > p,
+.signal-app .subscription-form-actions span,
+.signal-app .subscription-fields small,
+.signal-app .rss-explanation,
+.signal-app .saved-item-meta,
+.signal-app .personal-filter-footer,
+.signal-app .sidebar-tip,
+.signal-app .personal-load-warning,
+.signal-app .profile-intro,
+.signal-app .profile-section h2,
+.signal-app .timeline-content p,
+.signal-app .timeline-date,
+.signal-app .judgment-item p,
+.signal-app .side-panel p,
+.signal-app .glossary-box {
+  color: var(--app-muted);
+}
+
+.signal-app .workspace-stat strong,
+.signal-app .personal-heading h2,
+.signal-app .profile-section h2,
+.signal-app .side-panel h2,
+.signal-app .personal-card h3,
+.signal-app .timeline-content h3 {
+  color: var(--app-ink);
+}
+
+.signal-app .personal-heading,
+.signal-app .subscription-rules,
+.signal-app .profile-section + .profile-section,
+.signal-app .personal-card,
+.signal-app .saved-item:last-child {
+  border-color: var(--app-line-soft);
+}
+
+.signal-app .personal-card {
+  background: linear-gradient(90deg, rgba(14, 26, 52, .56), transparent 78%);
+}
+
+.signal-app .personal-card:hover {
+  background: linear-gradient(90deg, rgba(20, 45, 75, .72), rgba(33, 19, 58, .28));
+}
+
+.signal-app :is(input, select, textarea, .topic-pill, .album-tag, .outline-button, .small-action) {
+  border-color: rgba(105, 141, 194, .5);
+  color: #d7e7ff;
+  background: rgba(8, 17, 38, .84);
+}
+
+.signal-app :is(input, select, textarea)::placeholder {
+  color: #7084a8;
+}
+
+.signal-app :is(input, select, textarea):focus-visible {
+  border-color: #72e9ff;
+  outline-color: #72e9ff;
+  box-shadow: 0 0 0 3px rgba(114, 233, 255, .13), 0 0 18px rgba(114, 233, 255, .1);
+}
+
+.signal-app .retrieval-query {
+  border-color: rgba(114, 233, 255, .48);
+  background: linear-gradient(110deg, rgba(11, 27, 53, .96), rgba(24, 18, 57, .94));
+  box-shadow: 0 0 28px rgba(114, 233, 255, .07);
+}
+
+.signal-app .retrieval-query::after {
+  background: linear-gradient(90deg, #72e9ff, #ef68c4);
+}
+
+.signal-app .retrieval-query input {
+  color: var(--app-ink);
+}
+
+.signal-app .retrieval-leading {
+  color: #72e9ff;
+}
+
+.signal-app .retrieval-filter-disclosure > summary,
+.signal-app .retrieval-filter-disclosure > summary::before {
+  color: #a4c6f2;
+}
+
+.signal-app .personal-empty,
+.signal-app .workspace-empty {
+  color: var(--app-muted);
+}
+
+.signal-app .profile-section {
+  border-bottom-color: var(--app-line-soft);
+}
+
+.signal-app .capability-chip,
+.signal-app .tag,
+.signal-app .topic-pill {
+  border-color: rgba(114, 233, 255, .26);
+  color: #bfe9ff;
+  background: rgba(17, 49, 77, .58);
+}
+
+.signal-app .capability-chip:hover,
+.signal-app .topic-pill:hover,
+.signal-app .topic-pill.is-selected {
+  border-color: #72e9ff;
+  color: #e8fcff;
+  background: rgba(18, 70, 96, .74);
+}
+
+.signal-app .timeline::before {
+  background: linear-gradient(180deg, #72e9ff, #a583ff, #ef68c4);
+}
+
+.signal-app .timeline-marker {
+  border-color: #72e9ff;
+  background: #0a1830;
+  box-shadow: 0 0 12px rgba(114, 233, 255, .38);
+}
+
+.signal-app .judgment-item {
+  border-color: rgba(114, 233, 255, .28);
+  background: linear-gradient(135deg, rgba(14, 35, 63, .8), rgba(27, 19, 52, .72));
+  color: var(--app-body);
+}
+
+.signal-app .judgment-item.weakness {
+  border-color: rgba(165, 131, 255, .34);
+}
+
+.signal-app .judgment-item.threat {
+  border-color: rgba(239, 104, 196, .38);
+}
+
+.signal-app .judgment-item span {
+  color: #72e9ff;
+}
+
+.signal-app .judgment-item.weakness span { color: #a583ff; }
+.signal-app .judgment-item.threat span { color: #ef68c4; }
+
+.signal-app .app-footer {
+  position: relative;
+  z-index: 1;
+  border-top-color: rgba(114, 233, 255, .2);
+  color: #7589ad;
+  background: transparent;
+}
+
+@media (max-width: 700px) {
+  .signal-app .app-hero {
+    padding: 38px 20px 28px;
+  }
+
+  .signal-app .workspace-stats {
+    background: linear-gradient(110deg, rgba(15, 35, 68, .94), rgba(23, 22, 55, .88));
+  }
+}
