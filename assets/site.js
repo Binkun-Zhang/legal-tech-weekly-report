@@ -187,7 +187,7 @@
   function refreshFavorites() {document.querySelectorAll('[data-favorite-issue-id]').forEach(function(b){var i=allIssues.find(function(i){return i.id===b.dataset.favoriteIssueId;});if(i)updateFavoriteButton(b,i);});}
   favoriteChannel?.addEventListener('message',refreshFavorites);
   addEventListener('storage',refreshFavorites);
-  Promise.all([fetch('data/issues.json').then(r=>{if(!r.ok)throw new Error('目录加载失败');return r.json();}),fetch('data/competitors.json').then(r=>r.json())]).then(function(data) {
+  Promise.all([fetch('data/issues.json', {cache: 'no-store'}).then(r=>{if(!r.ok)throw new Error('目录加载失败');return r.json();}),fetch('data/competitors.json').then(r=>r.json())]).then(function(data) {
     allIssues = data[0].sort((a,b)=>String(b.publishedAt).localeCompare(String(a.publishedAt)));
     if (!allIssues.length) throw new Error('暂无周报');
     renderArchive(allIssues);renderProfiles(data[1]);

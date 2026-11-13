@@ -1,5 +1,103 @@
 [
   {
+    "id": "2026-11-12",
+    "title": "法律科技产品竞品监控周报",
+    "period": "2026/11/06—2026/11/12",
+    "periodStart": "2026-11-06",
+    "periodEnd": "2026-11-12",
+    "publishedAt": "2026-11-13",
+    "updatedAt": "2026-11-13",
+    "file": "issues/2026-11-12.html",
+    "reader": "four-modes",
+    "editors": [
+      "胡文颖"
+    ],
+    "reviewers": [
+      "苏旖旎",
+      "张井"
+    ],
+    "tags": [
+      "竞品",
+      "行业政策",
+      "评测文章",
+      "法律科技文章",
+      "法律科技论文",
+      "GitHub Skill",
+      "深度洞察"
+    ],
+    "summary": "本期整理 69 条资讯，关注合同审查核验、法律数据连接、模型与成本、评测方法与法律科技论文。",
+    "competitors": [
+      "幂律智能",
+      "iCourt / Alpha AI",
+      "得理",
+      "北大法宝",
+      "威科先行",
+      "WorkBuddy",
+      "Anthropic / Claude",
+      "Harvey",
+      "Legora",
+      "Kimi",
+      "智谱 GLM",
+      "DeepSeek",
+      "百度文心"
+    ],
+    "decisionSummary": {
+      "focus": "竞品动态集中在模型接入、法律数据经 MCP 进入 Agent、工作台形态与评测口径；国内厂商同时推进“本地版＋开源技能”。",
+      "risk": "通用 Agent 平台与模型厂正在吞噬法律 AI 的入口与能力边界；来源含厂商自报数据与非直接竞品信息，需结合原文实测判断。",
+      "action": "优先对标合同审查的多文件协同、规则配置、证据定位与 Word 交付；把记忆治理、连接器与人工接管纳入验收；内部评测固定预算与金标隔离。"
+    },
+    "highlights": [
+      {
+        "competitor": "网信办/监管",
+        "action": "AI 换脸带货专项整治",
+        "impact": "累计处置违规账号3961个；人脸/声音克隆类功能需内建标识与授权校验。",
+        "evidence": "s01"
+      },
+      {
+        "competitor": "北大法宝",
+        "action": "解读工信部智能体终端进网新规",
+        "impact": "预置智能体须适配验证、身份码与OTA报备，端侧法律助手合规门槛确立。",
+        "evidence": "s02"
+      },
+      {
+        "competitor": "豆包工作",
+        "action": "开放第三方模型（Kimi/GLM/DeepSeek）",
+        "impact": "办公Agent平台多模型可选并标注额度倍率，法律插件可按任务选配。",
+        "evidence": "s04"
+      },
+      {
+        "competitor": "Anthropic",
+        "action": "发布 Claude Fable 5.2 / Mythos 5.2",
+        "impact": "同底座双访问策略，企业垂直（含法律）投入预计加大。",
+        "evidence": "s05"
+      },
+      {
+        "competitor": "Legora",
+        "action": "与 DiliTrust 以 MCP 互联、前内阁大臣主攻公共部门",
+        "impact": "合同库与实体记录进入 Agent，政府与公共部门成为新战场。",
+        "evidence": "s19 s37"
+      },
+      {
+        "competitor": "LawVu",
+        "action": "上线 MCP Server 接入多家 Agent",
+        "impact": "法务事项/合同/费用数据反向接入 Claude、Copilot、Harvey 等。",
+        "evidence": "s20"
+      },
+      {
+        "competitor": "Harvey",
+        "action": "磋商 IPO、估值155亿美元",
+        "impact": "ARR 超4亿美元、客户逾3500家，法律AI商业模式锚点抬升。",
+        "evidence": "s34"
+      },
+      {
+        "competitor": "威科先行",
+        "action": "上线《GenAI 合规清单》3.0",
+        "impact": "合规义务做成可交互工具，绑定网络安全合规模块与实务指南。",
+        "evidence": "s32"
+      }
+    ]
+  },
+  {
     "id": "2026-11-05",
     "title": "法律科技产品竞品监控周报",
     "period": "2026/10/30—2026/11/05",
